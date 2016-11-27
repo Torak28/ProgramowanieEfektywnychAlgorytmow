@@ -4,8 +4,17 @@ import random
 
 INF = -1
 
-wybor = int(input('Wybieramy!\n\t1.Wpisuje z palca\n\t2.Losuje sobie sam\n\t3.Wczytam z pliku\nHmm?\n'))
+def PoliczDroge(tablica, macierz):
+    sum = 0
+    for i in range(0,tablica.__len__() - 1):
+        miastoAIndex = tablica[i]
+        miastoBIndex = tablica[i + 1]
+        sum += int(macierz[miastoAIndex][miastoBIndex])
+    return sum
+
+wybor = int(input('Wybieramy!\n\t1.Wpisuje z palca\n\t2.Wczytam z pliku\nHmm?\n'))
 if wybor == 1:
+    tabWpisywanie = []
     Ilosc_Miast = int(input('Ilosc Miast = '))
     macierz = [[0 for i in range(Ilosc_Miast)] for j in range(Ilosc_Miast)]
     print('Koszty przejazdu? (Liczba i enter. Sam program rozkmini jak to leci)')
@@ -17,21 +26,11 @@ if wybor == 1:
     rozmiar = len(macierz)
     for i in range(rozmiar):
         macierz[i][i] = INF
-elif wybor == 2:
-    Ilosc_Miast = int(input('Ilosc Miast = '))
-    macierz = [[0 for i in range(Ilosc_Miast)] for j in range(Ilosc_Miast)]
-    print("A zakres losowania?\n")
-    a = int(input('Dolna granica = '))
-    b = int(input('Gorna granica = '))
-    for i in range(Ilosc_Miast):
-        for j in range(Ilosc_Miast):
-            # Losowanie z przedzialu
-            macierz[i][j] = random.randint(a,b)
 
-    rozmiar = len(macierz)
-    for i in range(rozmiar):
-        macierz[i][i] = INF
-else:
+    for i in range(Ilosc_Miast):
+        tabWpisywanie.append(i)
+elif wybor == 2:
+    tabPlik = []
     nazwa = raw_input('Jak sie nazywa pliczek? ')
     plik = open(nazwa)
     # Podzial pliku na liczby
@@ -53,12 +52,16 @@ else:
     rozmiar = len(macierz)
     for i in range(rozmiar):
         macierz[i][i] = INF
+    for i in range(Ilosc_Miast):
+        tabPlik.append(i)
+    print "trasa: " + str(tabPlik)
+    print "dystans: " + str(PoliczDroge(tabPlik, macierz))
+
 
 # TODO:
 # * Dopisanie porzadku leksykograficznego
-# * Funkcji liczacej odleglosc
 
 # Drukiwanie dla obadania o co kaman
-print('Wypisanie:')
-for i in range(rozmiar):
-   print(macierz[i])
+    print('Wypisanie:')
+    for i in range(rozmiar):
+        print(macierz[ i ])
