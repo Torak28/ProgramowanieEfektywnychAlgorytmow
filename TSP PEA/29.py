@@ -12,6 +12,37 @@ def PoliczDroge(tablica, macierz):
         sum += int(macierz[miastoAIndex][miastoBIndex])
     return sum
 
+def swap(a,i,j):
+    temp = a[i]
+    a[i] = a[j]
+    a[j] = temp
+
+def nastepna_kolejnosc(tablica):
+    kolejnoscOstateczny = []
+    # Krok 1
+    # https://www.quora.com/How-would-you-explain-an-algorithm-that-generates-permutations-using-lexicographic-ordering
+    maxX = -1;
+    for i in range(0, tablica.__len__() - 1):
+        if (tablica[ i ] < tablica[ i + 1 ]):
+            maxX = i
+    if (maxX == -1) :
+        return [0, 1]
+    #Krok 2
+    maxY = -1
+    for j in range(0, tablica.__len__()):
+        if (tablica[ maxX ] < tablica[ j ]) :
+            maxY = j
+    #Krok 3
+    swap(tablica, maxX, maxY)
+    #Krok 4
+    kolejnoscOstateczny = tablica[maxX + 1:]
+    tablica = tablica[:maxX + 1]
+    kolejnoscOstateczny.reverse()
+    tablica = tablica + kolejnoscOstateczny
+    return tablica
+
+
+
 wybor = int(input('Wybieramy!\n\t1.Wpisuje z palca\n\t2.Wczytam z pliku\nHmm?\n'))
 if wybor == 1:
     tabWpisywanie = []
@@ -56,10 +87,21 @@ elif wybor == 2:
         tabPlik.append(i)
     print "trasa: " + str(tabPlik)
     print "dystans: " + str(PoliczDroge(tabPlik, macierz))
-
+    tabPlik = nastepna_kolejnosc(tabPlik)
+    print "Nowa trasa: " +str(tabPlik)
+    print "dystans: " + str(PoliczDroge(tabPlik, macierz))
+    tabPlik = nastepna_kolejnosc(tabPlik)
+    print "Nowa trasa: " + str(tabPlik)
+    print "dystans: " + str(PoliczDroge(tabPlik, macierz))
+    tabPlik = nastepna_kolejnosc(tabPlik)
+    print "Nowa trasa: " + str(tabPlik)
+    print "dystans: " + str(PoliczDroge(tabPlik, macierz))
+    tabPlik = nastepna_kolejnosc(tabPlik)
+    print "Nowa trasa: " + str(tabPlik)
+    print "dystans: " + str(PoliczDroge(tabPlik, macierz))
 
 # TODO:
-# * Dopisanie porzadku leksykograficznego
+# * Przeglad zupelny
 
 # Drukiwanie dla obadania o co kaman
     print('Wypisanie:')
