@@ -54,6 +54,10 @@ else:
     for i in range(rozmiar):
         macierz[i][i] = INF
 
+# TODO:
+# * Dopisanie porzadku leksykograficznego
+# * Funkcji liczacej odleglosc
+
 # Drukiwanie dla obadania o co kaman
 print('Wypisanie:')
 for i in range(rozmiar):
