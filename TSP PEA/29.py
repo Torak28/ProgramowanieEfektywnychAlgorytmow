@@ -3,6 +3,7 @@
 import random
 
 INF = -1
+ile = 0
 
 def PoliczDroge(tablica, macierz):
     sum = 0
@@ -18,6 +19,8 @@ def swap(a,i,j):
     a[j] = temp
 
 def nastepna_kolejnosc(tablica):
+    global ile
+    ile += 1
     kolejnoscOstateczny = []
     # Krok 1
     # https://www.quora.com/How-would-you-explain-an-algorithm-that-generates-permutations-using-lexicographic-ordering
@@ -26,7 +29,7 @@ def nastepna_kolejnosc(tablica):
         if (tablica[ i ] < tablica[ i + 1 ]):
             maxX = i
     if (maxX == -1) :
-        return [0, 1]
+        return 0
     #Krok 2
     maxY = -1
     for j in range(0, tablica.__len__()):
@@ -41,7 +44,11 @@ def nastepna_kolejnosc(tablica):
     tablica = tablica + kolejnoscOstateczny
     return tablica
 
-
+def silnia(n):
+    if (n == 1):
+        return 1
+    else:
+        return n * silnia(n - 1)
 
 wybor = int(input('Wybieramy!\n\t1.Wpisuje z palca\n\t2.Wczytam z pliku\nHmm?\n'))
 if wybor == 1:
@@ -85,20 +92,24 @@ elif wybor == 2:
         macierz[i][i] = INF
     for i in range(Ilosc_Miast):
         tabPlik.append(i)
-    print "trasa: " + str(tabPlik)
-    print "dystans: " + str(PoliczDroge(tabPlik, macierz))
-    tabPlik = nastepna_kolejnosc(tabPlik)
-    print "Nowa trasa: " +str(tabPlik)
-    print "dystans: " + str(PoliczDroge(tabPlik, macierz))
-    tabPlik = nastepna_kolejnosc(tabPlik)
-    print "Nowa trasa: " + str(tabPlik)
-    print "dystans: " + str(PoliczDroge(tabPlik, macierz))
-    tabPlik = nastepna_kolejnosc(tabPlik)
-    print "Nowa trasa: " + str(tabPlik)
-    print "dystans: " + str(PoliczDroge(tabPlik, macierz))
-    tabPlik = nastepna_kolejnosc(tabPlik)
-    print "Nowa trasa: " + str(tabPlik)
-    print "dystans: " + str(PoliczDroge(tabPlik, macierz))
+    iloscMozliwosci = silnia(Ilosc_Miast)
+    nalepszaTrasa = []
+    najkrotszyDystans = 2147483647
+    dychaW = 0
+    while tabPlik != 0:
+        t = tabPlik
+        d = PoliczDroge(tabPlik, macierz)
+        if(d < najkrotszyDystans):
+            nalepszaTrasa = tabPlik
+            najkrotszyDystans = PoliczDroge(tabPlik, macierz)
+        tabPlik = nastepna_kolejnosc(tabPlik)
+        procent = 100 * ile/float(iloscMozliwosci)
+        if procent > dychaW:
+            print "|",
+            dychaW += 10
+    print ""
+    print "Najlepsza trasa: " +str(nalepszaTrasa)
+    print "dystans: " + str(PoliczDroge(nalepszaTrasa, macierz))
 
 # TODO:
 # * Przeglad zupelny
