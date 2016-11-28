@@ -97,11 +97,12 @@ elif wybor == 2:
     najkrotszyDystans = 2147483647
     dychaW = 0
     while tabPlik != 0:
-        t = tabPlik
+        tabPlik.append(tabPlik[0])
         d = PoliczDroge(tabPlik, macierz)
         if(d < najkrotszyDystans):
             nalepszaTrasa = tabPlik
             najkrotszyDystans = PoliczDroge(tabPlik, macierz)
+        tabPlik = tabPlik[:tabPlik.__len__()-1]
         tabPlik = nastepna_kolejnosc(tabPlik)
         procent = 100 * ile/float(iloscMozliwosci)
         if procent > dychaW:
@@ -112,7 +113,7 @@ elif wybor == 2:
     print "dystans: " + str(PoliczDroge(nalepszaTrasa, macierz))
 
 # TODO:
-# * Przeglad zupelny
+# * wyliczenie LB
 
 # Drukiwanie dla obadania o co kaman
     print('Wypisanie:')
