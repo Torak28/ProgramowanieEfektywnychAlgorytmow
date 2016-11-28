@@ -50,7 +50,7 @@ def silnia(n):
     else:
         return n * silnia(n - 1)
 
-wybor = int(input('Wybieramy!\n\t1.Wpisuje z palca\n\t2.Wczytam z pliku\nHmm?\n'))
+wybor = int(input('Wybieramy!\n\t1.Wpisuje z palca(do dopisania obsluga)\n\t2.Wczytam z pliku\nHmm?\n'))
 if wybor == 1:
     tabWpisywanie = []
     Ilosc_Miast = int(input('Ilosc Miast = '))
@@ -113,7 +113,7 @@ elif wybor == 2:
     print "dystans: " + str(PoliczDroge(nalepszaTrasa, macierz))
 
 # TODO:
-# * wyliczenie LB
+# * ograniczyc przeszukania jako ze pierwszy i tak jest zawsze 0(zrobic to zalezne od wywolania funkcji tak zeby mozna bylo nadal liczyc buteforca), Napewno?!
 
 # Drukiwanie dla obadania o co kaman
     print('Wypisanie:')
