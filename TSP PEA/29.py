@@ -114,27 +114,10 @@ elif wybor == 2:
 
 # TODO:
 # * ograniczyc przeszukania jako ze pierwszy i tak jest zawsze 0(zrobic to zalezne od wywolania funkcji tak zeby mozna bylo nadal liczyc buteforca), Napewno?!
-
-#elif wybor == 3:
-#    Ilosc_Miast = int(input('Ilosc Miast = '))
-#    macierz = [[0 for i in range(Ilosc_Miast)] for j in range(Ilosc_Miast)]
-#    print("A zakres losowania?\n")
-#    a = int(input('Dolna granica = '))
-#    b = int(input('Gorna granica = '))
-#    for i in range(Ilosc_Miast):
-#        for j in range(Ilosc_Miast):
-#            # Losowanie z przedzialu
-#            macierz[i][j] = random.randint(a,b)
-
-#    rozmiar = len(macierz)
-#    for i in range(rozmiar):
-#        macierz[i][i] = INF
+# * Nie potrzebny if == 1, albo go pozmieniac tak zeby sypal dobre wyniki
+# * Moze dodanie algorytmu? xd
 
 # Drukiwanie dla obadania o co kaman
-#    plik = open('plik', 'w')
 print('Wypisanie:')
 for i in range(rozmiar):
     print(macierz[ i ])
-#        plik.write(macierz[i].__str__())
-#        plik.write("\n")
-#    plik.close()
