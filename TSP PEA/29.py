@@ -78,6 +78,13 @@ def redukcjaKolumn(macierz):
                 macierz[k][i] = macierz[k][i] - int(min)
     return macierz, sum
 
+def redukcja(macierz):
+    LB = 0
+    macierz, sum1 = redukcjaWierszy(macierz)
+    macierz, sum2 = redukcjaKolumn(macierz)
+    LB = sum1 + sum2
+    return macierz, LB
+
 wybor = int(input('Wybieramy!\n\t1.Wpisuje z palca(do dopisania obsluga)\n\t2.Wczytam z pliku\nHmm?\n'))
 if wybor == 1:
     tabWpisywanie = []
@@ -151,9 +158,6 @@ elif wybor == 2:
 print('Wypisanie:')
 for i in range(rozmiar):
     print(macierz[ i ])
-macierz, sum = redukcjaWierszy(macierz)
-print macierz
-print sum
-macierz, sum = redukcjaKolumn(macierz)
+macierz, sum = redukcja(macierz)
 print macierz
 print sum
