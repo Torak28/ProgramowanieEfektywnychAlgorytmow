@@ -52,6 +52,19 @@ def silnia(n):
     else:
         return n * silnia(n - 1)
 
+def iloscDrog(n):
+    if (n == 1):
+        return 1
+    else:
+        return (n-1) * iloscDrog(n-1) + 1
+
+def generujGraf(n):
+    x = iloscDrog(n)
+    tab = [ ]
+    for i in range(x):
+        tab.append(i + 1)
+    return tab
+
 def redukcjaWierszy(macierz):
     sum = 0
     for i in range(rozmiar):
@@ -158,6 +171,9 @@ elif wybor == 2:
 print('Wypisanie:')
 for i in range(rozmiar):
     print(macierz[ i ])
+
+#Test
 macierz, sum = redukcja(macierz)
 print macierz
 print sum
+print generujGraf(5)
