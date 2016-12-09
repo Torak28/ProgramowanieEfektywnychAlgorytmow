@@ -70,12 +70,12 @@ def redukcjaKolumn(macierz):
     for i in range(rozmiar):
         min = 2147483647
         for j in range(rozmiar):
-            if(macierz[i][j] != INF and macierz[i][j]<min):
-                min = macierz[i][j]
+            if(macierz[j][i] != INF and macierz[j][i] < min):
+                min = macierz[j][i]
         sum = sum + min
         for k in range(rozmiar):
-            if(macierz[k][i] != 0):
-                macierz[i][k] = macierz[i][k] - min
+            if(macierz[k][i] != INF and macierz[k][i] != 0):
+                macierz[k][i] = macierz[k][i] - int(min)
     return macierz, sum
 
 wybor = int(input('Wybieramy!\n\t1.Wpisuje z palca(do dopisania obsluga)\n\t2.Wczytam z pliku\nHmm?\n'))
@@ -153,5 +153,7 @@ for i in range(rozmiar):
     print(macierz[ i ])
 macierz, sum = redukcjaWierszy(macierz)
 print macierz
-print "\n"
+print sum
+macierz, sum = redukcjaKolumn(macierz)
+print macierz
 print sum
