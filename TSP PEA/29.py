@@ -5,6 +5,7 @@ import random
 INF = -1
 ile = 0
 
+#Macierz to tablica zawierajaca
 def PoliczDroge(tablica, macierz):
     sum = 0
     for i in range(0,tablica.__len__() - 1):
@@ -18,6 +19,7 @@ def swap(a,i,j):
     a[i] = a[j]
     a[j] = temp
 
+# Kolejnosc Leksykograficzna(Raczej niepotrzebna)
 def nastepna_kolejnosc(tablica):
     global ile
     ile += 1
@@ -49,6 +51,32 @@ def silnia(n):
         return 1
     else:
         return n * silnia(n - 1)
+
+def redukcjaWierszy(macierz):
+    sum = 0
+    for i in range(rozmiar):
+        min = 2147483647
+        for j in range(rozmiar):
+            if(macierz[i][j] != INF and macierz[i][j] < min):
+                min = macierz[i][j]
+        sum = sum + min
+        for k in range(rozmiar):
+            if(macierz[i][k] != INF and macierz[i][k] != 0):
+                macierz[i][k] = macierz[i][k] - int(min)
+    return macierz, sum
+
+def redukcjaKolumn(macierz):
+    sum = 0
+    for i in range(rozmiar):
+        min = 2147483647
+        for j in range(rozmiar):
+            if(macierz[i][j] != INF and macierz[i][j]<min):
+                min = macierz[i][j]
+        sum = sum + min
+        for k in range(rozmiar):
+            if(macierz[k][i] != 0):
+                macierz[i][k] = macierz[i][k] - min
+    return macierz, sum
 
 wybor = int(input('Wybieramy!\n\t1.Wpisuje z palca(do dopisania obsluga)\n\t2.Wczytam z pliku\nHmm?\n'))
 if wybor == 1:
@@ -87,6 +115,8 @@ elif wybor == 2:
             macierz[i][j] = tab[pom]
             pom += 1
 
+    macierz = [ map(int, x) for x in macierz ]
+
     rozmiar = len(macierz)
     for i in range(rozmiar):
         macierz[i][i] = INF
@@ -121,3 +151,7 @@ elif wybor == 2:
 print('Wypisanie:')
 for i in range(rozmiar):
     print(macierz[ i ])
+macierz, sum = redukcjaWierszy(macierz)
+print macierz
+print "\n"
+print sum
