@@ -98,6 +98,25 @@ def redukcja(macierz):
     LB = sum1 + sum2
     return macierz, LB
 
+def kombinacjeDrog(tablica):
+    wynik = [[1]]
+    #for item in items:
+    #    uklad = [i+[item] for i in wynik]
+    #    wynik.extend(uklad)
+    #return wynik
+    ulkad = []
+    for i in tablica:
+        if(i != 1):
+            uklad = [[1,i]]
+            wynik.extend(uklad)
+    wynik.extend([ tablica ])
+    #Ale jak to?!
+    for i in range(5):
+        tablica = nastepna_kolejnosc(tablica)
+        wynik.extend([tablica])
+    return wynik
+
+
 wybor = int(input('Wybieramy!\n\t1.Wpisuje z palca(do dopisania obsluga)\n\t2.Wczytam z pliku\nHmm?\n'))
 if wybor == 1:
     tabWpisywanie = []
@@ -176,4 +195,16 @@ for i in range(rozmiar):
 macierz, sum = redukcja(macierz)
 print macierz
 print sum
-print generujGraf(5)
+
+tablica = []
+for i in range(4):
+    tablica.append(i+1)
+print tablica
+
+
+nic = kombinacjeDrog(tablica)
+print nic
+
+print "\n"
+# Wiersz, Kolumna
+# print macierz[0][2]
