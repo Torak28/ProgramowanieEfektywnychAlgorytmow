@@ -99,7 +99,10 @@ def redukcja(macierz):
     LB = sum1 + sum2
     return macierz, LB
 
-def kombinacjeDrog(tablica):
+def kombinacjeDrog(n):
+    tablica = []
+    for i in range(n):
+        tablica.append(i+1)
     wynik = []
     for L in range(0, len(tablica) + 1):
         for subset in itertools.permutations(tablica, L):
@@ -109,22 +112,6 @@ def kombinacjeDrog(tablica):
                     subset = [subset]
                     wynik.extend(subset)
     return wynik
-    #wynik = [ [ ] ]
-    #for item in items:
-    #    uklad = [ i + [ item ] for i in wynik ]
-    #    wynik.extend(uklad)
-    #return wynik
-    #ulkad = []
-    #for i in tablica:
-    #    if(i != 1):
-    #        uklad = [[1,i]]
-    #        wynik.extend(uklad)
-    #wynik.extend([ tablica ])
-    #Ale jak to?!
-    #for i in range(5):
-    #    tablica = nastepna_kolejnosc(tablica)
-    #    wynik.extend([tablica])
-    #return wynik
 
 wybor = int(input('Wybieramy!\n\t1.Wpisuje z palca(do dopisania obsluga)\n\t2.Wczytam z pliku\nHmm?\n'))
 if wybor == 1:
@@ -205,14 +192,8 @@ macierz, sum = redukcja(macierz)
 print macierz
 print sum
 
-tablica = []
-for i in range(4):
-    tablica.append(i+1)
-print tablica
-
-
-nic = kombinacjeDrog(tablica)
-print nic
+e = kombinacjeDrog(Ilosc_Miast-1)
+print e
 
 print "\n"
 # Wiersz, Kolumna
