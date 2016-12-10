@@ -59,6 +59,12 @@ def iloscDrog(n):
     else:
         return (n-1) * iloscDrog(n-1) + 1
 
+def iloscLisci(n):
+    if n == 1:
+        return 1
+    else:
+        return (n-1) * iloscLisci(n-1)
+
 def generujGraf(n):
     x = iloscDrog(n)
     tab = [ ]
@@ -180,7 +186,8 @@ elif wybor == 2:
 # TODO:
 # * ograniczyc przeszukania jako ze pierwszy i tak jest zawsze 0(zrobic to zalezne od wywolania funkcji tak zeby mozna bylo nadal liczyc buteforca), Napewno?!
 # * Nie potrzebny if == 1, albo go pozmieniac tak zeby sypal dobre wyniki
-# * Moze dodanie algorytmu? xd
+# * Dodaj INF w macierzy dla zadanej tablicy drogi
+# * Liscie to taki niby zapis przejscia
 
 # Drukiwanie dla obadania o co kaman
 print('Wypisanie:')
@@ -192,9 +199,9 @@ macierz, sum = redukcja(macierz)
 print macierz
 print sum
 
-e = kombinacjeDrog(Ilosc_Miast-1)
+e = iloscLisci(Ilosc_Miast-1)
 print e
 
 print "\n"
 # Wiersz, Kolumna
-# print macierz[0][2]
+print macierz[0][2]
