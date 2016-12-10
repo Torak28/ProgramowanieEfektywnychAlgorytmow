@@ -74,8 +74,8 @@ def generujGraf(n):
 
 def generujPary(tablica):
     wynik = []
-    for i in range(1, tablica.__len__()):
-        wynik.extend([ [ tablica[ 0 ], tablica[ i ] ] ])
+    for i in range(tablica.__len__()-1):
+        wynik.extend([ [ tablica[ i ], tablica[ i+1 ] ] ])
     return wynik
 
 # def Negacja(macierz, tablica):
@@ -207,9 +207,9 @@ macierz, sum = redukcja(macierz)
 print macierz
 print sum
 
-t = [1,2,3,4]
+t = [1,4,3]
 e = generujPary(t)
-print
+print e
 
 print "\n"
 # Wiersz, Kolumna
