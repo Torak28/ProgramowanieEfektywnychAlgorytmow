@@ -5,6 +5,7 @@ import itertools
 
 INF = -1
 ile = 0
+LBMACIERZY = 0
 
 #Macierz to tablica zawierajaca
 def PoliczDroge(tablica, macierz):
@@ -113,7 +114,8 @@ def redukcjaWierszy(macierz):
         for j in range(rozmiar):
             if(macierz[i][j] != INF and macierz[i][j] < min):
                 min = macierz[i][j]
-        sum = sum + min
+        if min != 2147483647:
+            sum = sum + min
         for k in range(rozmiar):
             if(macierz[i][k] != INF and macierz[i][k] != 0):
                 macierz[i][k] = macierz[i][k] - int(min)
@@ -126,7 +128,8 @@ def redukcjaKolumn(macierz):
         for j in range(rozmiar):
             if(macierz[j][i] != INF and macierz[j][i] < min):
                 min = macierz[j][i]
-        sum = sum + min
+        if min != 2147483647:
+            sum = sum + min
         for k in range(rozmiar):
             if(macierz[k][i] != INF and macierz[k][i] != 0):
                 macierz[k][i] = macierz[k][i] - int(min)
@@ -169,6 +172,11 @@ def kombinacjeKonkretnychDrog(n, wielkosc,posiada):
                     wynik.extend(subset)
                     i = i + 1
     return wynik
+
+def liczLB(macierzPierwotna, macierz, LBprev, tablica):
+    A = macierzPierwotna[tablica[0]][tablica[1]]
+    macierz, r = redukcja(macierz)
+    return LBprev + A + r
 
 wybor = int(input('Wybieramy!\n\t1.Wpisuje z palca(do dopisania obsluga)\n\t2.Wczytam z pliku\nHmm?\n'))
 if wybor == 1:
@@ -246,13 +254,19 @@ for i in range(rozmiar):
     print(macierz[ i ])
 
 #Test
-macierz, sum = redukcja(macierz)
+macierz, LBMACIERZY = redukcja(macierz)
+LB = LBMACIERZY
 print macierz
-print sum
-
+print LB
+LB = 3
+print LBMACIERZY
+print LB
 t = [1,4,3]
 m = copy.deepcopy(macierz)
 negacja(m,t)
 print macierz
 print m
-print kombinacjeKonkretnychDrog(10,3,[1,2,3])
+x = liczLB(macierz,m,LBMACIERZY,[4,3])
+print x
+print m
+print macierz
