@@ -221,6 +221,7 @@ elif wybor == 2:
 # * ograniczyc przeszukania jako ze pierwszy i tak jest zawsze 0(zrobic to zalezne od wywolania funkcji tak zeby mozna bylo nadal liczyc buteforca), Napewno?!
 # * Nie potrzebny if == 1, albo go pozmieniac tak zeby sypal dobre wyniki
 # * Liscie to taki niby zapis przejscia
+# * przerwanie kmbinacji w zaleznosci od wilkosci permutacji(zeby nie genreowac wszystkiego)
 
 # Drukiwanie dla obadania o co kaman
 print('Wypisanie:')
