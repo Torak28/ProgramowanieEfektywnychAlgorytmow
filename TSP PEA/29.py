@@ -139,18 +139,35 @@ def redukcja(macierz):
     LB = sum1 + sum2
     return macierz, LB
 
-def kombinacjeDrog(n):
+def kombinacjeDrog(n, wielkosc):
     tablica = []
     for i in range(n):
         tablica.append(i+1)
     wynik = []
     for L in range(0, len(tablica) + 1):
         for subset in itertools.permutations(tablica, L):
-            subset = list(subset)
-            if subset != []:
+            if subset.__len__() == wielkosc:
+                subset = list(subset)
                 if subset[0] == 1:
                     subset = [subset]
                     wynik.extend(subset)
+    return wynik
+
+def kombinacjeKonkretnychDrog(n, wielkosc,posiada):
+    len = posiada.__len__()
+    tablica = []
+    for i in range(n):
+        tablica.append(i+1)
+    wynik = []
+    for L in range(0, tablica.__len__() + 1):
+        for subset in itertools.permutations(tablica, L):
+            if subset.__len__() == wielkosc:
+                subset = list(subset)
+                i = 1
+                if subset[0] == 1 and subset[i] == posiada[i]:
+                    subset = [subset]
+                    wynik.extend(subset)
+                    i = i + 1
     return wynik
 
 wybor = int(input('Wybieramy!\n\t1.Wpisuje z palca(do dopisania obsluga)\n\t2.Wczytam z pliku\nHmm?\n'))
@@ -238,3 +255,4 @@ m = copy.deepcopy(macierz)
 negacja(m,t)
 print macierz
 print m
+print kombinacjeKonkretnychDrog(10,3,[1,2,3])
