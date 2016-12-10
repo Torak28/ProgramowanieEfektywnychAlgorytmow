@@ -1,6 +1,6 @@
 # Autor : Jarek Ciolek-Zelechowski
 
-import random
+import copy
 import itertools
 
 INF = -1
@@ -78,7 +78,33 @@ def generujPary(tablica):
         wynik.extend([ [ tablica[ i ], tablica[ i+1 ] ] ])
     return wynik
 
-# def Negacja(macierz, tablica):
+def generujPunkty(tablica):
+    wynik = [ ]
+    for i in range(1, tablica.__len__()):
+        wynik.extend([ [ tablica[ 0 ], tablica[ i ] ] ])
+    return wynik
+
+def negacjaTablicy(m, tablica):
+    wiersz = tablica[0] - 1
+    kolumna = tablica[1] - 1
+    for j in range(rozmiar):
+        m[wiersz][j] = INF
+        m[j][kolumna] = INF
+    return m
+
+def negacjaPunktu(m, tablica):
+    wiersz = tablica[ 0 ] - 1
+    kolumna = tablica[ 1 ] - 1
+    m[kolumna][wiersz] = INF
+    return m
+
+def negacja(m,tablica):
+    pary = generujPary(tablica)
+    punkty = generujPunkty(tablica)
+    for i in range(tablica.__len__() - 1):
+        negacjaTablicy(m,pary[i])
+        negacjaPunktu(m,punkty[i])
+    return m
 
 def redukcjaWierszy(macierz):
     sum = 0
@@ -194,7 +220,6 @@ elif wybor == 2:
 # TODO:
 # * ograniczyc przeszukania jako ze pierwszy i tak jest zawsze 0(zrobic to zalezne od wywolania funkcji tak zeby mozna bylo nadal liczyc buteforca), Napewno?!
 # * Nie potrzebny if == 1, albo go pozmieniac tak zeby sypal dobre wyniki
-# * Dodaj INF w macierzy dla zadanej tablicy drogi
 # * Liscie to taki niby zapis przejscia
 
 # Drukiwanie dla obadania o co kaman
@@ -208,9 +233,7 @@ print macierz
 print sum
 
 t = [1,4,3]
-e = generujPary(t)
-print e
-
-print "\n"
-# Wiersz, Kolumna
-print macierz[0][2]
+m = copy.deepcopy(macierz)
+negacja(m,t)
+print macierz
+print m
