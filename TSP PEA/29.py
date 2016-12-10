@@ -1,6 +1,7 @@
 # Autor : Jarek Ciolek-Zelechowski
 
 import random
+import itertools
 
 INF = -1
 ile = 0
@@ -99,23 +100,31 @@ def redukcja(macierz):
     return macierz, LB
 
 def kombinacjeDrog(tablica):
-    wynik = [[1]]
+    wynik = []
+    for L in range(0, len(tablica) + 1):
+        for subset in itertools.permutations(tablica, L):
+            subset = list(subset)
+            if subset != []:
+                if subset[0] == 1:
+                    subset = [subset]
+                    wynik.extend(subset)
+    return wynik
+    #wynik = [ [ ] ]
     #for item in items:
-    #    uklad = [i+[item] for i in wynik]
+    #    uklad = [ i + [ item ] for i in wynik ]
     #    wynik.extend(uklad)
     #return wynik
-    ulkad = []
-    for i in tablica:
-        if(i != 1):
-            uklad = [[1,i]]
-            wynik.extend(uklad)
-    wynik.extend([ tablica ])
+    #ulkad = []
+    #for i in tablica:
+    #    if(i != 1):
+    #        uklad = [[1,i]]
+    #        wynik.extend(uklad)
+    #wynik.extend([ tablica ])
     #Ale jak to?!
-    for i in range(5):
-        tablica = nastepna_kolejnosc(tablica)
-        wynik.extend([tablica])
-    return wynik
-
+    #for i in range(5):
+    #    tablica = nastepna_kolejnosc(tablica)
+    #    wynik.extend([tablica])
+    #return wynik
 
 wybor = int(input('Wybieramy!\n\t1.Wpisuje z palca(do dopisania obsluga)\n\t2.Wczytam z pliku\nHmm?\n'))
 if wybor == 1:
