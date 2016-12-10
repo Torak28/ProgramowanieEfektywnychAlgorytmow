@@ -72,6 +72,14 @@ def generujGraf(n):
         tab.append(i + 1)
     return tab
 
+def generujPary(tablica):
+    wynik = []
+    for i in range(1, tablica.__len__()):
+        wynik.extend([ [ tablica[ 0 ], tablica[ i ] ] ])
+    return wynik
+
+# def Negacja(macierz, tablica):
+
 def redukcjaWierszy(macierz):
     sum = 0
     for i in range(rozmiar):
@@ -199,8 +207,9 @@ macierz, sum = redukcja(macierz)
 print macierz
 print sum
 
-e = iloscLisci(Ilosc_Miast-1)
-print e
+t = [1,2,3,4]
+e = generujPary(t)
+print
 
 print "\n"
 # Wiersz, Kolumna
