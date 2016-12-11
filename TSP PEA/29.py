@@ -173,6 +173,20 @@ def kombinacjeKonkretnychDrog(n, wielkosc,posiada):
                     i = i + 1
     return wynik
 
+def kombinacjeWielkosciKonkretnychDrog(n, wielkosc):
+    tablica = []
+    for i in range(n):
+        tablica.append(i+1)
+    wynik = []
+    for L in range(0, tablica.__len__() + 1):
+        for subset in itertools.permutations(tablica, L):
+            if subset.__len__() == wielkosc:
+                subset = list(subset)
+                if subset[0] == 1:
+                    subset = [subset]
+                    wynik.extend(subset)
+    return wynik
+
 def liczLB(macierzPierwotna, macierz, LBprev, tablica):
     A = macierzPierwotna[tablica[0]][tablica[1]]
     macierz, r = redukcja(macierz)
@@ -254,19 +268,28 @@ for i in range(rozmiar):
     print(macierz[ i ])
 
 #Test
+# macierz, LBMACIERZY = redukcja(macierz)
+# LB = LBMACIERZY
+# print macierz
+# print LB
+# LB = 3
+# print LBMACIERZY
+# print LB
+# t = [1,4,3]z
+# m = copy.deepcopy(macierz)
+# negacja(m,t)
+# print macierz
+# print m
+# x = liczLB(macierz,m,LBMACIERZY,[4,3])
+# print x
+# print m
+# print macierz
+print "\n"
+# macierz to zawsze wstepniak z ktory podajemy do liczenia LB
+# m bedziemy wykorzystywac
+wielkosc = 2
 macierz, LBMACIERZY = redukcja(macierz)
-LB = LBMACIERZY
-print macierz
-print LB
-LB = 3
-print LBMACIERZY
-print LB
-t = [1,4,3]
 m = copy.deepcopy(macierz)
-negacja(m,t)
 print macierz
 print m
-x = liczLB(macierz,m,LBMACIERZY,[4,3])
-print x
-print m
-print macierz
+print kombinacjeWielkosciKonkretnychDrog(Ilosc_Miast,wielkosc)
