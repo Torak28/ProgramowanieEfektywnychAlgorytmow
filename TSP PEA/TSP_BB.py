@@ -53,6 +53,15 @@ def silnia(n):
     else:
         return n * silnia(n - 1)
 
+def dlugoscDrogi(tablica, macierz):
+    sum = 0
+    pary = generujPary(tablica)
+    for i in range(pary.__len__()):
+        miastoAIndex = pary[i][0] - 1
+        miastoBIndex = pary[i][1] - 1
+        sum = sum + macierz[miastoAIndex][miastoBIndex]
+    return sum
+
 def iloscDrog(n):
     if (n == 1):
         return 1
@@ -196,6 +205,7 @@ def bbPoziom(pom, wielkosc, najkrotszaDroga, macierzPierwotna):
     tabPrzejscia = []
     wielkosc = wielkosc
     minLB = 2147483647
+    macierzDoDrogi = copy.deepcopy(macierzPierwotna)
     macierz, LBMACIERZY = redukcja(macierzPierwotna)
     if pom == 0:
         tabPrzejscia.extend(kombinacjeWielkosciKonkretnychDrog(Ilosc_Miast,wielkosc))
@@ -211,7 +221,11 @@ def bbPoziom(pom, wielkosc, najkrotszaDroga, macierzPierwotna):
         if(deltaLB < minLB):
             minLB = deltaLB
             najkrotszaDroga = droga
-    return najkrotszaDroga, m
+    return najkrotszaDroga, m, dlugoscDrogi(najkrotszaDroga,macierzDoDrogi)
+
+def bb(pom, wielkosc, najkrotszaDroga, macierzPierwotna):
+    droga, m, nic = bbPoziom(0, 2, [  ], macierzPierwotna)
+
 
 wybor = int(input('Wybieramy!\n\t1.Wpisuje z palca(do dopisania obsluga)\n\t2.Wczytam z pliku\nHmm?\n'))
 if wybor == 1:
@@ -309,6 +323,7 @@ print "\n"
 # macierz to zawsze wstepniak z ktory podajemy do liczenia LB
 # m bedziemy wykorzystywac
 
-droga,m = bbPoziom(1,3,[1,4],macierz)
+droga,m,dyst = bbPoziom(1,3,[1,4],macierz)
 print droga
 print m
+print dyst
