@@ -235,14 +235,15 @@ def bbPoziom(pom, wielkosc, najkrotszaDroga, macierzPierwotna, LBpop, macierzPop
         if pom == 0:
             noweLB,niepotrzebnazmienna,m = liczLB(m,r,droga)
         else:
-            print droga #wydaje sie ze wszystko bangla
+            #print droga #wydaje sie ze wszystko bangla
             noweLB,niepotrzebnazmienna,m = liczLB(m,LBpop,droga)
             #print m #Dobre po
         deltaLB = noweLB - LBpop
         if(deltaLB < minLB):
             minLB = deltaLB
             najkrotszaDroga = droga
-        print droga, noweLB
+        if najkrotszaDroga.__len__() == Ilosc_Miast:
+            najkrotszaDroga.append(1)
     return najkrotszaDroga, m, dlugoscDrogi(najkrotszaDroga,macierzDoDrogi), minLB, m
 
 def bb(macierzPierwotna):
@@ -250,14 +251,14 @@ def bb(macierzPierwotna):
     droga, m, odleglosc, lb, mp = bbPoziom(0, 2, [  ], macierzPierwotna, 0, 0, macierzDoDrogi)
     aktaulnieNajkrotszaDroga = droga
     LBpop = lb
-    print "LBpop", LBpop  # zle
+    #print "LBpop", LBpop  # zle
     macirzPoprzednia = mp
     for i in range(iloscPoziomow(Ilosc_Miast)-1):
         droga, m, odleglosc, lb, mp = bbPoziom(1,3+i,aktaulnieNajkrotszaDroga,macierzPierwotna, LBpop, macirzPoprzednia,macierzDoDrogi)
         aktaulnieNajkrotszaDroga = droga
         LBpop = lb
         macirzPoprzednia = mp
-        print "LBpop", LBpop #zle
+        #print "LBpop", LBpop #zle
     return aktaulnieNajkrotszaDroga, odleglosc
 
 
@@ -336,38 +337,7 @@ print('Wypisanie:')
 for i in range(rozmiar):
     print(macierz[ i ])
 
-#Test
 print "\n"
-#1
-b = copy.deepcopy(macierz)
-print b
-#2
-droga = [1,4,3]
-#3
-a,r = redukcja(b)
-#4
-b = copy.deepcopy(a)
-print "Po redukcji 1: ", b
-print "r: ", r
-#4a
-LBprev = r
-#5
-print "przed: ", b
-b = negacja(b,droga)
-print "Po negacji: ", b
-#6
-b,r = redukcja(b)
-print "po redukcji 2: ", b
-print "r: ", r
-#7
-par = generujPary(droga)
-print a
-print par
-print "A: ", a[par[-1][0]-1][par[-1][1]-1]
-print "LBprev: ", LBprev
-print "\n"
-#DORRZE
-
 droga,dyst = bb(macierz)
 print droga
 print dyst
