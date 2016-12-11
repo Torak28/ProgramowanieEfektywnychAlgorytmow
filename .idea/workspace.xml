@@ -30,21 +30,14 @@
       <file leaf-file-name="TSP_BB.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/TSP PEA/TSP_BB.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1100">
-              <caret line="251" column="0" selection-start-line="251" selection-start-column="0" selection-end-line="251" selection-end-column="0" />
+            <state relative-caret-position="187">
+              <caret line="138" column="54" selection-start-line="138" selection-start-column="4" selection-end-line="138" selection-end-column="54" />
               <folding>
                 <element signature="e#36#47#0" expanded="true" />
                 <element signature="e#396#416#0" expanded="false" />
-                <element signature="e#609#736#0" expanded="false" />
-                <element signature="e#774#923#0" expanded="false" />
-                <element signature="e#960#1058#0" expanded="false" />
-                <element signature="e#1088#1276#0" expanded="false" />
-                <element signature="e#1312#1737#0" expanded="false" />
-                <element signature="e#1772#2197#0" expanded="false" />
-                <element signature="e#2226#2365#0" expanded="false" />
-                <element signature="e#3971#4206#0" expanded="false" />
-                <element signature="e#6043#6528#0" expanded="false" />
-                <element signature="e#6550#7283#0" expanded="false" />
+                <element signature="e#831#980#0" expanded="false" />
+                <element signature="e#5939#6424#0" expanded="false" />
+                <element signature="e#6446#7179#0" expanded="false" />
               </folding>
             </state>
           </provider>
@@ -53,8 +46,8 @@
       <file leaf-file-name="tsp10.txt" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/tsp10.txt">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="0">
-              <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="10" selection-end-column="39" />
+            <state relative-caret-position="34">
+              <caret line="2" column="16" selection-start-line="0" selection-start-column="0" selection-end-line="11" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -73,8 +66,8 @@
       <file leaf-file-name="test" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/TSP PEA/test">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="289">
-              <caret line="17" column="0" selection-start-line="17" selection-start-column="0" selection-end-line="17" selection-end-column="0" />
+            <state relative-caret-position="187">
+              <caret line="11" column="0" selection-start-line="11" selection-start-column="0" selection-end-line="11" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -83,8 +76,8 @@
       <file leaf-file-name="tsp12.txt" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/tsp12.txt">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="119">
-              <caret line="7" column="35" selection-start-line="7" selection-start-column="35" selection-end-line="7" selection-end-column="35" />
+            <state relative-caret-position="17">
+              <caret line="1" column="0" selection-start-line="1" selection-start-column="0" selection-end-line="12" selection-end-column="35" />
               <folding />
             </state>
           </provider>
@@ -93,7 +86,7 @@
       <file leaf-file-name="28.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/TSP PEA/28.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="153">
+            <state relative-caret-position="-510">
               <caret line="9" column="14" selection-start-line="9" selection-start-column="14" selection-end-line="9" selection-end-column="14" />
               <folding />
             </state>
@@ -730,7 +723,14 @@
       <option name="project" value="LOCAL" />
       <updated>1481491315185</updated>
     </task>
-    <option name="localTasksCounter" value="44" />
+    <task id="LOCAL-00044" summary="lets see">
+      <created>1481493430981</created>
+      <option name="number" value="00044" />
+      <option name="presentableId" value="LOCAL-00044" />
+      <option name="project" value="LOCAL" />
+      <updated>1481493430981</updated>
+    </task>
+    <option name="localTasksCounter" value="45" />
     <servers />
   </component>
   <component name="TodoView">
@@ -814,7 +814,6 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Dziala w zaleznosci od wielkosci&#10;" />
     <MESSAGE value="Dodałem IloscLiscy do danego Grafu" />
     <MESSAGE value="Generator Par dla Negowania Macierzy" />
     <MESSAGE value="Fix Par dla Negowania Macierzy" />
@@ -839,7 +838,8 @@
     <MESSAGE value="Hmm cos jest na rzeczy&#10;" />
     <MESSAGE value="Closer each iteration" />
     <MESSAGE value="Better stronger" />
-    <option name="LAST_COMMIT_MESSAGE" value="Better stronger" />
+    <MESSAGE value="lets see" />
+    <option name="LAST_COMMIT_MESSAGE" value="lets see" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -850,7 +850,7 @@
           </properties>
         </breakpoint>
       </default-breakpoints>
-      <option name="time" value="71" />
+      <option name="time" value="72" />
     </breakpoint-manager>
     <watches-manager>
       <configuration name="PythonConfigurationType">
@@ -922,16 +922,9 @@
           <folding>
             <element signature="e#36#47#0" expanded="true" />
             <element signature="e#396#416#0" expanded="false" />
-            <element signature="e#609#736#0" expanded="false" />
-            <element signature="e#774#923#0" expanded="false" />
-            <element signature="e#960#1058#0" expanded="false" />
-            <element signature="e#1088#1276#0" expanded="false" />
-            <element signature="e#1312#1737#0" expanded="false" />
-            <element signature="e#1772#2197#0" expanded="false" />
-            <element signature="e#2226#2365#0" expanded="false" />
-            <element signature="e#3971#4206#0" expanded="false" />
-            <element signature="e#6043#6528#0" expanded="false" />
-            <element signature="e#6550#7283#0" expanded="false" />
+            <element signature="e#831#980#0" expanded="false" />
+            <element signature="e#5939#6424#0" expanded="false" />
+            <element signature="e#6446#7179#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -991,16 +984,9 @@
           <folding>
             <element signature="e#36#47#0" expanded="true" />
             <element signature="e#396#416#0" expanded="false" />
-            <element signature="e#609#736#0" expanded="false" />
-            <element signature="e#774#923#0" expanded="false" />
-            <element signature="e#960#1058#0" expanded="false" />
-            <element signature="e#1088#1276#0" expanded="false" />
-            <element signature="e#1312#1737#0" expanded="false" />
-            <element signature="e#1772#2197#0" expanded="false" />
-            <element signature="e#2226#2365#0" expanded="false" />
-            <element signature="e#3971#4206#0" expanded="false" />
-            <element signature="e#6043#6528#0" expanded="false" />
-            <element signature="e#6550#7283#0" expanded="false" />
+            <element signature="e#831#980#0" expanded="false" />
+            <element signature="e#5939#6424#0" expanded="false" />
+            <element signature="e#6446#7179#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -1044,16 +1030,9 @@
           <folding>
             <element signature="e#36#47#0" expanded="true" />
             <element signature="e#396#416#0" expanded="false" />
-            <element signature="e#609#736#0" expanded="false" />
-            <element signature="e#774#923#0" expanded="false" />
-            <element signature="e#960#1058#0" expanded="false" />
-            <element signature="e#1088#1276#0" expanded="false" />
-            <element signature="e#1312#1737#0" expanded="false" />
-            <element signature="e#1772#2197#0" expanded="false" />
-            <element signature="e#2226#2365#0" expanded="false" />
-            <element signature="e#3971#4206#0" expanded="false" />
-            <element signature="e#6043#6528#0" expanded="false" />
-            <element signature="e#6550#7283#0" expanded="false" />
+            <element signature="e#831#980#0" expanded="false" />
+            <element signature="e#5939#6424#0" expanded="false" />
+            <element signature="e#6446#7179#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -1081,16 +1060,9 @@
           <folding>
             <element signature="e#36#47#0" expanded="true" />
             <element signature="e#396#416#0" expanded="false" />
-            <element signature="e#609#736#0" expanded="false" />
-            <element signature="e#774#923#0" expanded="false" />
-            <element signature="e#960#1058#0" expanded="false" />
-            <element signature="e#1088#1276#0" expanded="false" />
-            <element signature="e#1312#1737#0" expanded="false" />
-            <element signature="e#1772#2197#0" expanded="false" />
-            <element signature="e#2226#2365#0" expanded="false" />
-            <element signature="e#3971#4206#0" expanded="false" />
-            <element signature="e#6043#6528#0" expanded="false" />
-            <element signature="e#6550#7283#0" expanded="false" />
+            <element signature="e#831#980#0" expanded="false" />
+            <element signature="e#5939#6424#0" expanded="false" />
+            <element signature="e#6446#7179#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -1126,16 +1098,9 @@
           <folding>
             <element signature="e#36#47#0" expanded="true" />
             <element signature="e#396#416#0" expanded="false" />
-            <element signature="e#609#736#0" expanded="false" />
-            <element signature="e#774#923#0" expanded="false" />
-            <element signature="e#960#1058#0" expanded="false" />
-            <element signature="e#1088#1276#0" expanded="false" />
-            <element signature="e#1312#1737#0" expanded="false" />
-            <element signature="e#1772#2197#0" expanded="false" />
-            <element signature="e#2226#2365#0" expanded="false" />
-            <element signature="e#3971#4206#0" expanded="false" />
-            <element signature="e#6043#6528#0" expanded="false" />
-            <element signature="e#6550#7283#0" expanded="false" />
+            <element signature="e#831#980#0" expanded="false" />
+            <element signature="e#5939#6424#0" expanded="false" />
+            <element signature="e#6446#7179#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -1170,16 +1135,9 @@
           <folding>
             <element signature="e#36#47#0" expanded="true" />
             <element signature="e#396#416#0" expanded="false" />
-            <element signature="e#609#736#0" expanded="false" />
-            <element signature="e#774#923#0" expanded="false" />
-            <element signature="e#960#1058#0" expanded="false" />
-            <element signature="e#1088#1276#0" expanded="false" />
-            <element signature="e#1312#1737#0" expanded="false" />
-            <element signature="e#1772#2197#0" expanded="false" />
-            <element signature="e#2226#2365#0" expanded="false" />
-            <element signature="e#3971#4206#0" expanded="false" />
-            <element signature="e#6043#6528#0" expanded="false" />
-            <element signature="e#6550#7283#0" expanded="false" />
+            <element signature="e#831#980#0" expanded="false" />
+            <element signature="e#5939#6424#0" expanded="false" />
+            <element signature="e#6446#7179#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -1221,16 +1179,9 @@
           <folding>
             <element signature="e#36#47#0" expanded="true" />
             <element signature="e#396#416#0" expanded="false" />
-            <element signature="e#609#736#0" expanded="false" />
-            <element signature="e#774#923#0" expanded="false" />
-            <element signature="e#960#1058#0" expanded="false" />
-            <element signature="e#1088#1276#0" expanded="false" />
-            <element signature="e#1312#1737#0" expanded="false" />
-            <element signature="e#1772#2197#0" expanded="false" />
-            <element signature="e#2226#2365#0" expanded="false" />
-            <element signature="e#3971#4206#0" expanded="false" />
-            <element signature="e#6043#6528#0" expanded="false" />
-            <element signature="e#6550#7283#0" expanded="false" />
+            <element signature="e#831#980#0" expanded="false" />
+            <element signature="e#5939#6424#0" expanded="false" />
+            <element signature="e#6446#7179#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -1286,6 +1237,23 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="192">
           <caret line="151" column="0" selection-start-line="151" selection-start-column="0" selection-end-line="151" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/tsp12.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="17">
+          <caret line="1" column="0" selection-start-line="1" selection-start-column="0" selection-end-line="12" selection-end-column="35" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/TSP PEA/28.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-510">
+          <caret line="9" column="14" selection-start-line="9" selection-start-column="14" selection-end-line="9" selection-end-column="14" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -1297,55 +1265,32 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/TSP PEA/28.py">
+    <entry file="file://$PROJECT_DIR$/tsp10.txt">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="153">
-          <caret line="9" column="14" selection-start-line="9" selection-start-column="14" selection-end-line="9" selection-end-column="14" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/tsp12.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="119">
-          <caret line="7" column="35" selection-start-line="7" selection-start-column="35" selection-end-line="7" selection-end-column="35" />
+        <state relative-caret-position="34">
+          <caret line="2" column="16" selection-start-line="0" selection-start-column="0" selection-end-line="11" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/TSP PEA/test">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="289">
-          <caret line="17" column="0" selection-start-line="17" selection-start-column="0" selection-end-line="17" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/tsp10.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="10" selection-end-column="39" />
+        <state relative-caret-position="187">
+          <caret line="11" column="0" selection-start-line="11" selection-start-column="0" selection-end-line="11" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/TSP PEA/TSP_BB.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1100">
-          <caret line="251" column="0" selection-start-line="251" selection-start-column="0" selection-end-line="251" selection-end-column="0" />
+        <state relative-caret-position="187">
+          <caret line="138" column="54" selection-start-line="138" selection-start-column="4" selection-end-line="138" selection-end-column="54" />
           <folding>
             <element signature="e#36#47#0" expanded="true" />
             <element signature="e#396#416#0" expanded="false" />
-            <element signature="e#609#736#0" expanded="false" />
-            <element signature="e#774#923#0" expanded="false" />
-            <element signature="e#960#1058#0" expanded="false" />
-            <element signature="e#1088#1276#0" expanded="false" />
-            <element signature="e#1312#1737#0" expanded="false" />
-            <element signature="e#1772#2197#0" expanded="false" />
-            <element signature="e#2226#2365#0" expanded="false" />
-            <element signature="e#3971#4206#0" expanded="false" />
-            <element signature="e#6043#6528#0" expanded="false" />
-            <element signature="e#6550#7283#0" expanded="false" />
+            <element signature="e#831#980#0" expanded="false" />
+            <element signature="e#5939#6424#0" expanded="false" />
+            <element signature="e#6446#7179#0" expanded="false" />
           </folding>
         </state>
       </provider>
