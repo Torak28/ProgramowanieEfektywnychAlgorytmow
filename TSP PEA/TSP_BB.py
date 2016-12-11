@@ -5,7 +5,6 @@ import itertools
 
 INF = -1
 ile = 0
-LBMACIERZY = 0
 
 #Macierz to tablica zawierajaca
 def PoliczDroge(tablica, macierz):
@@ -188,9 +187,31 @@ def kombinacjeWielkosciKonkretnychDrog(n, wielkosc):
     return wynik
 
 def liczLB(macierzPierwotna, macierz, LBprev, tablica):
-    A = macierzPierwotna[tablica[0]][tablica[1]]
+    A = macierzPierwotna[tablica[0]-1][tablica[1]-1]
     macierz, r = redukcja(macierz)
-    return LBprev + A + r
+    return LBprev + A + r, macierz
+
+def bbPoziom(pom, wielkosc, najkrotszaDroga, macierzPierwotna):
+    pom = pom
+    tabPrzejscia = []
+    wielkosc = wielkosc
+    minLB = 2147483647
+    macierz, LBMACIERZY = redukcja(macierzPierwotna)
+    if pom == 0:
+        tabPrzejscia.extend(kombinacjeWielkosciKonkretnychDrog(Ilosc_Miast,wielkosc))
+    else:
+        najkrotszaDroga = copy.deepcopy(najkrotszaDroga)
+        tabPrzejscia.extend(kombinacjeKonkretnychDrog(Ilosc_Miast,wielkosc,najkrotszaDroga))
+    for i in range(tabPrzejscia.__len__()):
+        m = copy.deepcopy(macierz)
+        droga = tabPrzejscia[i]
+        negacja(m,droga)
+        noweLB, m = liczLB(macierz,m,LBMACIERZY,droga)
+        deltaLB = noweLB - LBMACIERZY
+        if(deltaLB < minLB):
+            minLB = deltaLB
+            najkrotszaDroga = droga
+    return najkrotszaDroga, m
 
 wybor = int(input('Wybieramy!\n\t1.Wpisuje z palca(do dopisania obsluga)\n\t2.Wczytam z pliku\nHmm?\n'))
 if wybor == 1:
@@ -287,9 +308,7 @@ for i in range(rozmiar):
 print "\n"
 # macierz to zawsze wstepniak z ktory podajemy do liczenia LB
 # m bedziemy wykorzystywac
-wielkosc = 2
-macierz, LBMACIERZY = redukcja(macierz)
-m = copy.deepcopy(macierz)
-print macierz
+
+droga,m = bbPoziom(1,3,[1,4],macierz)
+print droga
 print m
-print kombinacjeWielkosciKonkretnychDrog(Ilosc_Miast,wielkosc)
