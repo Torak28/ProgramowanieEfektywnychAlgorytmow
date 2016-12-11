@@ -2,6 +2,7 @@
 
 import copy
 import itertools
+import time
 
 INF = -1
 ile = 0
@@ -107,13 +108,14 @@ def kombinacjeKonkretnychDrog(n, wielkosc,posiada):
     wynik = []
     for L in range(0, tablica.__len__() + 1):
         for subset in itertools.permutations(tablica, L):
-            if subset.__len__() == wielkosc:
+            if subset.__len__() == wielkosc and subset[0] == 1:
+                #print subset
                 subset = list(subset)
-                i = 1
-                if subset[0] == 1 and test(posiada,subset) == 1:
+                if test(posiada,subset) == 1:
                     subset = [subset]
                     wynik.extend(subset)
-                    i = i + 1
+            else:
+                break
     return wynik
 
 def kombinacjeWielkosciKonkretnychDrog(n, wielkosc):
@@ -229,7 +231,14 @@ print('Wypisanie:')
 for i in range(rozmiar):
     print(macierz[ i ])
 
+
+
+
 print "\n"
+start = time.clock()
 droga,dyst = bb(macierz)
+end = time.clock()
+total = end - start
 print "Najkrotsza droga: ", droga
 print "Jej dlugosc: ", dyst
+print("Czas pomiaru: {0:02f}s".format(total))
