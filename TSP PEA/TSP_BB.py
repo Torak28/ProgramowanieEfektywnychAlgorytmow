@@ -190,7 +190,7 @@ def kombinacjeKonkretnychDrog(n, wielkosc,posiada):
             if subset.__len__() == wielkosc:
                 subset = list(subset)
                 i = 1
-                if subset[0] == 1 and subset[i] == posiada[i]:
+                if subset[0] == 1 and test(posiada,subset) == 1:
                     subset = [subset]
                     wynik.extend(subset)
                     i = i + 1
@@ -244,10 +244,10 @@ def bb(macierzPierwotna):
     droga, m, odleglosc, lb = bbPoziom(0, 2, [  ], macierzPierwotna, 0)
     aktaulnieNajkrotszaDroga = droga
     LBpop = lb
-    # for i in range(iloscPoziomow(Ilosc_Miast)-1):
-    #     droga, m, odleglosc, lb = bbPoziom(1,3+i,aktaulnieNajkrotszaDroga,macierzPierwotna, LBpop)
-    #     aktaulnieNajkrotszaDroga = droga
-    #     LBpop = lb
+    for i in range(iloscPoziomow(Ilosc_Miast)-1):
+        droga, m, odleglosc, lb = bbPoziom(1,3+i,aktaulnieNajkrotszaDroga,macierzPierwotna, LBpop)
+        aktaulnieNajkrotszaDroga = droga
+        LBpop = lb
     return aktaulnieNajkrotszaDroga, odleglosc
 
 
@@ -347,7 +347,7 @@ print "\n"
 # macierz to zawsze wstepniak z ktory podajemy do liczenia LB
 # m bedziemy wykorzystywac
 
-print kombinacjeKonkretnychDrog(5,4,[1,4,3])
+#print kombinacjeKonkretnychDrog(5,4,[1,4,3])
 
 droga,dyst = bb(macierz)
 print droga
