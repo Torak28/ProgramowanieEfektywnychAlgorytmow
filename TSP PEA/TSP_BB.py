@@ -167,6 +167,18 @@ def kombinacjeDrog(n, wielkosc):
                     wynik.extend(subset)
     return wynik
 
+def test(tabliceDoSprawdzenia, tabliceSprawdzajaca):
+    pom = 0
+    for i in range(tabliceDoSprawdzenia.__len__()):
+        if tabliceSprawdzajaca[i] == tabliceDoSprawdzenia[i]:
+            pom = pom + 1
+        else:
+            pom = pom + 0
+    if pom == tabliceDoSprawdzenia.__len__():
+        return 1
+    else:
+        return 0
+
 def kombinacjeKonkretnychDrog(n, wielkosc,posiada):
     len = posiada.__len__()
     tablica = []
@@ -198,18 +210,17 @@ def kombinacjeWielkosciKonkretnychDrog(n, wielkosc):
                     wynik.extend(subset)
     return wynik
 
-def liczLB(macierzPierwotna, macierz, LBprev, tablica):
+def liczLB(macierzPierwotna, r, LBprev, tablica):
     A = macierzPierwotna[tablica[0]-1][tablica[1]-1]
-    macierz, r = redukcja(macierz)
-    return LBprev + A + r, macierz
+    return LBprev + A + r
 
-def bbPoziom(pom, wielkosc, najkrotszaDroga, macierzPierwotna):
+def bbPoziom(pom, wielkosc, najkrotszaDroga, macierzPierwotna, LBpop):
     pom = pom
     tabPrzejscia = []
     wielkosc = wielkosc
     minLB = 2147483647
     macierzDoDrogi = copy.deepcopy(macierzPierwotna)
-    macierz, LBMACIERZY = redukcja(macierzPierwotna)
+    macierz, r = redukcja(macierzPierwotna)
     if pom == 0:
         tabPrzejscia.extend(kombinacjeWielkosciKonkretnychDrog(Ilosc_Miast,wielkosc))
     else:
@@ -219,19 +230,24 @@ def bbPoziom(pom, wielkosc, najkrotszaDroga, macierzPierwotna):
         m = copy.deepcopy(macierz)
         droga = tabPrzejscia[i]
         negacja(m,droga)
-        noweLB, m = liczLB(macierz,m,LBMACIERZY,droga)
-        deltaLB = noweLB - LBMACIERZY
+        if pom == 0:
+            noweLB = liczLB(macierz,r,pom,droga)
+        else:
+            noweLB = liczLB(macierz,r,LBpop,droga)
+        deltaLB = noweLB - LBpop
         if(deltaLB < minLB):
             minLB = deltaLB
             najkrotszaDroga = droga
-    return najkrotszaDroga, m, dlugoscDrogi(najkrotszaDroga,macierzDoDrogi)
+    return najkrotszaDroga, m, dlugoscDrogi(najkrotszaDroga,macierzDoDrogi), noweLB
 
 def bb(macierzPierwotna):
-    droga, m, odleglosc = bbPoziom(0, 2, [  ], macierzPierwotna)
+    droga, m, odleglosc, lb = bbPoziom(0, 2, [  ], macierzPierwotna, 0)
     aktaulnieNajkrotszaDroga = droga
-    for i in range(iloscPoziomow(Ilosc_Miast)):
-        droga, m, odleglosc = bbPoziom(1,3+i,aktaulnieNajkrotszaDroga,macierzPierwotna)
-        aktaulnieNajkrotszaDroga = droga
+    LBpop = lb
+    # for i in range(iloscPoziomow(Ilosc_Miast)-1):
+    #     droga, m, odleglosc, lb = bbPoziom(1,3+i,aktaulnieNajkrotszaDroga,macierzPierwotna, LBpop)
+    #     aktaulnieNajkrotszaDroga = droga
+    #     LBpop = lb
     return aktaulnieNajkrotszaDroga, odleglosc
 
 
@@ -330,6 +346,8 @@ for i in range(rozmiar):
 print "\n"
 # macierz to zawsze wstepniak z ktory podajemy do liczenia LB
 # m bedziemy wykorzystywac
+
+print kombinacjeKonkretnychDrog(5,4,[1,4,3])
 
 droga,dyst = bb(macierz)
 print droga
