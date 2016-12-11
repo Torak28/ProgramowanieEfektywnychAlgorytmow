@@ -6,53 +6,6 @@ import itertools
 INF = -1
 ile = 0
 
-#Macierz to tablica zawierajaca
-def PoliczDroge(tablica, macierz):
-    sum = 0
-    for i in range(0,tablica.__len__() - 1):
-        miastoAIndex = tablica[i]
-        miastoBIndex = tablica[i + 1]
-        sum += int(macierz[miastoAIndex][miastoBIndex])
-    return sum
-
-def swap(a,i,j):
-    temp = a[i]
-    a[i] = a[j]
-    a[j] = temp
-
-# Kolejnosc Leksykograficzna(Raczej niepotrzebna)
-def nastepna_kolejnosc(tablica):
-    global ile
-    ile += 1
-    kolejnoscOstateczny = []
-    # Krok 1
-    # https://www.quora.com/How-would-you-explain-an-algorithm-that-generates-permutations-using-lexicographic-ordering
-    maxX = -1;
-    for i in range(0, tablica.__len__() - 1):
-        if (tablica[ i ] < tablica[ i + 1 ]):
-            maxX = i
-    if (maxX == -1) :
-        return 0
-    #Krok 2
-    maxY = -1
-    for j in range(0, tablica.__len__()):
-        if (tablica[ maxX ] < tablica[ j ]) :
-            maxY = j
-    #Krok 3
-    swap(tablica, maxX, maxY)
-    #Krok 4
-    kolejnoscOstateczny = tablica[maxX + 1:]
-    tablica = tablica[:maxX + 1]
-    kolejnoscOstateczny.reverse()
-    tablica = tablica + kolejnoscOstateczny
-    return tablica
-
-def silnia(n):
-    if (n == 1):
-        return 1
-    else:
-        return n * silnia(n - 1)
-
 def dlugoscDrogi(tablica, macierz):
     sum = 0
     pary = generujPary(tablica)
@@ -62,27 +15,8 @@ def dlugoscDrogi(tablica, macierz):
         sum = sum + macierz[miastoAIndex][miastoBIndex]
     return sum
 
-def iloscDrog(n):
-    if (n == 1):
-        return 1
-    else:
-        return (n-1) * iloscDrog(n-1) + 1
-
-def iloscLisci(n):
-    if n == 1:
-        return 1
-    else:
-        return (n-1) * iloscLisci(n-1)
-
 def iloscPoziomow(Ilosc_Miast):
     return Ilosc_Miast-1
-
-def generujGraf(n):
-    x = iloscDrog(n)
-    tab = [ ]
-    for i in range(x):
-        tab.append(i + 1)
-    return tab
 
 def generujPary(tablica):
     wynik = []
@@ -153,20 +87,6 @@ def redukcja(macierz):
     LB = sum1 + sum2
     return macierz, LB
 
-def kombinacjeDrog(n, wielkosc):
-    tablica = []
-    for i in range(n):
-        tablica.append(i+1)
-    wynik = []
-    for L in range(0, len(tablica) + 1):
-        for subset in itertools.permutations(tablica, L):
-            if subset.__len__() == wielkosc:
-                subset = list(subset)
-                if subset[0] == 1:
-                    subset = [subset]
-                    wynik.extend(subset)
-    return wynik
-
 def test(tabliceDoSprawdzenia, tabliceSprawdzajaca):
     pom = 0
     for i in range(tabliceDoSprawdzenia.__len__()):
@@ -217,8 +137,6 @@ def liczLB(macierzPierwotna,LBprev, droga):
     macierzPierwotna,r = redukcja(macierzPierwotna)
     return LBprev + A + r, r , macierzPierwotna
 
-# A tablica z LB?!
-
 def bbPoziom(pom, wielkosc, najkrotszaDroga, macierzPierwotna, LBpop, macierzPoprzednia, macierzDoDrogi):
     tabPrzejscia = []
     minLB = 2147483647
@@ -235,9 +153,7 @@ def bbPoziom(pom, wielkosc, najkrotszaDroga, macierzPierwotna, LBpop, macierzPop
         if pom == 0:
             noweLB,niepotrzebnazmienna,m = liczLB(m,r,droga)
         else:
-            #print droga #wydaje sie ze wszystko bangla
             noweLB,niepotrzebnazmienna,m = liczLB(m,LBpop,droga)
-            #print m #Dobre po
         deltaLB = noweLB - LBpop
         if(deltaLB < minLB):
             minLB = deltaLB
@@ -251,14 +167,12 @@ def bb(macierzPierwotna):
     droga, m, odleglosc, lb, mp = bbPoziom(0, 2, [  ], macierzPierwotna, 0, 0, macierzDoDrogi)
     aktaulnieNajkrotszaDroga = droga
     LBpop = lb
-    #print "LBpop", LBpop  # zle
     macirzPoprzednia = mp
     for i in range(iloscPoziomow(Ilosc_Miast)-1):
         droga, m, odleglosc, lb, mp = bbPoziom(1,3+i,aktaulnieNajkrotszaDroga,macierzPierwotna, LBpop, macirzPoprzednia,macierzDoDrogi)
         aktaulnieNajkrotszaDroga = droga
         LBpop = lb
         macirzPoprzednia = mp
-        #print "LBpop", LBpop #zle
     return aktaulnieNajkrotszaDroga, odleglosc
 
 
@@ -270,7 +184,6 @@ if wybor == 1:
     print('Koszty przejazdu? (Liczba i enter. Sam program rozkmini jak to leci)')
     for i in range(Ilosc_Miast):
         for j in range(Ilosc_Miast):
-            # Wpisywanie z palca
             macierz[i][j] = int(input())
 
     rozmiar = len(macierz)
@@ -306,30 +219,9 @@ elif wybor == 2:
         macierz[i][i] = INF
     for i in range(Ilosc_Miast):
         tabPlik.append(i)
-    iloscMozliwosci = silnia(Ilosc_Miast)
-    nalepszaTrasa = []
-    najkrotszyDystans = 2147483647
-    dychaW = 0
-    while tabPlik != 0:
-        tabPlik.append(tabPlik[0])
-        d = PoliczDroge(tabPlik, macierz)
-        if(d < najkrotszyDystans):
-            nalepszaTrasa = tabPlik
-            najkrotszyDystans = PoliczDroge(tabPlik, macierz)
-        tabPlik = tabPlik[:tabPlik.__len__()-1]
-        tabPlik = nastepna_kolejnosc(tabPlik)
-        procent = 100 * ile/float(iloscMozliwosci)
-        if procent > dychaW:
-            print "|",
-            dychaW += 10
-    print ""
-    print "Najlepsza trasa: " +str(nalepszaTrasa)
-    print "dystans: " + str(PoliczDroge(nalepszaTrasa, macierz))
 
 # TODO:
 # * ograniczyc przeszukania jako ze pierwszy i tak jest zawsze 0(zrobic to zalezne od wywolania funkcji tak zeby mozna bylo nadal liczyc buteforca), Napewno?!
-# * Nie potrzebny if == 1, albo go pozmieniac tak zeby sypal dobre wyniki
-# * Liscie to taki niby zapis przejscia
 # * przerwanie kmbinacji w zaleznosci od wilkosci permutacji(zeby nie genreowac wszystkiego)
 
 # Drukiwanie dla obadania o co kaman
@@ -339,5 +231,5 @@ for i in range(rozmiar):
 
 print "\n"
 droga,dyst = bb(macierz)
-print droga
-print dyst
+print "Najkrotsza droga: ", droga
+print "Jej dlugosc: ", dyst
