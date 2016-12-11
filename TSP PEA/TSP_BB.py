@@ -74,6 +74,9 @@ def iloscLisci(n):
     else:
         return (n-1) * iloscLisci(n-1)
 
+def iloscPoziomow(Ilosc_Miast):
+    return Ilosc_Miast-1
+
 def generujGraf(n):
     x = iloscDrog(n)
     tab = [ ]
@@ -223,8 +226,13 @@ def bbPoziom(pom, wielkosc, najkrotszaDroga, macierzPierwotna):
             najkrotszaDroga = droga
     return najkrotszaDroga, m, dlugoscDrogi(najkrotszaDroga,macierzDoDrogi)
 
-def bb(pom, wielkosc, najkrotszaDroga, macierzPierwotna):
-    droga, m, nic = bbPoziom(0, 2, [  ], macierzPierwotna)
+def bb(macierzPierwotna):
+    droga, m, odleglosc = bbPoziom(0, 2, [  ], macierzPierwotna)
+    aktaulnieNajkrotszaDroga = droga
+    for i in range(iloscPoziomow(Ilosc_Miast)):
+        droga, m, odleglosc = bbPoziom(1,3+i,aktaulnieNajkrotszaDroga,macierzPierwotna)
+        aktaulnieNajkrotszaDroga = droga
+    return aktaulnieNajkrotszaDroga, odleglosc
 
 
 wybor = int(input('Wybieramy!\n\t1.Wpisuje z palca(do dopisania obsluga)\n\t2.Wczytam z pliku\nHmm?\n'))
@@ -323,7 +331,6 @@ print "\n"
 # macierz to zawsze wstepniak z ktory podajemy do liczenia LB
 # m bedziemy wykorzystywac
 
-droga,m,dyst = bbPoziom(1,3,[1,4],macierz)
+droga,dyst = bb(macierz)
 print droga
-print m
 print dyst
