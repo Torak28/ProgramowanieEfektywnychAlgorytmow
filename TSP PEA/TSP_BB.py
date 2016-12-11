@@ -212,16 +212,20 @@ def kombinacjeWielkosciKonkretnychDrog(n, wielkosc):
 
 def liczLB(macierzPierwotna,LBprev, tablica):
     A = macierzPierwotna[tablica[0]-1][tablica[1]-1]
-    macierz,r = redukcja(macierzPierwotna)
-    return LBprev + A + r, r , macierz
+    macierzPierwotna = negacja(macierzPierwotna,tablica)
+    macierzPierwotna,r = redukcja(macierzPierwotna)
+    return LBprev + A + r, r , macierzPierwotna
 
 # A tablica z LB?!
 def bbPoziom(pom, wielkosc, najkrotszaDroga, macierzPierwotna, LBpop, macierzPoprzednia, macierzDoDrogi):
+    tabLB = []
+    tabPom = []
     tabPrzejscia = []
     minLB = 2147483647
     # spr czy zawsze stala BANGLA
     if pom == 0:
         macierz, r = redukcja(macierzPierwotna)
+        #print macierz, r #Bangla pierwsza redukcja
         tabPrzejscia.extend(kombinacjeWielkosciKonkretnychDrog(Ilosc_Miast,wielkosc))
     else:
         # Nie chce redukowac
@@ -232,22 +236,22 @@ def bbPoziom(pom, wielkosc, najkrotszaDroga, macierzPierwotna, LBpop, macierzPop
     for i in range(tabPrzejscia.__len__()):
         m = copy.deepcopy(macierz)
         droga = tabPrzejscia[i]
-        negacja(m,droga)
+        # if pom == 1:
+        #     m,r = redukcja(m)
+        #m = negacja(m,droga)
         if pom == 0:
-            #print macierz
-            #print droga
-            noweLB,r,m = liczLB(macierz,pom,droga)
-            #print r
-            #print m
+            noweLB,niepotrzebnazmienna,m = liczLB(m,r,droga)
         else:
             # r powinno sie zmieniac
-            noweLB,r,m = liczLB(macierz,LBpop,droga)
+            noweLB,niepotrzebnazmienna,m = liczLB(m,LBpop,droga)
         deltaLB = noweLB - LBpop
-        # print deltaLB, noweLB, LBpop, droga, r
-        # print m
         if(deltaLB < minLB):
             minLB = deltaLB
             najkrotszaDroga = droga
+        tabPom.append(minLB)
+        print droga, noweLB
+    tabLB.append(tabPom[-1])
+    print tabLB
     return najkrotszaDroga, m, dlugoscDrogi(najkrotszaDroga,macierzDoDrogi), minLB, m
 
 def bb(macierzPierwotna):
@@ -261,6 +265,7 @@ def bb(macierzPierwotna):
         aktaulnieNajkrotszaDroga = droga
         LBpop = lb
         macirzPoprzednia = mp
+        print "LBpop", LBpop
     return aktaulnieNajkrotszaDroga, odleglosc
 
 
@@ -364,17 +369,27 @@ print "\n"
 # print 666,b,r,25,[1,2]
 # print liczLB(b,r,[1,4,3])
 
-# droga,dyst = bb(macierz)
-# print droga
-# print dyst
+
 
 b = copy.deepcopy(macierz)
-b,r = redukcja(b)
-print "Po redukcji: ", b
+print b
+droga = [1,4,3]
+a,r = redukcja(b)
+b = copy.deepcopy(a)
+print "Po redukcji 1: ", b
 print "r: ", r
-b = negacja(b,[1,4,3])
+b = negacja(b,droga)
 print "Po negacji: ", b
 b,r = redukcja(b)
-print "po redukcji: ", b
+print "po redukcji 2: ", b
 print "r: ", r
+par = generujPary(droga)
+print a
+print par
+print a[par[-1][0]-1][par[-1][1]-1]
+print "\n"
 #DORRZE
+
+droga,dyst = bb(macierz)
+print droga
+print dyst
