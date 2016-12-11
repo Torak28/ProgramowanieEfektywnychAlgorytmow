@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="BookmarkManager">
-    <bookmark url="file://$PROJECT_DIR$/TSP PEA/TSP_BB.py" line="346" mnemonic="Z" />
+    <bookmark url="file://$PROJECT_DIR$/TSP PEA/TSP_BB.py" line="338" mnemonic="Z" />
   </component>
   <component name="ChangeListManager">
     <list default="true" id="e3072320-8269-4da3-b042-05fef085bc7f" name="Default" comment="">
@@ -32,8 +32,8 @@
       <file leaf-file-name="TSP_BB.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/TSP PEA/TSP_BB.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="369">
-              <caret line="254" column="82" selection-start-line="254" selection-start-column="77" selection-end-line="254" selection-end-column="82" />
+            <state relative-caret-position="332">
+              <caret line="244" column="8" selection-start-line="244" selection-start-column="8" selection-end-line="244" selection-end-column="8" />
               <folding>
                 <element signature="e#36#47#0" expanded="true" />
                 <element signature="e#155#350#0" expanded="false" />
@@ -55,10 +55,9 @@
                 <element signature="e#3950#4341#0" expanded="false" />
                 <element signature="e#4400#4677#0" expanded="false" />
                 <element signature="e#4735#5241#0" expanded="false" />
-                <element signature="e#8123#8641#0" expanded="false" />
-                <element signature="e#8663#10093#0" expanded="false" />
-                <element signature="e#10577#10582#0" expanded="false" />
-                <marker date="1481478549007" expanded="false" signature="5295:5696" ph="..." />
+                <element signature="e#7852#8370#0" expanded="false" />
+                <element signature="e#8392#9822#0" expanded="false" />
+                <marker date="1481482306926" expanded="false" signature="5295:5696" ph="..." />
               </folding>
             </state>
           </provider>
@@ -612,7 +611,21 @@
       <option name="project" value="LOCAL" />
       <updated>1481474162313</updated>
     </task>
-    <option name="localTasksCounter" value="35" />
+    <task id="LOCAL-00035" summary="Try hard&#10;">
+      <created>1481478555044</created>
+      <option name="number" value="00035" />
+      <option name="presentableId" value="LOCAL-00035" />
+      <option name="project" value="LOCAL" />
+      <updated>1481478555044</updated>
+    </task>
+    <task id="LOCAL-00036" summary="Getting closer">
+      <created>1481479157987</created>
+      <option name="number" value="00036" />
+      <option name="presentableId" value="LOCAL-00036" />
+      <option name="project" value="LOCAL" />
+      <updated>1481479157987</updated>
+    </task>
+    <option name="localTasksCounter" value="37" />
     <servers />
   </component>
   <component name="TodoView">
@@ -696,8 +709,6 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Ukryta opcja Projektowa" />
-    <MESSAGE value="Sprowadzenie całości do postaci mozliwej do oddania" />
     <MESSAGE value="Add TODO" />
     <MESSAGE value="Redukcja Wierszy bangla" />
     <MESSAGE value="Redukcja kolumn bangla" />
@@ -721,7 +732,9 @@
     <MESSAGE value=":c Cały czas probelm z obliczanie LB" />
     <MESSAGE value="delta LB nie działa dla glebokosci wiekszej niz 2&#10;&#10;" />
     <MESSAGE value="Debugowanie mocno, cos tam sie polepsza" />
-    <option name="LAST_COMMIT_MESSAGE" value="Debugowanie mocno, cos tam sie polepsza" />
+    <MESSAGE value="Try hard&#10;" />
+    <MESSAGE value="Getting closer" />
+    <option name="LAST_COMMIT_MESSAGE" value="Getting closer" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -766,10 +779,9 @@
             <element signature="e#3950#4341#0" expanded="false" />
             <element signature="e#4400#4677#0" expanded="false" />
             <element signature="e#4735#5241#0" expanded="false" />
-            <element signature="e#8123#8641#0" expanded="false" />
-            <element signature="e#8663#10093#0" expanded="false" />
-            <element signature="e#10577#10582#0" expanded="false" />
-            <marker date="1481478549007" expanded="false" signature="5295:5696" ph="..." />
+            <element signature="e#7852#8370#0" expanded="false" />
+            <element signature="e#8392#9822#0" expanded="false" />
+            <marker date="1481482306926" expanded="false" signature="5295:5696" ph="..." />
           </folding>
         </state>
       </provider>
@@ -831,10 +843,9 @@
             <element signature="e#3950#4341#0" expanded="false" />
             <element signature="e#4400#4677#0" expanded="false" />
             <element signature="e#4735#5241#0" expanded="false" />
-            <element signature="e#8123#8641#0" expanded="false" />
-            <element signature="e#8663#10093#0" expanded="false" />
-            <element signature="e#10577#10582#0" expanded="false" />
-            <marker date="1481478549007" expanded="false" signature="5295:5696" ph="..." />
+            <element signature="e#7852#8370#0" expanded="false" />
+            <element signature="e#8392#9822#0" expanded="false" />
+            <marker date="1481482306926" expanded="false" signature="5295:5696" ph="..." />
           </folding>
         </state>
       </provider>
@@ -880,10 +891,9 @@
             <element signature="e#3950#4341#0" expanded="false" />
             <element signature="e#4400#4677#0" expanded="false" />
             <element signature="e#4735#5241#0" expanded="false" />
-            <element signature="e#8123#8641#0" expanded="false" />
-            <element signature="e#8663#10093#0" expanded="false" />
-            <element signature="e#10577#10582#0" expanded="false" />
-            <marker date="1481478549007" expanded="false" signature="5295:5696" ph="..." />
+            <element signature="e#7852#8370#0" expanded="false" />
+            <element signature="e#8392#9822#0" expanded="false" />
+            <marker date="1481482306926" expanded="false" signature="5295:5696" ph="..." />
           </folding>
         </state>
       </provider>
@@ -937,10 +947,9 @@
             <element signature="e#3950#4341#0" expanded="false" />
             <element signature="e#4400#4677#0" expanded="false" />
             <element signature="e#4735#5241#0" expanded="false" />
-            <element signature="e#8123#8641#0" expanded="false" />
-            <element signature="e#8663#10093#0" expanded="false" />
-            <element signature="e#10577#10582#0" expanded="false" />
-            <marker date="1481478549007" expanded="false" signature="5295:5696" ph="..." />
+            <element signature="e#7852#8370#0" expanded="false" />
+            <element signature="e#8392#9822#0" expanded="false" />
+            <marker date="1481482306926" expanded="false" signature="5295:5696" ph="..." />
           </folding>
         </state>
       </provider>
@@ -993,10 +1002,9 @@
             <element signature="e#3950#4341#0" expanded="false" />
             <element signature="e#4400#4677#0" expanded="false" />
             <element signature="e#4735#5241#0" expanded="false" />
-            <element signature="e#8123#8641#0" expanded="false" />
-            <element signature="e#8663#10093#0" expanded="false" />
-            <element signature="e#10577#10582#0" expanded="false" />
-            <marker date="1481478549007" expanded="false" signature="5295:5696" ph="..." />
+            <element signature="e#7852#8370#0" expanded="false" />
+            <element signature="e#8392#9822#0" expanded="false" />
+            <marker date="1481482306926" expanded="false" signature="5295:5696" ph="..." />
           </folding>
         </state>
       </provider>
@@ -1056,10 +1064,9 @@
             <element signature="e#3950#4341#0" expanded="false" />
             <element signature="e#4400#4677#0" expanded="false" />
             <element signature="e#4735#5241#0" expanded="false" />
-            <element signature="e#8123#8641#0" expanded="false" />
-            <element signature="e#8663#10093#0" expanded="false" />
-            <element signature="e#10577#10582#0" expanded="false" />
-            <marker date="1481478549007" expanded="false" signature="5295:5696" ph="..." />
+            <element signature="e#7852#8370#0" expanded="false" />
+            <element signature="e#8392#9822#0" expanded="false" />
+            <marker date="1481482306926" expanded="false" signature="5295:5696" ph="..." />
           </folding>
         </state>
       </provider>
@@ -1144,8 +1151,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/TSP PEA/TSP_BB.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="369">
-          <caret line="254" column="82" selection-start-line="254" selection-start-column="77" selection-end-line="254" selection-end-column="82" />
+        <state relative-caret-position="332">
+          <caret line="244" column="8" selection-start-line="244" selection-start-column="8" selection-end-line="244" selection-end-column="8" />
           <folding>
             <element signature="e#36#47#0" expanded="true" />
             <element signature="e#155#350#0" expanded="false" />
@@ -1167,10 +1174,9 @@
             <element signature="e#3950#4341#0" expanded="false" />
             <element signature="e#4400#4677#0" expanded="false" />
             <element signature="e#4735#5241#0" expanded="false" />
-            <element signature="e#8123#8641#0" expanded="false" />
-            <element signature="e#8663#10093#0" expanded="false" />
-            <element signature="e#10577#10582#0" expanded="false" />
-            <marker date="1481478549007" expanded="false" signature="5295:5696" ph="..." />
+            <element signature="e#7852#8370#0" expanded="false" />
+            <element signature="e#8392#9822#0" expanded="false" />
+            <marker date="1481482306926" expanded="false" signature="5295:5696" ph="..." />
           </folding>
         </state>
       </provider>

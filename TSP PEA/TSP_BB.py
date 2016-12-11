@@ -210,48 +210,39 @@ def kombinacjeWielkosciKonkretnychDrog(n, wielkosc):
                     wynik.extend(subset)
     return wynik
 
-def liczLB(macierzPierwotna,LBprev, tablica):
-    A = macierzPierwotna[tablica[0]-1][tablica[1]-1]
-    macierzPierwotna = negacja(macierzPierwotna,tablica)
+def liczLB(macierzPierwotna,LBprev, droga):
+    pary = generujPary(droga)
+    A = macierzPierwotna[pary[-1][0]-1][pary[-1][1]-1]
+    macierzPierwotna = negacja(macierzPierwotna,droga)
     macierzPierwotna,r = redukcja(macierzPierwotna)
     return LBprev + A + r, r , macierzPierwotna
 
 # A tablica z LB?!
+
 def bbPoziom(pom, wielkosc, najkrotszaDroga, macierzPierwotna, LBpop, macierzPoprzednia, macierzDoDrogi):
-    #tabLB = []
-    #tabPom = []
     tabPrzejscia = []
     minLB = 2147483647
-    # spr czy zawsze stala BANGLA
     if pom == 0:
-        macierz, r = redukcja(macierzPierwotna)
-        #print macierz, r #Bangla pierwsza redukcja
+        a, r = redukcja(macierzPierwotna)
         tabPrzejscia.extend(kombinacjeWielkosciKonkretnychDrog(Ilosc_Miast,wielkosc))
     else:
-        # Nie chce redukowac
-        # macierz, r = redukcja(macierzPoprzednia)
-        macierz = copy.deepcopy(macierzPoprzednia)
+        a, r = redukcja(macierz)
         najkrotszaDroga = copy.deepcopy(najkrotszaDroga)
         tabPrzejscia.extend(kombinacjeKonkretnychDrog(Ilosc_Miast,wielkosc,najkrotszaDroga))
     for i in range(tabPrzejscia.__len__()):
-        m = copy.deepcopy(macierz)
+        m = copy.deepcopy(a)
         droga = tabPrzejscia[i]
-        # if pom == 1:
-        #     m,r = redukcja(m)
-        #m = negacja(m,droga)
         if pom == 0:
             noweLB,niepotrzebnazmienna,m = liczLB(m,r,droga)
         else:
-            # r powinno sie zmieniac
+            print droga #wydaje sie ze wszystko bangla
             noweLB,niepotrzebnazmienna,m = liczLB(m,LBpop,droga)
+            #print m #Dobre po
         deltaLB = noweLB - LBpop
         if(deltaLB < minLB):
             minLB = deltaLB
             najkrotszaDroga = droga
-       # tabPom.append(minLB)
         print droga, noweLB
-    #tabLB.append(tabPom[-1])
-    #print tabLB
     return najkrotszaDroga, m, dlugoscDrogi(najkrotszaDroga,macierzDoDrogi), minLB, m
 
 def bb(macierzPierwotna):
@@ -346,22 +337,6 @@ for i in range(rozmiar):
     print(macierz[ i ])
 
 #Test
-# macierz, LBMACIERZY = redukcja(macierz)
-# LB = LBMACIERZY
-# print macierz
-# print LB
-# LB = 3
-# print LBMACIERZY
-# print LB
-# t = [1,4,3]z
-# m = copy.deepcopy(macierz)
-# negacja(m,t)
-# print macierz
-# print m
-# x = liczLB(macierz,m,LBMACIERZY,[4,3])
-# print x
-# print m
-# print macierz
 print "\n"
 #1
 b = copy.deepcopy(macierz)
@@ -377,6 +352,7 @@ print "r: ", r
 #4a
 LBprev = r
 #5
+print "przed: ", b
 b = negacja(b,droga)
 print "Po negacji: ", b
 #6
