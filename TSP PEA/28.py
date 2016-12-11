@@ -7,7 +7,7 @@
 
 import time
 
-inf = 100000000
+inf = 10000000
 nalepsza_cena = 0
 
 def redukuj(rozmiar, matrix, wiersz, kolumna, wiersz_usuwany, kolumna_usuwana):
