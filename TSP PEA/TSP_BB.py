@@ -114,18 +114,34 @@ def kombinacjeKonkretnychDrog(n, wielkosc,posiada):
     return wynik
 
 def kombinacjeWielkosciKonkretnychDrog(n, wielkosc):
-    tablica = []
-    for i in range(n):
-        tablica.append(i+1)
-    wynik = []
-    for L in range(0, tablica.__len__() + 1):
-        for subset in itertools.permutations(tablica, L):
-            if subset.__len__() == wielkosc:
-                subset = list(subset)
-                if subset[0] == 1:
-                    subset = [subset]
-                    wynik.extend(subset)
+    wynik = [ ]
+    posiada = [1]
+    posiada.append(100)
+    zakres = Ilosc_Miast - 1
+    # print wielkosc
+    for i in range(zakres):
+        # posiada[-1] = i+2
+        zmienna = i + 2
+        if zmienna not in posiada:
+            posiada[ -1 ] = zmienna
+            wynik.extend([ list(posiada) ])
     return wynik
+
+
+# def kombinacjeWielkosciKonkretnychDrog(n, wielkosc):
+#     tablica = []
+#     for i in range(n):
+#         tablica.append(i+1)
+#     wynik = []
+#     for L in range(0, tablica.__len__() + 1):
+#         for subset in itertools.permutations(tablica, L):
+#             if subset.__len__() == wielkosc:
+#                 subset = list(subset)
+#                 if subset[0] == 1:
+#                     subset = [subset]
+#                     wynik.extend(subset)
+#     print wynik
+#     return wynik
 
 def liczLB(macierzPierwotna,LBprev, droga):
     pary = generujPary(droga)
@@ -152,6 +168,7 @@ def bbPoziom(pom, wielkosc, najkrotszaDroga, macierzPierwotna, LBpop, macierzPop
         else:
             noweLB,niepotrzebnazmienna,m = liczLB(m,LBpop,droga)
         deltaLB = noweLB - LBpop
+        print noweLB, LBpop, droga
         if(deltaLB < minLB):
             minLB = deltaLB
             najkrotszaDroga = droga
@@ -162,7 +179,6 @@ def bbPoziom(pom, wielkosc, najkrotszaDroga, macierzPierwotna, LBpop, macierzPop
 def bb(macierzPierwotna):
     macierzDoDrogi = copy.deepcopy(macierzPierwotna)
     droga, m, odleglosc, lb, mp = bbPoziom(0, 2, [  ], macierzPierwotna, 0, 0, macierzDoDrogi)
-    #print droga
     aktaulnieNajkrotszaDroga = droga
     LBpop = lb
     macirzPoprzednia = mp
@@ -229,8 +245,12 @@ for i in range(rozmiar):
     print(macierz[ i ])
 
 
-
-
+najkrotszaDroga = [1, 11, 4, 6, 8, 10, 3]
+print "xd do 10 z 3: ", dlugoscDrogi(najkrotszaDroga,macierz)
+najkrotszaDroga = [1, 11, 4, 6, 8, 10, 14]
+print "xd do 10 z 14: ", dlugoscDrogi(najkrotszaDroga,macierz)
+# print "A[10][3]", macierz[9][2]
+# print "A[10][14]", macierz[9][13]
 print "\n"
 start = time.clock()
 droga,dyst = bb(macierz)
