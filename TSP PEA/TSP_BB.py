@@ -235,6 +235,7 @@ def bbPoziom(pom, wielkosc, najkrotszaDroga, macierzPierwotna, LBpop):
         else:
             noweLB = liczLB(macierz,r,LBpop,droga)
         deltaLB = noweLB - LBpop
+        print deltaLB, droga
         if(deltaLB < minLB):
             minLB = deltaLB
             najkrotszaDroga = droga
@@ -346,9 +347,6 @@ for i in range(rozmiar):
 print "\n"
 # macierz to zawsze wstepniak z ktory podajemy do liczenia LB
 # m bedziemy wykorzystywac
-
-#print kombinacjeKonkretnychDrog(5,4,[1,4,3])
-
 droga,dyst = bb(macierz)
 print droga
 print dyst

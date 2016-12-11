@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="BookmarkManager">
-    <bookmark url="file://$PROJECT_DIR$/TSP PEA/TSP_BB.py" line="328" mnemonic="Z" />
+    <bookmark url="file://$PROJECT_DIR$/TSP PEA/TSP_BB.py" line="329" mnemonic="Z" />
   </component>
   <component name="ChangeListManager">
     <list default="true" id="e3072320-8269-4da3-b042-05fef085bc7f" name="Default" comment="">
@@ -32,8 +32,8 @@
       <file leaf-file-name="TSP_BB.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/TSP PEA/TSP_BB.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="336">
-              <caret line="169" column="52" selection-start-line="169" selection-start-column="52" selection-end-line="169" selection-end-column="52" />
+            <state relative-caret-position="386">
+              <caret line="237" column="28" selection-start-line="237" selection-start-column="28" selection-end-line="237" selection-end-column="28" />
               <folding>
                 <element signature="e#36#47#0" expanded="true" />
                 <element signature="e#373#416#0" expanded="false" />
@@ -44,10 +44,10 @@
                 <element signature="e#1868#1962#0" expanded="false" />
                 <element signature="e#3950#4341#0" expanded="false" />
                 <element signature="e#4400#4677#0" expanded="false" />
-                <element signature="e#7362#7880#0" expanded="false" />
-                <element signature="e#7902#9332#0" expanded="false" />
-                <element signature="e#9816#9821#0" expanded="false" />
-                <marker date="1481467289031" expanded="false" signature="5293:5694" ph="..." />
+                <element signature="e#7385#7903#0" expanded="false" />
+                <element signature="e#7925#9355#0" expanded="false" />
+                <element signature="e#9839#9844#0" expanded="false" />
+                <marker date="1481468144780" expanded="false" signature="5295:5696" ph="..." />
               </folding>
             </state>
           </provider>
@@ -573,7 +573,21 @@
       <option name="project" value="LOCAL" />
       <updated>1481462043432</updated>
     </task>
-    <option name="localTasksCounter" value="31" />
+    <task id="LOCAL-00031" summary="Fix + funkcja sprawdzajace czy drogi sa sobie rowne.">
+      <created>1481467350013</created>
+      <option name="number" value="00031" />
+      <option name="presentableId" value="LOCAL-00031" />
+      <option name="project" value="LOCAL" />
+      <updated>1481467350013</updated>
+    </task>
+    <task id="LOCAL-00032" summary=":c Cały czas probelm z obliczanie LB">
+      <created>1481467494590</created>
+      <option name="number" value="00032" />
+      <option name="presentableId" value="LOCAL-00032" />
+      <option name="project" value="LOCAL" />
+      <updated>1481467494590</updated>
+    </task>
+    <option name="localTasksCounter" value="33" />
     <servers />
   </component>
   <component name="TodoView">
@@ -587,14 +601,14 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
-    <editor active="true" />
+    <editor active="false" />
     <layout>
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.07007376" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32827735" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33044422" sideWeight="0.5021075" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32719395" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Python Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32827735" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33044422" sideWeight="0.49789253" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Python Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32827735" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.33044422" sideWeight="0.49789253" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.24973656" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32932165" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
@@ -657,8 +671,6 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Dodałem Funkcję generująca kolejne permutacje całości" />
-    <MESSAGE value="BruteForce oparty na porządku leksykograficznym" />
     <MESSAGE value="Naprawa Problemu. Teraz przeglą dam drogę z A do A przez wszystkie wierzcholki" />
     <MESSAGE value="male poprawki" />
     <MESSAGE value="Ukryta opcja Projektowa" />
@@ -682,7 +694,9 @@
     <MESSAGE value="BB dla konkretnego poziomu&#10;" />
     <MESSAGE value="Fix liczenia drogi&#10;" />
     <MESSAGE value="Naiwana wersja bb, dużo do poprawy" />
-    <option name="LAST_COMMIT_MESSAGE" value="Naiwana wersja bb, dużo do poprawy" />
+    <MESSAGE value="Fix + funkcja sprawdzajace czy drogi sa sobie rowne." />
+    <MESSAGE value=":c Cały czas probelm z obliczanie LB" />
+    <option name="LAST_COMMIT_MESSAGE" value=":c Cały czas probelm z obliczanie LB" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -693,7 +707,7 @@
           </properties>
         </breakpoint>
       </default-breakpoints>
-      <option name="time" value="43" />
+      <option name="time" value="47" />
     </breakpoint-manager>
     <watches-manager>
       <configuration name="PythonConfigurationType">
@@ -716,10 +730,10 @@
             <element signature="e#1868#1962#0" expanded="false" />
             <element signature="e#3950#4341#0" expanded="false" />
             <element signature="e#4400#4677#0" expanded="false" />
-            <element signature="e#7362#7880#0" expanded="false" />
-            <element signature="e#7902#9332#0" expanded="false" />
-            <element signature="e#9816#9821#0" expanded="false" />
-            <marker date="1481467289031" expanded="false" signature="5293:5694" ph="..." />
+            <element signature="e#7385#7903#0" expanded="false" />
+            <element signature="e#7925#9355#0" expanded="false" />
+            <element signature="e#9839#9844#0" expanded="false" />
+            <marker date="1481468144780" expanded="false" signature="5295:5696" ph="..." />
           </folding>
         </state>
       </provider>
@@ -770,10 +784,10 @@
             <element signature="e#1868#1962#0" expanded="false" />
             <element signature="e#3950#4341#0" expanded="false" />
             <element signature="e#4400#4677#0" expanded="false" />
-            <element signature="e#7362#7880#0" expanded="false" />
-            <element signature="e#7902#9332#0" expanded="false" />
-            <element signature="e#9816#9821#0" expanded="false" />
-            <marker date="1481467289031" expanded="false" signature="5293:5694" ph="..." />
+            <element signature="e#7385#7903#0" expanded="false" />
+            <element signature="e#7925#9355#0" expanded="false" />
+            <element signature="e#9839#9844#0" expanded="false" />
+            <marker date="1481468144780" expanded="false" signature="5295:5696" ph="..." />
           </folding>
         </state>
       </provider>
@@ -808,10 +822,10 @@
             <element signature="e#1868#1962#0" expanded="false" />
             <element signature="e#3950#4341#0" expanded="false" />
             <element signature="e#4400#4677#0" expanded="false" />
-            <element signature="e#7362#7880#0" expanded="false" />
-            <element signature="e#7902#9332#0" expanded="false" />
-            <element signature="e#9816#9821#0" expanded="false" />
-            <marker date="1481467289031" expanded="false" signature="5293:5694" ph="..." />
+            <element signature="e#7385#7903#0" expanded="false" />
+            <element signature="e#7925#9355#0" expanded="false" />
+            <element signature="e#9839#9844#0" expanded="false" />
+            <marker date="1481468144780" expanded="false" signature="5295:5696" ph="..." />
           </folding>
         </state>
       </provider>
@@ -854,10 +868,10 @@
             <element signature="e#1868#1962#0" expanded="false" />
             <element signature="e#3950#4341#0" expanded="false" />
             <element signature="e#4400#4677#0" expanded="false" />
-            <element signature="e#7362#7880#0" expanded="false" />
-            <element signature="e#7902#9332#0" expanded="false" />
-            <element signature="e#9816#9821#0" expanded="false" />
-            <marker date="1481467289031" expanded="false" signature="5293:5694" ph="..." />
+            <element signature="e#7385#7903#0" expanded="false" />
+            <element signature="e#7925#9355#0" expanded="false" />
+            <element signature="e#9839#9844#0" expanded="false" />
+            <marker date="1481468144780" expanded="false" signature="5295:5696" ph="..." />
           </folding>
         </state>
       </provider>
@@ -899,10 +913,10 @@
             <element signature="e#1868#1962#0" expanded="false" />
             <element signature="e#3950#4341#0" expanded="false" />
             <element signature="e#4400#4677#0" expanded="false" />
-            <element signature="e#7362#7880#0" expanded="false" />
-            <element signature="e#7902#9332#0" expanded="false" />
-            <element signature="e#9816#9821#0" expanded="false" />
-            <marker date="1481467289031" expanded="false" signature="5293:5694" ph="..." />
+            <element signature="e#7385#7903#0" expanded="false" />
+            <element signature="e#7925#9355#0" expanded="false" />
+            <element signature="e#9839#9844#0" expanded="false" />
+            <marker date="1481468144780" expanded="false" signature="5295:5696" ph="..." />
           </folding>
         </state>
       </provider>
@@ -951,10 +965,10 @@
             <element signature="e#1868#1962#0" expanded="false" />
             <element signature="e#3950#4341#0" expanded="false" />
             <element signature="e#4400#4677#0" expanded="false" />
-            <element signature="e#7362#7880#0" expanded="false" />
-            <element signature="e#7902#9332#0" expanded="false" />
-            <element signature="e#9816#9821#0" expanded="false" />
-            <marker date="1481467289031" expanded="false" signature="5293:5694" ph="..." />
+            <element signature="e#7385#7903#0" expanded="false" />
+            <element signature="e#7925#9355#0" expanded="false" />
+            <element signature="e#9839#9844#0" expanded="false" />
+            <marker date="1481468144780" expanded="false" signature="5295:5696" ph="..." />
           </folding>
         </state>
       </provider>
@@ -1039,8 +1053,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/TSP PEA/TSP_BB.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="336">
-          <caret line="169" column="52" selection-start-line="169" selection-start-column="52" selection-end-line="169" selection-end-column="52" />
+        <state relative-caret-position="386">
+          <caret line="237" column="28" selection-start-line="237" selection-start-column="28" selection-end-line="237" selection-end-column="28" />
           <folding>
             <element signature="e#36#47#0" expanded="true" />
             <element signature="e#373#416#0" expanded="false" />
@@ -1051,10 +1065,10 @@
             <element signature="e#1868#1962#0" expanded="false" />
             <element signature="e#3950#4341#0" expanded="false" />
             <element signature="e#4400#4677#0" expanded="false" />
-            <element signature="e#7362#7880#0" expanded="false" />
-            <element signature="e#7902#9332#0" expanded="false" />
-            <element signature="e#9816#9821#0" expanded="false" />
-            <marker date="1481467289031" expanded="false" signature="5293:5694" ph="..." />
+            <element signature="e#7385#7903#0" expanded="false" />
+            <element signature="e#7925#9355#0" expanded="false" />
+            <element signature="e#9839#9844#0" expanded="false" />
+            <marker date="1481468144780" expanded="false" signature="5295:5696" ph="..." />
           </folding>
         </state>
       </provider>
