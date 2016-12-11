@@ -100,23 +100,34 @@ def test(tabliceDoSprawdzenia, tabliceSprawdzajaca):
     else:
         return 0
 
+# def kombinacjeKonkretnychDrog(n, wielkosc,posiada):
+#     print Ilo
+#     len = posiada.__len__()
+#     tablica = []
+#     for i in range(n):
+#         tablica.append(i+1)
+#     wynik = []
+#     for L in range(0, tablica.__len__() + 1):
+#         for subset in itertools.permutations(tablica, L):
+#             if subset.__len__() == wielkosc and subset[0] == 1:
+#                 if test(posiada,subset) == 1:
+#                     subset = list(subset)
+#                     subset = [subset]
+#                     wynik.extend(subset)
+#             else:
+#                 break
+#     print wynik
+#     return wynik
+
 def kombinacjeKonkretnychDrog(n, wielkosc,posiada):
-    len = posiada.__len__()
-    tablica = []
-    for i in range(n):
-        tablica.append(i+1)
     wynik = []
-    for L in range(0, tablica.__len__() + 1):
-        for subset in itertools.permutations(tablica, L):
-            if subset.__len__() == wielkosc and subset[0] == 1:
-                if test(posiada,subset) == 1:
-                    subset = list(subset)
-                    subset = [subset]
-                    wynik.extend(subset)
-                else:
-                    break
-            else:
-                break
+    posiada.append(100)
+    for i in range(Ilosc_Miast - wielkosc + 2):
+        posiada[-1] = i+2
+        if posiada[-1] != posiada[-2]:
+            wynik.extend([list(posiada)])
+    print wynik
+    print "---"
     return wynik
 
 def kombinacjeWielkosciKonkretnychDrog(n, wielkosc):
