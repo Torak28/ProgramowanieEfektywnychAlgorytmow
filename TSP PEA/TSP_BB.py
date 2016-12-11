@@ -109,11 +109,12 @@ def kombinacjeKonkretnychDrog(n, wielkosc,posiada):
     for L in range(0, tablica.__len__() + 1):
         for subset in itertools.permutations(tablica, L):
             if subset.__len__() == wielkosc and subset[0] == 1:
-                #print subset
-                subset = list(subset)
                 if test(posiada,subset) == 1:
+                    subset = list(subset)
                     subset = [subset]
                     wynik.extend(subset)
+                else:
+                    break
             else:
                 break
     return wynik

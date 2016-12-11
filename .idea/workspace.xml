@@ -4,7 +4,6 @@
     <list default="true" id="e3072320-8269-4da3-b042-05fef085bc7f" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/TSP PEA/TSP_BB.py" afterPath="$PROJECT_DIR$/TSP PEA/TSP_BB.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/TSP PEA/test" afterPath="$PROJECT_DIR$/TSP PEA/test" />
     </list>
     <ignored path="ProgramowanieEfektywnychAlgorytmow.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -30,8 +29,8 @@
       <file leaf-file-name="TSP_BB.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/TSP PEA/TSP_BB.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="271">
-              <caret line="115" column="20" selection-start-line="115" selection-start-column="20" selection-end-line="115" selection-end-column="20" />
+            <state relative-caret-position="328">
+              <caret line="240" column="18" selection-start-line="240" selection-start-column="18" selection-end-line="240" selection-end-column="18" />
               <folding>
                 <element signature="e#36#47#0" expanded="true" />
                 <element signature="e#136#358#0" expanded="false" />
@@ -44,9 +43,9 @@
                 <element signature="e#1312#1737#0" expanded="false" />
                 <element signature="e#1772#2197#0" expanded="false" />
                 <element signature="e#2226#2365#0" expanded="false" />
-                <element signature="e#3788#4023#0" expanded="false" />
-                <element signature="e#5785#6270#0" expanded="false" />
-                <element signature="e#6292#7025#0" expanded="false" />
+                <element signature="e#3810#4045#0" expanded="false" />
+                <element signature="e#5807#6292#0" expanded="false" />
+                <element signature="e#6314#7047#0" expanded="false" />
               </folding>
             </state>
           </provider>
@@ -655,7 +654,14 @@
       <option name="project" value="LOCAL" />
       <updated>1481483113506</updated>
     </task>
-    <option name="localTasksCounter" value="40" />
+    <task id="LOCAL-00040" summary="Proby przyspieszenia&#10;">
+      <created>1481485292819</created>
+      <option name="number" value="00040" />
+      <option name="presentableId" value="LOCAL-00040" />
+      <option name="project" value="LOCAL" />
+      <updated>1481485292819</updated>
+    </task>
+    <option name="localTasksCounter" value="41" />
     <servers />
   </component>
   <component name="TodoView">
@@ -669,18 +675,18 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
-    <editor active="false" />
+    <editor active="true" />
     <layout>
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.07007376" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32827735" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33044422" sideWeight="0.5021075" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32719395" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Python Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32827735" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.33044422" sideWeight="0.49789253" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33044422" sideWeight="0.49789253" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.24973656" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32932165" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.39869988" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.39869988" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
@@ -739,7 +745,6 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="redukacja + Liczenie LB" />
     <MESSAGE value="Gedneracja Drogi w Grafie" />
     <MESSAGE value="bugs, bugs everywhre" />
     <MESSAGE value="Generacja drog bangla" />
@@ -764,10 +769,18 @@
     <MESSAGE value="We got this" />
     <MESSAGE value="&lt;3 dziala" />
     <MESSAGE value="&lt;3 + sprzatanie niepotrzebnych Funkcji" />
-    <option name="LAST_COMMIT_MESSAGE" value="&lt;3 + sprzatanie niepotrzebnych Funkcji" />
+    <MESSAGE value="Proby przyspieszenia&#10;" />
+    <option name="LAST_COMMIT_MESSAGE" value="Proby przyspieszenia&#10;" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/TSP PEA/TSP_BB.py</url>
+          <line>116</line>
+          <option name="timeStamp" value="63" />
+        </line-breakpoint>
+      </breakpoints>
       <default-breakpoints>
         <breakpoint type="python-exception">
           <properties notifyOnTerminate="true" exception="BaseException">
@@ -775,7 +788,7 @@
           </properties>
         </breakpoint>
       </default-breakpoints>
-      <option name="time" value="62" />
+      <option name="time" value="64" />
     </breakpoint-manager>
     <watches-manager>
       <configuration name="PythonConfigurationType">
@@ -800,9 +813,9 @@
             <element signature="e#1312#1737#0" expanded="false" />
             <element signature="e#1772#2197#0" expanded="false" />
             <element signature="e#2226#2365#0" expanded="false" />
-            <element signature="e#3788#4023#0" expanded="false" />
-            <element signature="e#5785#6270#0" expanded="false" />
-            <element signature="e#6292#7025#0" expanded="false" />
+            <element signature="e#3810#4045#0" expanded="false" />
+            <element signature="e#5807#6292#0" expanded="false" />
+            <element signature="e#6314#7047#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -855,9 +868,9 @@
             <element signature="e#1312#1737#0" expanded="false" />
             <element signature="e#1772#2197#0" expanded="false" />
             <element signature="e#2226#2365#0" expanded="false" />
-            <element signature="e#3788#4023#0" expanded="false" />
-            <element signature="e#5785#6270#0" expanded="false" />
-            <element signature="e#6292#7025#0" expanded="false" />
+            <element signature="e#3810#4045#0" expanded="false" />
+            <element signature="e#5807#6292#0" expanded="false" />
+            <element signature="e#6314#7047#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -894,9 +907,9 @@
             <element signature="e#1312#1737#0" expanded="false" />
             <element signature="e#1772#2197#0" expanded="false" />
             <element signature="e#2226#2365#0" expanded="false" />
-            <element signature="e#3788#4023#0" expanded="false" />
-            <element signature="e#5785#6270#0" expanded="false" />
-            <element signature="e#6292#7025#0" expanded="false" />
+            <element signature="e#3810#4045#0" expanded="false" />
+            <element signature="e#5807#6292#0" expanded="false" />
+            <element signature="e#6314#7047#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -941,9 +954,9 @@
             <element signature="e#1312#1737#0" expanded="false" />
             <element signature="e#1772#2197#0" expanded="false" />
             <element signature="e#2226#2365#0" expanded="false" />
-            <element signature="e#3788#4023#0" expanded="false" />
-            <element signature="e#5785#6270#0" expanded="false" />
-            <element signature="e#6292#7025#0" expanded="false" />
+            <element signature="e#3810#4045#0" expanded="false" />
+            <element signature="e#5807#6292#0" expanded="false" />
+            <element signature="e#6314#7047#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -987,9 +1000,9 @@
             <element signature="e#1312#1737#0" expanded="false" />
             <element signature="e#1772#2197#0" expanded="false" />
             <element signature="e#2226#2365#0" expanded="false" />
-            <element signature="e#3788#4023#0" expanded="false" />
-            <element signature="e#5785#6270#0" expanded="false" />
-            <element signature="e#6292#7025#0" expanded="false" />
+            <element signature="e#3810#4045#0" expanded="false" />
+            <element signature="e#5807#6292#0" expanded="false" />
+            <element signature="e#6314#7047#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -1040,9 +1053,9 @@
             <element signature="e#1312#1737#0" expanded="false" />
             <element signature="e#1772#2197#0" expanded="false" />
             <element signature="e#2226#2365#0" expanded="false" />
-            <element signature="e#3788#4023#0" expanded="false" />
-            <element signature="e#5785#6270#0" expanded="false" />
-            <element signature="e#6292#7025#0" expanded="false" />
+            <element signature="e#3810#4045#0" expanded="false" />
+            <element signature="e#5807#6292#0" expanded="false" />
+            <element signature="e#6314#7047#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -1136,8 +1149,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/TSP PEA/TSP_BB.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="271">
-          <caret line="115" column="20" selection-start-line="115" selection-start-column="20" selection-end-line="115" selection-end-column="20" />
+        <state relative-caret-position="328">
+          <caret line="240" column="18" selection-start-line="240" selection-start-column="18" selection-end-line="240" selection-end-column="18" />
           <folding>
             <element signature="e#36#47#0" expanded="true" />
             <element signature="e#136#358#0" expanded="false" />
@@ -1150,9 +1163,9 @@
             <element signature="e#1312#1737#0" expanded="false" />
             <element signature="e#1772#2197#0" expanded="false" />
             <element signature="e#2226#2365#0" expanded="false" />
-            <element signature="e#3788#4023#0" expanded="false" />
-            <element signature="e#5785#6270#0" expanded="false" />
-            <element signature="e#6292#7025#0" expanded="false" />
+            <element signature="e#3810#4045#0" expanded="false" />
+            <element signature="e#5807#6292#0" expanded="false" />
+            <element signature="e#6314#7047#0" expanded="false" />
           </folding>
         </state>
       </provider>
