@@ -7,6 +7,8 @@ import time
 INF = -1
 ile = 0
 
+# Dla przyjetej tablicy drogi i zadanej macierzy przejscia
+# wylicza i zwraca dlugosc drogi
 def dlugoscDrogi(tablica, macierz):
     sum = 0
     pary = generujPary(tablica)
@@ -16,21 +18,35 @@ def dlugoscDrogi(tablica, macierz):
         sum = sum + macierz[miastoAIndex][miastoBIndex]
     return sum
 
+# Funkcja dla zadanej Ilosci Miast zwraca glebokosc
+# drzewa
 def iloscPoziomow(Ilosc_Miast):
     return Ilosc_Miast-1
 
+# Funkcja dla zadanej tablicy drogi generuje pary
+# Np. dla drogi = [1,2,3]
+# Wygeneruje wynik = [[1,2],[2,3]]
+# Potrzebne przy obliczaniu Dolnego Ograniczenia
 def generujPary(tablica):
     wynik = []
     for i in range(tablica.__len__()-1):
         wynik.extend([ [ tablica[ i ], tablica[ i+1 ] ] ])
     return wynik
 
+# Funkcja identyczna jak poprzednia z ta
+# roznica ze zamiast par, generuje punkty
+# Np. dla drogi = [1,2,3]
+# Wygeneruje wynik = [[1,2],[1,3]]
+# Przydatne przy negacji
 def generujPunkty(tablica):
     wynik = [ ]
     for i in range(1, tablica.__len__()):
         wynik.extend([ [ tablica[ 0 ], tablica[ i ] ] ])
     return wynik
 
+# Funkcja neguje zadana macierz m
+# zgodnie z tablica drogi
+# Zwraca zanegowana macierz
 def negacjaTablicy(m, tablica):
     wiersz = tablica[0] - 1
     kolumna = tablica[1] - 1
@@ -39,6 +55,9 @@ def negacjaTablicy(m, tablica):
         m[j][kolumna] = INF
     return m
 
+# Funkcja neguje zadana macierz m
+# zgodnie z tablica punktow
+# Zwraca zanegowana macierz
 def negacjaPunktu(m, tablica):
     wiersz = tablica[ 0 ] - 1
     kolumna = tablica[ 1 ] - 1
@@ -48,6 +67,9 @@ def negacjaPunktu(m, tablica):
     m[ kolumna ][ wiersz ] = INF
     return m
 
+# Funkcja laczaca negacjeTablicy i negacjePunkty
+# W pelni wykonuje potrzebna negacje zadane macierzy m
+# Zwraca zanegowana macierz
 def negacja(m,tablica):
     pary = generujPary(tablica)
     punkty = generujPunkty(tablica)
@@ -56,6 +78,8 @@ def negacja(m,tablica):
         negacjaPunktu(m,punkty[i])
     return m
 
+# Funkcja redukuje w zadanej macierzy wierzsze
+# Zwraca macierz
 def redukcjaWierszy(macierz):
     sum = 0
     for i in range(rozmiar):
@@ -70,6 +94,8 @@ def redukcjaWierszy(macierz):
                 macierz[i][k] = macierz[i][k] - int(min)
     return macierz, sum
 
+# Funkcja redukuje w zadanej macierzy kolumny
+# Zwraca macierz
 def redukcjaKolumn(macierz):
     sum = 0
     for i in range(rozmiar):
@@ -84,6 +110,8 @@ def redukcjaKolumn(macierz):
                 macierz[k][i] = macierz[k][i] - int(min)
     return macierz, sum
 
+# Funkcja zbiorcza dla redukcjiWierszy i redukcjiKolumn
+# Zwraca macierz
 def redukcja(macierz):
     LB = 0
     macierz, sum1 = redukcjaWierszy(macierz)
@@ -91,6 +119,11 @@ def redukcja(macierz):
     LB = sum1 + sum2
     return macierz, LB
 
+# Funkcja o niefortunnej nazwie sprawdza czy
+# tablicaDoSprawdzenia jest elementem tablicySprawdzajacej
+# Np. dla a = [1,2] i b = [1,2,3]
+# test(a,b) = 1
+# Funkcja zwraca 1 dla prawdy i 0 dla falszu
 def test(tabliceDoSprawdzenia, tabliceSprawdzajaca):
     pom = 0
     for i in range(tabliceDoSprawdzenia.__len__()):
@@ -103,6 +136,10 @@ def test(tabliceDoSprawdzenia, tabliceSprawdzajaca):
     else:
         return 0
 
+# Funkcja zwraca wszystkie permutacje zadanej tablicy posiada
+# z indeksem o jeden wiekszym
+# Np. dla posiada = [1,2] i Ilosci Miast = 4
+# Funkcja zwroci wynik=[[1,2,3],[1,2,4]]
 def kombinacjeKonkretnychDrog(n, wielkosc,posiada):
     wynik = []
     posiada.append(100)
@@ -114,6 +151,12 @@ def kombinacjeKonkretnychDrog(n, wielkosc,posiada):
             wynik.extend([list(posiada)])
     return wynik
 
+# Funkcja identyczna jak poprzednia z ta
+# roznica ze nie posiada tablicy posiada, ktora
+# zostala wykreowana w srodu i ma tylko jeden element
+# posiada = [1]
+# Idea jest taka zeby ja wywolywac na poczatku przez powyzsza funkcja
+# dla zaoszczedzenia czasu
 def kombinacjeWielkosciKonkretnychDrog(n, wielkosc):
     wynik = [ ]
     posiada = [1]
@@ -126,6 +169,8 @@ def kombinacjeWielkosciKonkretnychDrog(n, wielkosc):
             wynik.extend([ list(posiada) ])
     return wynik
 
+# Funkcja liczaca Dolne Ograniczenia dla zadanych warunkow
+# Zwraca wynik i wartos r, tj. wartosc redukcji
 def liczLB(macierzPierwotna,LBprev, droga):
     pary = generujPary(droga)
     A = []
@@ -138,6 +183,8 @@ def liczLB(macierzPierwotna,LBprev, droga):
         wynik = wynik + A[i]
     return wynik, r , macierzPierwotna
 
+# Funkcja wykomuje przejscie algorytmu BB dla
+# konkretnego poziomu drzewa
 def bbPoziom(pom, wielkosc, najkrotszaDroga, macierzPierwotna, LBpop, macierzPoprzednia, macierzDoDrogi):
     tabPrzejscia = []
     minLB = 2147483647
@@ -164,6 +211,7 @@ def bbPoziom(pom, wielkosc, najkrotszaDroga, macierzPierwotna, LBpop, macierzPop
             najkrotszaDroga.append(1)
     return najkrotszaDroga, m, dlugoscDrogi(najkrotszaDroga,macierzDoDrogi), minLB, m
 
+# Funkcja zapetlajaca powyzsa na cale drzewo
 def bb(macierzPierwotna):
     macierzDoDrogi = copy.deepcopy(macierzPierwotna)
     droga, m, odleglosc, lb, mp = bbPoziom(0, 2, [  ], macierzPierwotna, 0, 0, macierzDoDrogi)
@@ -177,7 +225,7 @@ def bb(macierzPierwotna):
         macirzPoprzednia = mp
     return aktaulnieNajkrotszaDroga, odleglosc
 
-
+# Obsluga menu
 wybor = int(input('Wybieramy!\n\t1.Wpisuje z palca(do dopisania obsluga)\n\t2.Wczytam z pliku\nHmm?\n'))
 if wybor == 1:
     tabWpisywanie = []
@@ -222,11 +270,12 @@ elif wybor == 2:
     for i in range(Ilosc_Miast):
         tabPlik.append(i)
 
-# Drukiwanie dla obadania o co kaman
+# Drukiwanie zadanej na poczatku macierzy
 print('Wypisanie:')
 for i in range(rozmiar):
     print(macierz[ i ])
 
+# Wypisanie wyniku
 print "\n"
 start = time.clock()
 droga,dyst = bb(macierz)
