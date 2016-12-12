@@ -13,8 +13,8 @@ def dlugoscDrogi(tablica, macierz):
     sum = 0
     pary = generujPary(tablica)
     for i in range(pary.__len__()):
-        miastoAIndex = pary[i][0] - 1
-        miastoBIndex = pary[i][1] - 1
+        miastoAIndex = pary[i][1] - 1
+        miastoBIndex = pary[i][0] - 1
         sum = sum + macierz[miastoAIndex][miastoBIndex]
     return sum
 
@@ -183,39 +183,9 @@ def liczLB(macierzPierwotna,LBprev, droga):
 
 # Funkcja wykomuje przejscie algorytmu BB dla
 # konkretnego poziomu drzewa
-def bbPoziom(pom, wielkosc, najkrotszaDroga, macierzPierwotna, LBpop, macierzPoprzednia, macierzDoDrogi):
-    tabPrzejscia = []
-    minLB = 2147483647
-    if pom == 0:
-        a, r = redukcja(macierzPierwotna)
-        tabPrzejscia.extend(kombinacjeWielkosciKonkretnychDrog(Ilosc_Miast,wielkosc))
-    else:
-        a, r = redukcja(macierz)
-        najkrotszaDroga = copy.deepcopy(najkrotszaDroga)
-        tabPrzejscia.extend(kombinacjeKonkretnychDrog(Ilosc_Miast,wielkosc,najkrotszaDroga))
-    for i in range(tabPrzejscia.__len__()):
-        m = copy.deepcopy(a)
-        xd = copy.deepcopy(m)
-        droga = tabPrzejscia[i]
-        if pom == 0:
-            noweLB,niepotrzebnazmienna,m = liczLB(m,r,droga)
-        else:
-            noweLB,niepotrzebnazmienna,m = liczLB(m,LBpop,droga)
-        deltaLB = noweLB - LBpop
-        if(deltaLB < minLB):
-            minLB = deltaLB
-            najkrotszaDroga = droga
-        if najkrotszaDroga.__len__() == Ilosc_Miast:
-            najkrotszaDroga.append(1)
-    return najkrotszaDroga, m, dlugoscDrogi(najkrotszaDroga,macierzDoDrogi), minLB, m
-
-# TODO:
-# Wersja zabugowana do poprawy
-# Rzuca lepszy wynik dla tsp15
 # def bbPoziom(pom, wielkosc, najkrotszaDroga, macierzPierwotna, LBpop, macierzPoprzednia, macierzDoDrogi):
 #     tabPrzejscia = []
 #     minLB = 2147483647
-#     mind = 2147483647
 #     if pom == 0:
 #         a, r = redukcja(macierzPierwotna)
 #         tabPrzejscia.extend(kombinacjeWielkosciKonkretnychDrog(Ilosc_Miast,wielkosc))
@@ -232,21 +202,51 @@ def bbPoziom(pom, wielkosc, najkrotszaDroga, macierzPierwotna, LBpop, macierzPop
 #         else:
 #             noweLB,niepotrzebnazmienna,m = liczLB(m,LBpop,droga)
 #         deltaLB = noweLB - LBpop
-#
-#         x = dlugoscDrogi(droga,macierzDoDrogi)
-#         #print "Prze ",droga, x
-#         if (x < mind):
-#             mind = x
-#             mindr =droga
-#         #print "Najk ",mind, mindr
-#         najkrotszaDroga = mindr
-#
 #         if(deltaLB < minLB):
 #             minLB = deltaLB
-#             #najkrotszaDroga = droga
+#             najkrotszaDroga = droga
 #         if najkrotszaDroga.__len__() == Ilosc_Miast:
 #             najkrotszaDroga.append(1)
 #     return najkrotszaDroga, m, dlugoscDrogi(najkrotszaDroga,macierzDoDrogi), minLB, m
+
+# TODO:
+# Wersja zabugowana do poprawy
+# Rzuca lepszy wynik dla tsp15
+def bbPoziom(pom, wielkosc, najkrotszaDroga, macierzPierwotna, LBpop, macierzPoprzednia, macierzDoDrogi):
+    tabPrzejscia = []
+    minLB = 2147483647
+    mind = 2147483647
+    if pom == 0:
+        a, r = redukcja(macierzPierwotna)
+        tabPrzejscia.extend(kombinacjeWielkosciKonkretnychDrog(Ilosc_Miast,wielkosc))
+    else:
+        a, r = redukcja(macierz)
+        najkrotszaDroga = copy.deepcopy(najkrotszaDroga)
+        tabPrzejscia.extend(kombinacjeKonkretnychDrog(Ilosc_Miast,wielkosc,najkrotszaDroga))
+    for i in range(tabPrzejscia.__len__()):
+        m = copy.deepcopy(a)
+        xd = copy.deepcopy(m)
+        droga = tabPrzejscia[i]
+        if pom == 0:
+            noweLB,niepotrzebnazmienna,m = liczLB(m,r,droga)
+        else:
+            noweLB,niepotrzebnazmienna,m = liczLB(m,LBpop,droga)
+        deltaLB = noweLB - LBpop
+
+        x = dlugoscDrogi(droga,macierzDoDrogi)
+        print "Prze ",droga, x
+        if (x < mind):
+            mind = x
+            mindr =droga
+        print "Najk ",mind, mindr
+        najkrotszaDroga = mindr
+
+        if(deltaLB < minLB):
+            minLB = deltaLB
+            #najkrotszaDroga = droga
+        if najkrotszaDroga.__len__() == Ilosc_Miast:
+            najkrotszaDroga.append(1)
+    return najkrotszaDroga, m, dlugoscDrogi(najkrotszaDroga,macierzDoDrogi), minLB, m
 
 # Funkcja zapetlajaca powyzsa na cale drzewo
 
