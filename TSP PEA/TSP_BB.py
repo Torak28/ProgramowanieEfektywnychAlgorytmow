@@ -217,10 +217,6 @@ elif wybor == 2:
     for i in range(Ilosc_Miast):
         tabPlik.append(i)
 
-# TODO:
-# * ograniczyc przeszukania jako ze pierwszy i tak jest zawsze 0(zrobic to zalezne od wywolania funkcji tak zeby mozna bylo nadal liczyc buteforca), Napewno?!
-# * przerwanie kmbinacji w zaleznosci od wilkosci permutacji(zeby nie genreowac wszystkiego)
-
 # Drukiwanie dla obadania o co kaman
 print('Wypisanie:')
 for i in range(rozmiar):
