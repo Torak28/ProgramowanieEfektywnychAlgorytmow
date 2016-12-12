@@ -128,10 +128,15 @@ def kombinacjeWielkosciKonkretnychDrog(n, wielkosc):
 
 def liczLB(macierzPierwotna,LBprev, droga):
     pary = generujPary(droga)
-    A = macierzPierwotna[pary[-1][0]-1][pary[-1][1]-1]
+    A = []
+    for i in range(pary.__len__()):
+        A.append(macierzPierwotna[pary[i][0]-1][pary[i][1]-1])
     macierzPierwotna = negacja(macierzPierwotna,droga)
     macierzPierwotna,r = redukcja(macierzPierwotna)
-    return LBprev + A + r, r , macierzPierwotna
+    wynik = LBprev + r
+    for i in range(A.__len__()):
+        wynik = wynik + A[i]
+    return wynik, r , macierzPierwotna
 
 def bbPoziom(pom, wielkosc, najkrotszaDroga, macierzPierwotna, LBpop, macierzPoprzednia, macierzDoDrogi):
     tabPrzejscia = []
