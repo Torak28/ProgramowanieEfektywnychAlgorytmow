@@ -29,7 +29,6 @@ def generujPunkty(tablica):
     wynik = [ ]
     for i in range(1, tablica.__len__()):
         wynik.extend([ [ tablica[ 0 ], tablica[ i ] ] ])
-        wynik.extend([ [ tablica[ i ], tablica[ 0 ] ] ])
     return wynik
 
 def negacjaTablicy(m, tablica):
@@ -44,6 +43,9 @@ def negacjaPunktu(m, tablica):
     wiersz = tablica[ 0 ] - 1
     kolumna = tablica[ 1 ] - 1
     m[kolumna][wiersz] = INF
+    wiersz = tablica[ 1 ] - 1
+    kolumna = tablica[ 0 ] - 1
+    m[ kolumna ][ wiersz ] = INF
     return m
 
 def negacja(m,tablica):
@@ -84,11 +86,8 @@ def redukcjaKolumn(macierz):
 
 def redukcja(macierz):
     LB = 0
-    print macierz
     macierz, sum1 = redukcjaWierszy(macierz)
-    print "r z wierszy: ", sum1
     macierz, sum2 = redukcjaKolumn(macierz)
-    print "r z kolumn: ", sum2
     LB = sum1 + sum2
     return macierz, LB
 
@@ -108,9 +107,7 @@ def kombinacjeKonkretnychDrog(n, wielkosc,posiada):
     wynik = []
     posiada.append(100)
     zakres = Ilosc_Miast-1
-    #print wielkosc
     for i in range(zakres):
-        #posiada[-1] = i+2
         zmienna = i + 2
         if zmienna not in posiada:
             posiada[-1] = zmienna
@@ -122,9 +119,7 @@ def kombinacjeWielkosciKonkretnychDrog(n, wielkosc):
     posiada = [1]
     posiada.append(2147483647)
     zakres = Ilosc_Miast - 1
-    # print wielkosc
     for i in range(zakres):
-        # posiada[-1] = i+2
         zmienna = i + 2
         if zmienna not in posiada:
             posiada[ -1 ] = zmienna
@@ -132,15 +127,10 @@ def kombinacjeWielkosciKonkretnychDrog(n, wielkosc):
     return wynik
 
 def liczLB(macierzPierwotna,LBprev, droga):
-    # print "Takie A[10][14]? :",macierzPierwotna[9][13]
-    # print "Takie A[10][3]? :", macierzPierwotna[ 9 ][ 2 ]
-    print macierzPierwotna
     pary = generujPary(droga)
     A = macierzPierwotna[pary[-1][0]-1][pary[-1][1]-1]
-    # Czy dobra negacja i redukcja?
     macierzPierwotna = negacja(macierzPierwotna,droga)
     macierzPierwotna,r = redukcja(macierzPierwotna)
-    print "A: ", A," r: ",r, "LBprev: ", LBprev
     return LBprev + A + r, r , macierzPierwotna
 
 def bbPoziom(pom, wielkosc, najkrotszaDroga, macierzPierwotna, LBpop, macierzPoprzednia, macierzDoDrogi):
@@ -155,6 +145,7 @@ def bbPoziom(pom, wielkosc, najkrotszaDroga, macierzPierwotna, LBpop, macierzPop
         tabPrzejscia.extend(kombinacjeKonkretnychDrog(Ilosc_Miast,wielkosc,najkrotszaDroga))
     for i in range(tabPrzejscia.__len__()):
         m = copy.deepcopy(a)
+        xd = copy.deepcopy(m)
         droga = tabPrzejscia[i]
         if pom == 0:
             noweLB,niepotrzebnazmienna,m = liczLB(m,r,droga)
@@ -164,7 +155,6 @@ def bbPoziom(pom, wielkosc, najkrotszaDroga, macierzPierwotna, LBpop, macierzPop
         if(deltaLB < minLB):
             minLB = deltaLB
             najkrotszaDroga = droga
-        print "noweLB: ",noweLB, " LBpop: ", LBpop, droga
         if najkrotszaDroga.__len__() == Ilosc_Miast:
             najkrotszaDroga.append(1)
     return najkrotszaDroga, m, dlugoscDrogi(najkrotszaDroga,macierzDoDrogi), minLB, m
@@ -180,7 +170,6 @@ def bb(macierzPierwotna):
         aktaulnieNajkrotszaDroga = droga
         LBpop = lb
         macirzPoprzednia = mp
-        #print aktaulnieNajkrotszaDroga
     return aktaulnieNajkrotszaDroga, odleglosc
 
 
@@ -237,13 +226,6 @@ print('Wypisanie:')
 for i in range(rozmiar):
     print(macierz[ i ])
 
-
-# najkrotszaDroga = [1, 11, 4, 6, 8, 10, 3]
-# print "xd do 10 z 3: ", dlugoscDrogi(najkrotszaDroga,macierz)
-# najkrotszaDroga = [1, 11, 4, 6, 8, 10, 14]
-# print "xd do 10 z 14: ", dlugoscDrogi(najkrotszaDroga,macierz)
-# print "A[10][3]", macierz[9][2]
-# print "A[10][14]", macierz[9][13]
 print "\n"
 start = time.clock()
 droga,dyst = bb(macierz)
