@@ -1,3 +1,4 @@
+from __future__ import print_function
 # Autor : Jarek Ciolek-Zelechowski
 
 import copy
@@ -10,8 +11,24 @@ ile = 0
 def dp(macierz):
     dane = []
     for i in range(Ilosc_Miast):
-        dane.append(i+1)
-    print len(dane) #rowne Ilosc_Miast
+        if i != 0:
+            dane.append(i+1)
+    dane = tuple(dane)
+    minimum(1, dane)
+
+    """
+    print('\n\nSolution to TSP: {1, ', end="")
+    solution = permutacje.pop()
+    print(solution[ 1 ][ 0 ], end=', ')
+    for x in range(Ilosc_Miast - 2):
+        for new_solution in permutacje:
+            if tuple(solution[ 1 ]) == new_solution[ 0 ]:
+                solution = new_solution
+                print(solution[ 1 ][ 0 ], end=', ')
+                break
+    print('1}')
+    """
+
     
 def minimum(celDrogi ,sciezkaPrzejscia):
     if (celDrogi ,sciezkaPrzejscia) in krotkiPrzejscia:
@@ -87,12 +104,12 @@ for i in range(rozmiar):
     print(macierz[ i ])
 
 # Wypisanie wyniku
-print "\n"
+print("\n")
 start = time.clock()
 # droga,dyst = dp(macierz)
 dp(macierz)
 end = time.clock()
 total = end - start
-print "Najkrotsza droga: ", #droga
-print "Jej dlugosc: ", #dyst
+print ("Najkrotsza droga: ") #, droga)
+print ("Jej dlugosc: ") #, dyst)
 print("Czas pomiaru: {0:02f}s".format(total))
