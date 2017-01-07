@@ -3,7 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="e3072320-8269-4da3-b042-05fef085bc7f" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/TSP PEA/TSP_BB.py" afterPath="$PROJECT_DIR$/TSP PEA/TSP_BB.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/TSP PEA/TSP_DP.py" afterPath="$PROJECT_DIR$/TSP PEA/TSP_DP.py" />
     </list>
     <ignored path="ProgramowanieEfektywnychAlgorytmow.iws" />
@@ -495,13 +494,6 @@
       <option name="presentableId" value="Default" />
       <updated>1480263317144</updated>
     </task>
-    <task id="LOCAL-00015" summary="Gedneracja Drogi w Grafie">
-      <created>1481307162604</created>
-      <option name="number" value="00015" />
-      <option name="presentableId" value="LOCAL-00015" />
-      <option name="project" value="LOCAL" />
-      <updated>1481307162604</updated>
-    </task>
     <task id="LOCAL-00016" summary="bugs, bugs everywhre">
       <created>1481317328742</created>
       <option name="number" value="00016" />
@@ -838,7 +830,14 @@
       <option name="project" value="LOCAL" />
       <updated>1483818298217</updated>
     </task>
-    <option name="localTasksCounter" value="64" />
+    <task id="LOCAL-00064" summary="fix typo">
+      <created>1483829911893</created>
+      <option name="number" value="00064" />
+      <option name="presentableId" value="LOCAL-00064" />
+      <option name="project" value="LOCAL" />
+      <updated>1483829911894</updated>
+    </task>
+    <option name="localTasksCounter" value="65" />
     <servers />
   </component>
   <component name="TodoView" selected-index="4">
@@ -922,7 +921,6 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="&lt;3 dziala" />
     <MESSAGE value="&lt;3 + sprzatanie niepotrzebnych Funkcji" />
     <MESSAGE value="Proby przyspieszenia&#10;" />
     <MESSAGE value="Hmm cos jest na rzeczy&#10;" />
@@ -947,7 +945,8 @@
     <MESSAGE value="Liczenie drogi" />
     <MESSAGE value="Done" />
     <MESSAGE value="Moj BB jest jednak zły. Nigdy sie nie cofam przez co generuja zla droge. :c" />
-    <option name="LAST_COMMIT_MESSAGE" value="Moj BB jest jednak zły. Nigdy sie nie cofam przez co generuja zla droge. :c" />
+    <MESSAGE value="fix typo" />
+    <option name="LAST_COMMIT_MESSAGE" value="fix typo" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

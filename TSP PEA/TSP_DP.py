@@ -16,10 +16,12 @@ def generujPary(tablica):
 def dlugoscDrogi(tablica, macierz):
     sum = 0
     pary = generujPary(tablica)
+    print ("Pary: ", pary)
     for i in range(pary.__len__()):
-        miastoAIndex = pary[i][1] - 1
-        miastoBIndex = pary[i][0] - 1
+        miastoAIndex = pary[i][0] - 1
+        miastoBIndex = pary[ i ][ 1 ] - 1
         sum = sum + macierz[miastoAIndex][miastoBIndex]
+        print("Przejscie ", i, " ", miastoAIndex, " ", miastoBIndex, "Suma: ", sum)
     return sum
 
 def dp(macierz):
@@ -119,7 +121,6 @@ for i in range(rozmiar):
 print("\n")
 start = time.clock()
 droga,dyst = dp(macierz)
-dp(macierz)
 end = time.clock()
 total = end - start
 print ("Najkrotsza droga: ", droga)
