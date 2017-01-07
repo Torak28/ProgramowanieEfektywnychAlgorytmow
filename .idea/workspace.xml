@@ -504,13 +504,6 @@
       <option name="presentableId" value="Default" />
       <updated>1480263317144</updated>
     </task>
-    <task id="LOCAL-00018" summary="Dziala w zaleznosci od wielkosci&#10;">
-      <created>1481381215405</created>
-      <option name="number" value="00018" />
-      <option name="presentableId" value="LOCAL-00018" />
-      <option name="project" value="LOCAL" />
-      <updated>1481381215405</updated>
-    </task>
     <task id="LOCAL-00019" summary="Dodałem IloscLiscy do danego Grafu">
       <created>1481383253537</created>
       <option name="number" value="00019" />
@@ -847,7 +840,14 @@
       <option name="project" value="LOCAL" />
       <updated>1483831058984</updated>
     </task>
-    <option name="localTasksCounter" value="67" />
+    <task id="LOCAL-00067" summary="fix&#10;">
+      <created>1483831324261</created>
+      <option name="number" value="00067" />
+      <option name="presentableId" value="LOCAL-00067" />
+      <option name="project" value="LOCAL" />
+      <updated>1483831324261</updated>
+    </task>
+    <option name="localTasksCounter" value="68" />
     <servers />
   </component>
   <component name="TodoView" selected-index="4">
