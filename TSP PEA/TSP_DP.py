@@ -51,9 +51,7 @@ def dp(macierz):
     
 def get_minimum(k, a):
     if (k, a) in krotkiPrzejscia:
-        # Already calculated Set g[%d, (%s)]=%d' % (k, str(a), g[k, a]))
         return krotkiPrzejscia[k, a]
-
     values = []
     all_min = []
     for j in a:
@@ -62,12 +60,10 @@ def get_minimum(k, a):
         all_min.append([j, tuple(set_a)])
         result = get_minimum(j, tuple(set_a))
         values.append(macierz[k-1][j-1] + result)
-
-    # get minimun value from set as optimal solution for
     krotkiPrzejscia[k, a] = min(values)
     permutacje.append(((k, a), all_min[values.index(krotkiPrzejscia[k, a])]))
-
     return krotkiPrzejscia[k, a]
+
 # Obsluga menu
 wybor = int(input('Wybieramy!\n\t1.Wpisuje z palca(do dopisania obsluga)\n\t2.Wczytam z pliku\nHmm?\n'))
 if wybor == 1:

@@ -73,13 +73,13 @@
           <file leaf-file-name="TSP_DP.py" pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/TSP PEA/TSP_DP.py">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="170">
-                  <caret line="14" column="16" selection-start-line="14" selection-start-column="16" selection-end-line="14" selection-end-column="16" />
+                <state relative-caret-position="697">
+                  <caret line="61" column="49" selection-start-line="61" selection-start-column="49" selection-end-line="61" selection-end-column="49" />
                   <folding>
                     <element signature="e#0#37#0" expanded="true" />
                     <element signature="e#164#291#0" expanded="false" />
                     <element signature="e#333#555#0" expanded="false" />
-                    <marker date="1483816501890" expanded="false" signature="1975:2538" ph="..." />
+                    <marker date="1483816545984" expanded="false" signature="1843:2406" ph="..." />
                   </folding>
                 </state>
               </provider>
@@ -506,13 +506,6 @@
       <option name="presentableId" value="Default" />
       <updated>1480263317144</updated>
     </task>
-    <task id="LOCAL-00011" summary="Add TODO">
-      <created>1481214618773</created>
-      <option name="number" value="00011" />
-      <option name="presentableId" value="LOCAL-00011" />
-      <option name="project" value="LOCAL" />
-      <updated>1481214618773</updated>
-    </task>
     <task id="LOCAL-00012" summary="Redukcja Wierszy bangla">
       <created>1481298314649</created>
       <option name="number" value="00012" />
@@ -849,7 +842,14 @@
       <option name="project" value="LOCAL" />
       <updated>1483815946647</updated>
     </task>
-    <option name="localTasksCounter" value="60" />
+    <task id="LOCAL-00060" summary="Getting there">
+      <created>1483816510103</created>
+      <option name="number" value="00060" />
+      <option name="presentableId" value="LOCAL-00060" />
+      <option name="project" value="LOCAL" />
+      <updated>1483816510103</updated>
+    </task>
+    <option name="localTasksCounter" value="61" />
     <servers />
   </component>
   <component name="TodoView" selected-index="4">
@@ -933,7 +933,6 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Debugowanie mocno, cos tam sie polepsza" />
     <MESSAGE value="Try hard&#10;" />
     <MESSAGE value="Getting closer" />
     <MESSAGE value="We got this" />
@@ -958,7 +957,8 @@
     <MESSAGE value="Dodanie minimum" />
     <MESSAGE value="Klopoty Najmana&#10;" />
     <MESSAGE value="No juz dużo dużo lepiej" />
-    <option name="LAST_COMMIT_MESSAGE" value="No juz dużo dużo lepiej" />
+    <MESSAGE value="Getting there" />
+    <option name="LAST_COMMIT_MESSAGE" value="Getting there" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -1546,13 +1546,13 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/TSP PEA/TSP_DP.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="170">
-          <caret line="14" column="16" selection-start-line="14" selection-start-column="16" selection-end-line="14" selection-end-column="16" />
+        <state relative-caret-position="697">
+          <caret line="61" column="49" selection-start-line="61" selection-start-column="49" selection-end-line="61" selection-end-column="49" />
           <folding>
             <element signature="e#0#37#0" expanded="true" />
             <element signature="e#164#291#0" expanded="false" />
             <element signature="e#333#555#0" expanded="false" />
-            <marker date="1483816501890" expanded="false" signature="1975:2538" ph="..." />
+            <marker date="1483816545984" expanded="false" signature="1843:2406" ph="..." />
           </folding>
         </state>
       </provider>
