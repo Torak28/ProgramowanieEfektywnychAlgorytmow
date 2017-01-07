@@ -14,7 +14,11 @@ def dp(macierz):
         if i != 0:
             dane.append(i+1)
     dane = tuple(dane)
-    minimum(1, dane)
+
+    for x in range(1, Ilosc_Miast):
+        krotkiPrzejscia[x + 1, ()] = macierz[x][0]
+
+    get_minimum(1, dane)
 
     """
     print('\n\nSolution to TSP: {1, ', end="")
@@ -30,23 +34,25 @@ def dp(macierz):
     """
 
     
-def minimum(celDrogi ,sciezkaPrzejscia):
-    if (celDrogi ,sciezkaPrzejscia) in krotkiPrzejscia:
-        return krotkiPrzejscia[celDrogi ,sciezkaPrzejscia]
-    wartosci = [ ]
-    minimalnePrzejscie = [ ]
-    for j in sciezkaPrzejscia:
-        przejscie = copy.deepcopy(list(sciezkaPrzejscia))
-        przejscie.remove(j)
-        minimalnePrzejscie.append([ j, tuple(przejscie) ])
-        wynik = minimum(j, tuple(przejscie))
-        wartosci.append(macierz[ celDrogi - 1 ][ j - 1 ] + wynik)
+def get_minimum(k, a):
+    if (k, a) in krotkiPrzejscia:
+        # Already calculated Set g[%d, (%s)]=%d' % (k, str(a), g[k, a]))
+        return krotkiPrzejscia[k, a]
+
+    values = []
+    all_min = []
+    for j in a:
+        set_a = copy.deepcopy(list(a))
+        set_a.remove(j)
+        all_min.append([j, tuple(set_a)])
+        result = get_minimum(j, tuple(set_a))
+        values.append(macierz[k-1][j-1] + result)
 
     # get minimun value from set as optimal solution for
-    krotkiPrzejscia[ celDrogi, sciezkaPrzejscia ] = min(wartosci)
-    permutacje.append(((celDrogi, sciezkaPrzejscia), minimalnePrzejscie[ wartosci.index(krotkiPrzejscia[ celDrogi, sciezkaPrzejscia ]) ]))
+    krotkiPrzejscia[k, a] = min(values)
+    permutacje.append(((k, a), all_min[values.index(krotkiPrzejscia[k, a])]))
 
-    return krotkiPrzejscia[ celDrogi, sciezkaPrzejscia ]
+    return krotkiPrzejscia[k, a]
 # Obsluga menu
 wybor = int(input('Wybieramy!\n\t1.Wpisuje z palca(do dopisania obsluga)\n\t2.Wczytam z pliku\nHmm?\n'))
 if wybor == 1:
