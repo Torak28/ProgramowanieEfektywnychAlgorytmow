@@ -7,6 +7,12 @@ import time
 INF = -1
 ile = 0
 
+def dp(macierz):
+    dane = []
+    for i in range(Ilosc_Miast):
+        dane.append(i+1)
+    print len(dane)
+
 # Obsluga menu
 wybor = int(input('Wybieramy!\n\t1.Wpisuje z palca(do dopisania obsluga)\n\t2.Wczytam z pliku\nHmm?\n'))
 if wybor == 1:
@@ -61,6 +67,7 @@ for i in range(rozmiar):
 print "\n"
 start = time.clock()
 # droga,dyst = dp(macierz)
+dp(macierz)
 end = time.clock()
 total = end - start
 print "Najkrotsza droga: ", #droga
