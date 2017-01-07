@@ -21,7 +21,6 @@ def dlugoscDrogi(tablica, macierz):
         miastoAIndex = pary[i][0] - 1
         miastoBIndex = pary[ i ][ 1 ] - 1
         sum = sum + macierz[miastoAIndex][miastoBIndex]
-        print("Przejscie ", i, " ", miastoAIndex, " ", miastoBIndex, "Suma: ", sum)
     return sum
 
 def dp(macierz):
