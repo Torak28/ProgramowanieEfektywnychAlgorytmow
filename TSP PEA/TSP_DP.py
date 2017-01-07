@@ -8,6 +8,21 @@ import time
 INF = -1
 ile = 0
 
+def generujPary(tablica):
+    wynik = []
+    for i in range(tablica.__len__()-1):
+        wynik.extend([ [ tablica[ i ], tablica[ i+1 ] ] ])
+    return wynik
+
+def dlugoscDrogi(tablica, macierz):
+    sum = 0
+    pary = generujPary(tablica)
+    for i in range(pary.__len__()):
+        miastoAIndex = pary[i][1] - 1
+        miastoBIndex = pary[i][0] - 1
+        sum = sum + macierz[miastoAIndex][miastoBIndex]
+    return sum
+
 def dp(macierz):
     dane = []
     for i in range(Ilosc_Miast):
