@@ -2,7 +2,6 @@ from __future__ import print_function
 # Autor : Jarek Ciolek-Zelechowski
 
 import copy
-import itertools
 import time
 
 INF = -1
@@ -29,26 +28,22 @@ def dp(macierz):
         if i != 0:
             dane.append(i+1)
     dane = tuple(dane)
-
     for x in range(1, Ilosc_Miast):
         krotkiPrzejscia[x + 1, ()] = macierz[x][0]
-
     get_minimum(1, dane)
-
-    """
-    print('\n\nSolution to TSP: {1, ', end="")
-    solution = permutacje.pop()
-    print(solution[ 1 ][ 0 ], end=', ')
+    droga = []
+    droga.append(1)
+    rozwiazanie = permutacje.pop()
+    droga.append(rozwiazanie[1][0])
     for x in range(Ilosc_Miast - 2):
-        for new_solution in permutacje:
-            if tuple(solution[ 1 ]) == new_solution[ 0 ]:
-                solution = new_solution
-                print(solution[ 1 ][ 0 ], end=', ')
+        for noweRozwiazanie in permutacje:
+            if tuple(rozwiazanie[ 1 ]) == noweRozwiazanie[ 0 ]:
+                rozwiazanie = noweRozwiazanie
+                droga.append(rozwiazanie[1][0])
                 break
-    print('1}')
-    """
+    droga.append(1)
+    return droga, dlugoscDrogi(droga, macierz)
 
-    
 def get_minimum(k, a):
     if (k, a) in krotkiPrzejscia:
         return krotkiPrzejscia[k, a]
@@ -123,10 +118,10 @@ for i in range(rozmiar):
 # Wypisanie wyniku
 print("\n")
 start = time.clock()
-# droga,dyst = dp(macierz)
+droga,dyst = dp(macierz)
 dp(macierz)
 end = time.clock()
 total = end - start
-print ("Najkrotsza droga: ") #, droga)
-print ("Jej dlugosc: ") #, dyst)
+print ("Najkrotsza droga: ", droga)
+print ("Jej dlugosc: ", dyst)
 print("Czas pomiaru: {0:02f}s".format(total))
