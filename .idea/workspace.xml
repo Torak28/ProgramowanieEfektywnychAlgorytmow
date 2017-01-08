@@ -510,13 +510,6 @@
       <option name="presentableId" value="Default" />
       <updated>1480263317144</updated>
     </task>
-    <task id="LOCAL-00020" summary="Generator Par dla Negowania Macierzy">
-      <created>1481384297217</created>
-      <option name="number" value="00020" />
-      <option name="presentableId" value="LOCAL-00020" />
-      <option name="project" value="LOCAL" />
-      <updated>1481384297217</updated>
-    </task>
     <task id="LOCAL-00021" summary="Fix Par dla Negowania Macierzy">
       <created>1481385019596</created>
       <option name="number" value="00021" />
@@ -853,7 +846,14 @@
       <option name="project" value="LOCAL" />
       <updated>1483831329318</updated>
     </task>
-    <option name="localTasksCounter" value="69" />
+    <task id="LOCAL-00069" summary="Podejscie 2">
+      <created>1483893528348</created>
+      <option name="number" value="00069" />
+      <option name="presentableId" value="LOCAL-00069" />
+      <option name="project" value="LOCAL" />
+      <updated>1483893528349</updated>
+    </task>
+    <option name="localTasksCounter" value="70" />
     <servers />
   </component>
   <component name="TodoView" selected-index="4">
@@ -937,7 +937,6 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Hmm cos jest na rzeczy&#10;" />
     <MESSAGE value="Closer each iteration" />
     <MESSAGE value="Better stronger" />
     <MESSAGE value="lets see" />
@@ -962,7 +961,8 @@
     <MESSAGE value="fix typo" />
     <MESSAGE value="lepiej!" />
     <MESSAGE value="fix&#10;" />
-    <option name="LAST_COMMIT_MESSAGE" value="fix&#10;" />
+    <MESSAGE value="Podejscie 2" />
+    <option name="LAST_COMMIT_MESSAGE" value="Podejscie 2" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

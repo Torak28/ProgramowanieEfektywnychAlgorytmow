@@ -1,3 +1,3 @@
-#Programowanie Efektywnych Algorytmów - Laboratorium
+# Programowanie Efektywnych Algorytmów - Laboratorium
 
 Zapis Pracy nad zadaniami z przedmiotu.
