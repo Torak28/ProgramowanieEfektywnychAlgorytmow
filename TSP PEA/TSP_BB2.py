@@ -4,7 +4,7 @@
  "An Algorithm For The TSP"(1963)
  https://goo.gl/am5JFf
  oraz z pomoca wykladu Prof. G. Srinivasan
- (https://www.youtube.com/watch?v=nN4K8xA8ShM)
+ https://www.youtube.com/watch?v=RR7GXoWiUw4&t=691s
 """
 
 
@@ -12,6 +12,7 @@ import time
 
 INF = 1000000
 nalepsza_cena = 0
+
 
 def redukuj(rozmiar, macierz, wiersz, kolumna, wiersz_usuwany, kolumna_usuwana):
     redukcja = 0
@@ -36,7 +37,6 @@ def redukuj(rozmiar, macierz, wiersz, kolumna, wiersz_usuwany, kolumna_usuwana):
             redukcja += temp
         kolumna_usuwana[j] = temp
     return redukcja
-
 
 def nalepsza_krawedz(rozmiar, macierz, wiersz, kolumna):
     mosti = -INF
@@ -69,10 +69,8 @@ def nalepsza_krawedz(rozmiar, macierz, wiersz, kolumna):
                     yi = j
     return mosti, xi, yi
 
-
 def przeszukaj(n, macierz, krawedzie, koszt, wiersz, kolumna, najlepsza, wskaznik_w_przod, wskaznik_w_tyl):
     global nalepsza_cena
-
     kolumna_usuwana = [0 for c in range(n)]
     wiersz_usuwany = [0 for c in range(n)]
     rozmiar = n - krawedzie
@@ -157,7 +155,6 @@ def bb(macierz):
         koszt += macierz[src][dst]
         index.append(dst+1)
     return koszt, index
-
 
 # Obsluga menu
 wybor = int(input('Wybieramy!\n\t1.Wpisuje z palca(do dopisania obsluga)\n\t2.Wczytam z pliku\nHmm?\n'))
