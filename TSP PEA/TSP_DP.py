@@ -16,7 +16,6 @@ def generujPary(tablica):
 def dlugoscDrogi(tablica, macierz):
     sum = 0
     pary = generujPary(tablica)
-    print ("Pary: ", pary)
     for i in range(pary.__len__()):
         miastoAIndex = pary[i][0] - 1
         miastoBIndex = pary[ i ][ 1 ] - 1
