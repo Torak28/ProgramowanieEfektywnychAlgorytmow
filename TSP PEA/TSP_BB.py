@@ -4,7 +4,7 @@ import copy
 import itertools
 import time
 
-INF = -1
+INF = 1000000
 ile = 0
 
 # Dla przyjetej tablicy drogi i zadanej macierzy przejscia
@@ -280,12 +280,13 @@ print('Wypisanie:')
 for i in range(rozmiar):
     print(macierz[ i ])
 
+macierzDoDrogi = copy.deepcopy(macierz)
 # Wypisanie wyniku
 print "\n"
 start = time.clock()
 droga,dyst = bb(macierz)
 end = time.clock()
 total = end - start
-print "Najkrotsza droga: ", droga
-print "Jej dlugosc: ", dyst
+print "Najkrotsza droga: ", droga[::-1]
+print "Jej dlugosc: ", dlugoscDrogi(droga[::-1],macierzDoDrogi)
 print("Czas pomiaru: {0:02f}s".format(total))

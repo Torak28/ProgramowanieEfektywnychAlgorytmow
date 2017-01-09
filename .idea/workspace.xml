@@ -3,7 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="e3072320-8269-4da3-b042-05fef085bc7f" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/TSP PEA/TSP_BB2.py" afterPath="$PROJECT_DIR$/TSP PEA/TSP_BB2.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/TSP PEA/TSP_BB.py" afterPath="$PROJECT_DIR$/TSP PEA/TSP_BB.py" />
     </list>
     <ignored path="ProgramowanieEfektywnychAlgorytmow.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -26,64 +26,14 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="TSP_BB.py" pinned="false" current-in-tab="false">
+      <file leaf-file-name="TSP_BB.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/TSP PEA/TSP_BB.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="241">
-              <caret line="25" column="0" selection-start-line="25" selection-start-column="0" selection-end-line="28" selection-end-column="48" />
+            <state relative-caret-position="776">
+              <caret line="290" column="62" selection-start-line="290" selection-start-column="62" selection-end-line="290" selection-end-column="62" />
               <folding>
                 <element signature="e#36#47#0" expanded="true" />
-                <element signature="e#228#454#0" expanded="false" />
-                <element signature="e#456#507#0" expanded="false" />
-                <element signature="e#553#573#0" expanded="false" />
-                <element signature="e#765#892#0" expanded="false" />
-                <element signature="e#894#934#0" expanded="false" />
-                <element signature="e#1095#1222#0" expanded="false" />
-                <element signature="e#1224#1257#0" expanded="false" />
-                <element signature="e#1348#1497#0" expanded="false" />
-                <element signature="e#1499#1532#0" expanded="false" />
-                <element signature="e#1624#1755#0" expanded="false" />
-                <element signature="e#1757#1805#0" expanded="false" />
-                <element signature="e#1917#2105#0" expanded="false" />
-                <element signature="e#2107#2153#0" expanded="false" />
-                <element signature="e#2205#2630#0" expanded="false" />
-                <element signature="e#2632#2677#0" expanded="false" />
-                <element signature="e#2728#3153#0" expanded="false" />
-                <element signature="e#3155#3210#0" expanded="false" />
-                <element signature="e#3255#3394#0" expanded="false" />
-                <element signature="e#3396#3440#0" expanded="false" />
-                <element signature="e#3652#3931#0" expanded="false" />
-                <element signature="e#3931#3992#0" expanded="false" />
-                <element signature="e#4165#4406#0" expanded="false" />
-                <element signature="e#4408#4448#0" expanded="false" />
-                <element signature="e#4721#4994#0" expanded="false" />
-                <element signature="e#4996#5054#0" expanded="false" />
-                <element signature="e#5151#5517#0" expanded="false" />
-                <element signature="e#5519#5564#0" expanded="false" />
-                <element signature="e#5704#6817#0" expanded="false" />
-                <element signature="e#6894#7438#0" expanded="false" />
-                <element signature="e#7579#8064#0" expanded="false" />
-                <element signature="e#8086#8819#0" expanded="false" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="TSP_BB2.py" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/TSP PEA/TSP_BB2.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="234">
-              <caret line="15" column="0" selection-start-line="15" selection-start-column="0" selection-end-line="34" selection-end-column="14" />
-              <folding>
-                <element signature="e#256#267#0" expanded="true" />
-                <element signature="e#498#625#0" expanded="false" />
-                <element signature="e#759#985#0" expanded="false" />
-                <element signature="e#1325#2114#0" expanded="false" />
-                <element signature="e#2406#3472#0" expanded="false" />
-                <element signature="e#3834#6274#0" expanded="false" />
-                <element signature="e#6474#7396#0" expanded="false" />
-                <element signature="e#7537#8177#0" expanded="false" />
-                <element signature="e#8199#9087#0" expanded="false" />
+                <element signature="e#1353#1502#0" expanded="false" />
               </folding>
             </state>
           </provider>
@@ -92,17 +42,10 @@
       <file leaf-file-name="TSP_DP.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/TSP PEA/TSP_DP.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="484">
+            <state relative-caret-position="1547">
               <caret line="148" column="45" selection-start-line="148" selection-start-column="45" selection-end-line="148" selection-end-column="45" />
               <folding>
                 <element signature="e#192#203#0" expanded="true" />
-                <element signature="e#419#546#0" expanded="false" />
-                <element signature="e#680#906#0" expanded="false" />
-                <element signature="e#1235#1844#0" expanded="false" />
-                <element signature="e#2029#2683#0" expanded="false" />
-                <element signature="e#2824#3382#0" expanded="false" />
-                <element signature="e#3404#4208#0" expanded="false" />
-                <element signature="e#4320#4338#0" expanded="false" />
               </folding>
             </state>
           </provider>
@@ -117,36 +60,6 @@
                 <folding />
               </first_editor>
               <second_editor />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="tsp15.txt" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/tsp15.txt">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="17">
-              <caret line="1" column="0" selection-start-line="1" selection-start-column="0" selection-end-line="15" selection-end-column="44" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="test" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/TSP PEA/test">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="34">
-              <caret line="2" column="2" selection-start-line="2" selection-start-column="0" selection-end-line="2" selection-end-column="2" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="t" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/TSP PEA/t">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="68">
-              <caret line="4" column="8" selection-start-line="4" selection-start-column="8" selection-end-line="4" selection-end-column="8" />
-              <folding />
             </state>
           </provider>
         </entry>
@@ -178,18 +91,19 @@
         <option value="$PROJECT_DIR$/TSP PEA/test" />
         <option value="$PROJECT_DIR$/TSP PEA/xd.py" />
         <option value="$PROJECT_DIR$/TSP PEA/test.py" />
-        <option value="$PROJECT_DIR$/TSP PEA/TSP_BB.py" />
         <option value="$PROJECT_DIR$/README.md" />
         <option value="$PROJECT_DIR$/TSP PEA/TSP_DP.py" />
         <option value="$PROJECT_DIR$/TSP PEA/t" />
         <option value="$PROJECT_DIR$/TSP PEA/TSP_BB2.py" />
+        <option value="$PROJECT_DIR$/TSP PEA/TSP_BB.py" />
       </list>
     </option>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="-7" />
-    <option name="width" value="974" />
-    <option name="height" value="1047" />
+    <option name="x" value="-8" />
+    <option name="y" value="-8" />
+    <option name="width" value="1936" />
+    <option name="height" value="1056" />
   </component>
   <component name="ProjectInspectionProfilesVisibleTreeState">
     <entry key="Project Default">
@@ -235,6 +149,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -270,7 +185,6 @@
         </subPane>
       </pane>
       <pane id="Scratches" />
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -278,6 +192,9 @@
     <property name="settings.editor.splitter.proportion" value="0.2" />
   </component>
   <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\Dropbox\Studiowanie\git\ProgramowanieEfektywnychAlgorytmow\TSP PEA" />
+    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="D:\Dropbox\Studiowanie\git\ProgramowanieEfektywnychAlgorytmow\TSP PEA" />
     </key>
@@ -512,8 +429,8 @@
     <recent_temporary>
       <list size="5">
         <item index="0" class="java.lang.String" itemvalue="Python.TSP_BB2" />
-        <item index="1" class="java.lang.String" itemvalue="Python.TSP_DP" />
-        <item index="2" class="java.lang.String" itemvalue="Python.TSP_BB" />
+        <item index="1" class="java.lang.String" itemvalue="Python.TSP_BB" />
+        <item index="2" class="java.lang.String" itemvalue="Python.TSP_DP" />
         <item index="3" class="java.lang.String" itemvalue="Python.test" />
         <item index="4" class="java.lang.String" itemvalue="Python.28" />
       </list>
@@ -532,13 +449,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1480263317144</updated>
-    </task>
-    <task id="LOCAL-00031" summary="Fix + funkcja sprawdzajace czy drogi sa sobie rowne.">
-      <created>1481467350013</created>
-      <option name="number" value="00031" />
-      <option name="presentableId" value="LOCAL-00031" />
-      <option name="project" value="LOCAL" />
-      <updated>1481467350013</updated>
     </task>
     <task id="LOCAL-00032" summary=":c Cały czas probelm z obliczanie LB">
       <created>1481467494590</created>
@@ -876,7 +786,14 @@
       <option name="project" value="LOCAL" />
       <updated>1483958604526</updated>
     </task>
-    <option name="localTasksCounter" value="80" />
+    <task id="LOCAL-00080" summary="&lt;3">
+      <created>1483962254260</created>
+      <option name="number" value="00080" />
+      <option name="presentableId" value="LOCAL-00080" />
+      <option name="project" value="LOCAL" />
+      <updated>1483962254260</updated>
+    </task>
+    <option name="localTasksCounter" value="81" />
     <servers />
   </component>
   <component name="TodoView" selected-index="4">
@@ -889,15 +806,15 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="-7" y="0" width="974" height="1047" extended-state="0" />
+    <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.14102565" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.06954689" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32827735" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33044422" sideWeight="0.5021075" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32719395" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Python Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32827735" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32822758" sideWeight="0.49789253" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32719395" sideWeight="0.49789253" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.24973656" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3261105" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
@@ -960,7 +877,6 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="fxi. Nadal nie czaje czemu se tak dzieje. Jak skupiam się na drodze to spada mi statystyka na 5 miastach i rosnie dla 15 :c" />
     <MESSAGE value="A moze to jest to? &lt;3" />
     <MESSAGE value="Dziala dla tsp15 poprawnie. Naprawione" />
     <MESSAGE value="init do Dynamicznego programowania&#10;" />
@@ -985,7 +901,8 @@
     <MESSAGE value="Komentarze pt.1" />
     <MESSAGE value="Wszystie komentarze na miejscu!" />
     <MESSAGE value="dziala" />
-    <option name="LAST_COMMIT_MESSAGE" value="dziala" />
+    <MESSAGE value="&lt;3" />
+    <option name="LAST_COMMIT_MESSAGE" value="&lt;3" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -996,7 +913,7 @@
           </properties>
         </breakpoint>
       </default-breakpoints>
-      <option name="time" value="81" />
+      <option name="time" value="87" />
     </breakpoint-manager>
     <watches-manager>
       <configuration name="PythonConfigurationType">
@@ -1005,61 +922,6 @@
     </watches-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/TSP PEA/macierz.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="85">
-          <caret line="5" column="11" selection-start-line="5" selection-start-column="11" selection-end-line="5" selection-end-column="11" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/TSP PEA/TSP_BB.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding>
-            <element signature="e#36#47#0" expanded="true" />
-            <element signature="e#228#454#0" expanded="false" />
-            <element signature="e#456#507#0" expanded="false" />
-            <element signature="e#553#573#0" expanded="false" />
-            <element signature="e#765#892#0" expanded="false" />
-            <element signature="e#894#934#0" expanded="false" />
-            <element signature="e#1095#1222#0" expanded="false" />
-            <element signature="e#1224#1257#0" expanded="false" />
-            <element signature="e#1348#1497#0" expanded="false" />
-            <element signature="e#1499#1532#0" expanded="false" />
-            <element signature="e#1624#1755#0" expanded="false" />
-            <element signature="e#1757#1805#0" expanded="false" />
-            <element signature="e#1917#2105#0" expanded="false" />
-            <element signature="e#2107#2153#0" expanded="false" />
-            <element signature="e#2205#2630#0" expanded="false" />
-            <element signature="e#2632#2677#0" expanded="false" />
-            <element signature="e#2728#3153#0" expanded="false" />
-            <element signature="e#3155#3210#0" expanded="false" />
-            <element signature="e#3255#3394#0" expanded="false" />
-            <element signature="e#3396#3440#0" expanded="false" />
-            <element signature="e#3652#3931#0" expanded="false" />
-            <element signature="e#3931#3992#0" expanded="false" />
-            <element signature="e#4165#4406#0" expanded="false" />
-            <element signature="e#4408#4448#0" expanded="false" />
-            <element signature="e#4721#4994#0" expanded="false" />
-            <element signature="e#4996#5054#0" expanded="false" />
-            <element signature="e#5151#5517#0" expanded="false" />
-            <element signature="e#5519#5564#0" expanded="false" />
-            <element signature="e#5704#6817#0" expanded="false" />
-            <element signature="e#6894#7438#0" expanded="false" />
-            <element signature="e#7579#8064#0" expanded="false" />
-            <element signature="e#8086#8819#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/tsp10.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="11" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/tsp15.txt">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
@@ -1097,37 +959,7 @@
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
             <element signature="e#36#47#0" expanded="true" />
-            <element signature="e#228#454#0" expanded="false" />
-            <element signature="e#456#507#0" expanded="false" />
-            <element signature="e#553#573#0" expanded="false" />
-            <element signature="e#765#892#0" expanded="false" />
-            <element signature="e#894#934#0" expanded="false" />
-            <element signature="e#1095#1222#0" expanded="false" />
-            <element signature="e#1224#1257#0" expanded="false" />
-            <element signature="e#1348#1497#0" expanded="false" />
-            <element signature="e#1499#1532#0" expanded="false" />
-            <element signature="e#1624#1755#0" expanded="false" />
-            <element signature="e#1757#1805#0" expanded="false" />
-            <element signature="e#1917#2105#0" expanded="false" />
-            <element signature="e#2107#2153#0" expanded="false" />
-            <element signature="e#2205#2630#0" expanded="false" />
-            <element signature="e#2632#2677#0" expanded="false" />
-            <element signature="e#2728#3153#0" expanded="false" />
-            <element signature="e#3155#3210#0" expanded="false" />
-            <element signature="e#3255#3394#0" expanded="false" />
-            <element signature="e#3396#3440#0" expanded="false" />
-            <element signature="e#3652#3931#0" expanded="false" />
-            <element signature="e#3931#3992#0" expanded="false" />
-            <element signature="e#4165#4406#0" expanded="false" />
-            <element signature="e#4408#4448#0" expanded="false" />
-            <element signature="e#4721#4994#0" expanded="false" />
-            <element signature="e#4996#5054#0" expanded="false" />
-            <element signature="e#5151#5517#0" expanded="false" />
-            <element signature="e#5519#5564#0" expanded="false" />
-            <element signature="e#5704#6817#0" expanded="false" />
-            <element signature="e#6894#7438#0" expanded="false" />
-            <element signature="e#7579#8064#0" expanded="false" />
-            <element signature="e#8086#8819#0" expanded="false" />
+            <element signature="e#1353#1502#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -1161,37 +993,7 @@
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
             <element signature="e#36#47#0" expanded="true" />
-            <element signature="e#228#454#0" expanded="false" />
-            <element signature="e#456#507#0" expanded="false" />
-            <element signature="e#553#573#0" expanded="false" />
-            <element signature="e#765#892#0" expanded="false" />
-            <element signature="e#894#934#0" expanded="false" />
-            <element signature="e#1095#1222#0" expanded="false" />
-            <element signature="e#1224#1257#0" expanded="false" />
-            <element signature="e#1348#1497#0" expanded="false" />
-            <element signature="e#1499#1532#0" expanded="false" />
-            <element signature="e#1624#1755#0" expanded="false" />
-            <element signature="e#1757#1805#0" expanded="false" />
-            <element signature="e#1917#2105#0" expanded="false" />
-            <element signature="e#2107#2153#0" expanded="false" />
-            <element signature="e#2205#2630#0" expanded="false" />
-            <element signature="e#2632#2677#0" expanded="false" />
-            <element signature="e#2728#3153#0" expanded="false" />
-            <element signature="e#3155#3210#0" expanded="false" />
-            <element signature="e#3255#3394#0" expanded="false" />
-            <element signature="e#3396#3440#0" expanded="false" />
-            <element signature="e#3652#3931#0" expanded="false" />
-            <element signature="e#3931#3992#0" expanded="false" />
-            <element signature="e#4165#4406#0" expanded="false" />
-            <element signature="e#4408#4448#0" expanded="false" />
-            <element signature="e#4721#4994#0" expanded="false" />
-            <element signature="e#4996#5054#0" expanded="false" />
-            <element signature="e#5151#5517#0" expanded="false" />
-            <element signature="e#5519#5564#0" expanded="false" />
-            <element signature="e#5704#6817#0" expanded="false" />
-            <element signature="e#6894#7438#0" expanded="false" />
-            <element signature="e#7579#8064#0" expanded="false" />
-            <element signature="e#8086#8819#0" expanded="false" />
+            <element signature="e#1353#1502#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -1216,37 +1018,7 @@
           <caret line="138" column="22" selection-start-line="138" selection-start-column="22" selection-end-line="138" selection-end-column="22" />
           <folding>
             <element signature="e#36#47#0" expanded="true" />
-            <element signature="e#228#454#0" expanded="false" />
-            <element signature="e#456#507#0" expanded="false" />
-            <element signature="e#553#573#0" expanded="false" />
-            <element signature="e#765#892#0" expanded="false" />
-            <element signature="e#894#934#0" expanded="false" />
-            <element signature="e#1095#1222#0" expanded="false" />
-            <element signature="e#1224#1257#0" expanded="false" />
-            <element signature="e#1348#1497#0" expanded="false" />
-            <element signature="e#1499#1532#0" expanded="false" />
-            <element signature="e#1624#1755#0" expanded="false" />
-            <element signature="e#1757#1805#0" expanded="false" />
-            <element signature="e#1917#2105#0" expanded="false" />
-            <element signature="e#2107#2153#0" expanded="false" />
-            <element signature="e#2205#2630#0" expanded="false" />
-            <element signature="e#2632#2677#0" expanded="false" />
-            <element signature="e#2728#3153#0" expanded="false" />
-            <element signature="e#3155#3210#0" expanded="false" />
-            <element signature="e#3255#3394#0" expanded="false" />
-            <element signature="e#3396#3440#0" expanded="false" />
-            <element signature="e#3652#3931#0" expanded="false" />
-            <element signature="e#3931#3992#0" expanded="false" />
-            <element signature="e#4165#4406#0" expanded="false" />
-            <element signature="e#4408#4448#0" expanded="false" />
-            <element signature="e#4721#4994#0" expanded="false" />
-            <element signature="e#4996#5054#0" expanded="false" />
-            <element signature="e#5151#5517#0" expanded="false" />
-            <element signature="e#5519#5564#0" expanded="false" />
-            <element signature="e#5704#6817#0" expanded="false" />
-            <element signature="e#6894#7438#0" expanded="false" />
-            <element signature="e#7579#8064#0" expanded="false" />
-            <element signature="e#8086#8819#0" expanded="false" />
+            <element signature="e#1353#1502#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -1279,37 +1051,7 @@
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
             <element signature="e#36#47#0" expanded="true" />
-            <element signature="e#228#454#0" expanded="false" />
-            <element signature="e#456#507#0" expanded="false" />
-            <element signature="e#553#573#0" expanded="false" />
-            <element signature="e#765#892#0" expanded="false" />
-            <element signature="e#894#934#0" expanded="false" />
-            <element signature="e#1095#1222#0" expanded="false" />
-            <element signature="e#1224#1257#0" expanded="false" />
-            <element signature="e#1348#1497#0" expanded="false" />
-            <element signature="e#1499#1532#0" expanded="false" />
-            <element signature="e#1624#1755#0" expanded="false" />
-            <element signature="e#1757#1805#0" expanded="false" />
-            <element signature="e#1917#2105#0" expanded="false" />
-            <element signature="e#2107#2153#0" expanded="false" />
-            <element signature="e#2205#2630#0" expanded="false" />
-            <element signature="e#2632#2677#0" expanded="false" />
-            <element signature="e#2728#3153#0" expanded="false" />
-            <element signature="e#3155#3210#0" expanded="false" />
-            <element signature="e#3255#3394#0" expanded="false" />
-            <element signature="e#3396#3440#0" expanded="false" />
-            <element signature="e#3652#3931#0" expanded="false" />
-            <element signature="e#3931#3992#0" expanded="false" />
-            <element signature="e#4165#4406#0" expanded="false" />
-            <element signature="e#4408#4448#0" expanded="false" />
-            <element signature="e#4721#4994#0" expanded="false" />
-            <element signature="e#4996#5054#0" expanded="false" />
-            <element signature="e#5151#5517#0" expanded="false" />
-            <element signature="e#5519#5564#0" expanded="false" />
-            <element signature="e#5704#6817#0" expanded="false" />
-            <element signature="e#6894#7438#0" expanded="false" />
-            <element signature="e#7579#8064#0" expanded="false" />
-            <element signature="e#8086#8819#0" expanded="false" />
+            <element signature="e#1353#1502#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -1341,37 +1083,7 @@
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
             <element signature="e#36#47#0" expanded="true" />
-            <element signature="e#228#454#0" expanded="false" />
-            <element signature="e#456#507#0" expanded="false" />
-            <element signature="e#553#573#0" expanded="false" />
-            <element signature="e#765#892#0" expanded="false" />
-            <element signature="e#894#934#0" expanded="false" />
-            <element signature="e#1095#1222#0" expanded="false" />
-            <element signature="e#1224#1257#0" expanded="false" />
-            <element signature="e#1348#1497#0" expanded="false" />
-            <element signature="e#1499#1532#0" expanded="false" />
-            <element signature="e#1624#1755#0" expanded="false" />
-            <element signature="e#1757#1805#0" expanded="false" />
-            <element signature="e#1917#2105#0" expanded="false" />
-            <element signature="e#2107#2153#0" expanded="false" />
-            <element signature="e#2205#2630#0" expanded="false" />
-            <element signature="e#2632#2677#0" expanded="false" />
-            <element signature="e#2728#3153#0" expanded="false" />
-            <element signature="e#3155#3210#0" expanded="false" />
-            <element signature="e#3255#3394#0" expanded="false" />
-            <element signature="e#3396#3440#0" expanded="false" />
-            <element signature="e#3652#3931#0" expanded="false" />
-            <element signature="e#3931#3992#0" expanded="false" />
-            <element signature="e#4165#4406#0" expanded="false" />
-            <element signature="e#4408#4448#0" expanded="false" />
-            <element signature="e#4721#4994#0" expanded="false" />
-            <element signature="e#4996#5054#0" expanded="false" />
-            <element signature="e#5151#5517#0" expanded="false" />
-            <element signature="e#5519#5564#0" expanded="false" />
-            <element signature="e#5704#6817#0" expanded="false" />
-            <element signature="e#6894#7438#0" expanded="false" />
-            <element signature="e#7579#8064#0" expanded="false" />
-            <element signature="e#8086#8819#0" expanded="false" />
+            <element signature="e#1353#1502#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -1404,37 +1116,7 @@
           <caret line="109" column="11" selection-start-line="109" selection-start-column="11" selection-end-line="109" selection-end-column="11" />
           <folding>
             <element signature="e#36#47#0" expanded="true" />
-            <element signature="e#228#454#0" expanded="false" />
-            <element signature="e#456#507#0" expanded="false" />
-            <element signature="e#553#573#0" expanded="false" />
-            <element signature="e#765#892#0" expanded="false" />
-            <element signature="e#894#934#0" expanded="false" />
-            <element signature="e#1095#1222#0" expanded="false" />
-            <element signature="e#1224#1257#0" expanded="false" />
-            <element signature="e#1348#1497#0" expanded="false" />
-            <element signature="e#1499#1532#0" expanded="false" />
-            <element signature="e#1624#1755#0" expanded="false" />
-            <element signature="e#1757#1805#0" expanded="false" />
-            <element signature="e#1917#2105#0" expanded="false" />
-            <element signature="e#2107#2153#0" expanded="false" />
-            <element signature="e#2205#2630#0" expanded="false" />
-            <element signature="e#2632#2677#0" expanded="false" />
-            <element signature="e#2728#3153#0" expanded="false" />
-            <element signature="e#3155#3210#0" expanded="false" />
-            <element signature="e#3255#3394#0" expanded="false" />
-            <element signature="e#3396#3440#0" expanded="false" />
-            <element signature="e#3652#3931#0" expanded="false" />
-            <element signature="e#3931#3992#0" expanded="false" />
-            <element signature="e#4165#4406#0" expanded="false" />
-            <element signature="e#4408#4448#0" expanded="false" />
-            <element signature="e#4721#4994#0" expanded="false" />
-            <element signature="e#4996#5054#0" expanded="false" />
-            <element signature="e#5151#5517#0" expanded="false" />
-            <element signature="e#5519#5564#0" expanded="false" />
-            <element signature="e#5704#6817#0" expanded="false" />
-            <element signature="e#6894#7438#0" expanded="false" />
-            <element signature="e#7579#8064#0" expanded="false" />
-            <element signature="e#8086#8819#0" expanded="false" />
+            <element signature="e#1353#1502#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -1469,13 +1151,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/tsp12.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="17">
-          <caret line="1" column="0" selection-start-line="1" selection-start-column="0" selection-end-line="12" selection-end-column="35" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/TSP PEA/28.py" />
     <entry file="file://$PROJECT_DIR$/tsp10.txt">
       <provider selected="true" editor-type-id="text-editor">
@@ -1491,78 +1166,12 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/tsp15.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="17">
-          <caret line="1" column="0" selection-start-line="1" selection-start-column="0" selection-end-line="15" selection-end-column="44" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/TSP PEA/xd.py" />
     <entry file="file://$PROJECT_DIR$/TSP PEA/test.py" />
     <entry file="file://$PROJECT_DIR$/TSP PEA/macierz.txt">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="85">
           <caret line="5" column="11" selection-start-line="5" selection-start-column="11" selection-end-line="5" selection-end-column="11" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/README.md">
-      <provider selected="true" editor-type-id="split-provider[text-editor;MarkdownPreviewEditor]">
-        <state split_layout="SPLIT">
-          <first_editor relative-caret-position="0">
-            <caret line="0" column="2" selection-start-line="0" selection-start-column="2" selection-end-line="0" selection-end-column="2" />
-            <folding />
-          </first_editor>
-          <second_editor />
-        </state>
-      </provider>
-      <provider editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/TSP PEA/TSP_BB.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="241">
-          <caret line="25" column="0" selection-start-line="25" selection-start-column="0" selection-end-line="28" selection-end-column="48" />
-          <folding>
-            <element signature="e#36#47#0" expanded="true" />
-            <element signature="e#228#454#0" expanded="false" />
-            <element signature="e#456#507#0" expanded="false" />
-            <element signature="e#553#573#0" expanded="false" />
-            <element signature="e#765#892#0" expanded="false" />
-            <element signature="e#894#934#0" expanded="false" />
-            <element signature="e#1095#1222#0" expanded="false" />
-            <element signature="e#1224#1257#0" expanded="false" />
-            <element signature="e#1348#1497#0" expanded="false" />
-            <element signature="e#1499#1532#0" expanded="false" />
-            <element signature="e#1624#1755#0" expanded="false" />
-            <element signature="e#1757#1805#0" expanded="false" />
-            <element signature="e#1917#2105#0" expanded="false" />
-            <element signature="e#2107#2153#0" expanded="false" />
-            <element signature="e#2205#2630#0" expanded="false" />
-            <element signature="e#2632#2677#0" expanded="false" />
-            <element signature="e#2728#3153#0" expanded="false" />
-            <element signature="e#3155#3210#0" expanded="false" />
-            <element signature="e#3255#3394#0" expanded="false" />
-            <element signature="e#3396#3440#0" expanded="false" />
-            <element signature="e#3652#3931#0" expanded="false" />
-            <element signature="e#3931#3992#0" expanded="false" />
-            <element signature="e#4165#4406#0" expanded="false" />
-            <element signature="e#4408#4448#0" expanded="false" />
-            <element signature="e#4721#4994#0" expanded="false" />
-            <element signature="e#4996#5054#0" expanded="false" />
-            <element signature="e#5151#5517#0" expanded="false" />
-            <element signature="e#5519#5564#0" expanded="false" />
-            <element signature="e#5704#6817#0" expanded="false" />
-            <element signature="e#6894#7438#0" expanded="false" />
-            <element signature="e#7579#8064#0" expanded="false" />
-            <element signature="e#8086#8819#0" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1574,45 +1183,84 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/TSP PEA/t">
+    <entry file="file://$PROJECT_DIR$/TSP PEA/t" />
+    <entry file="file://$PROJECT_DIR$/tsp14.txt">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="68">
-          <caret line="4" column="8" selection-start-line="4" selection-start-column="8" selection-end-line="4" selection-end-column="8" />
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/tsp12.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="238">
+          <caret line="14" column="0" selection-start-line="14" selection-start-column="0" selection-end-line="14" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/tsp4.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/tsp15.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="136">
+          <caret line="8" column="44" selection-start-line="8" selection-start-column="44" selection-end-line="8" selection-end-column="44" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/TSP PEA/52.txt" />
+    <entry file="file://$PROJECT_DIR$/README.md">
+      <provider editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+      <provider selected="true" editor-type-id="split-provider[text-editor;MarkdownPreviewEditor]">
+        <state split_layout="SPLIT">
+          <first_editor relative-caret-position="0">
+            <caret line="0" column="2" selection-start-line="0" selection-start-column="2" selection-end-line="0" selection-end-column="2" />
+            <folding />
+          </first_editor>
+          <second_editor />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/TSP PEA/TSP_DP.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="484">
+        <state relative-caret-position="1547">
           <caret line="148" column="45" selection-start-line="148" selection-start-column="45" selection-end-line="148" selection-end-column="45" />
           <folding>
             <element signature="e#192#203#0" expanded="true" />
-            <element signature="e#419#546#0" expanded="false" />
-            <element signature="e#680#906#0" expanded="false" />
-            <element signature="e#1235#1844#0" expanded="false" />
-            <element signature="e#2029#2683#0" expanded="false" />
-            <element signature="e#2824#3382#0" expanded="false" />
-            <element signature="e#3404#4208#0" expanded="false" />
-            <element signature="e#4320#4338#0" expanded="false" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/TSP PEA/TSP_BB2.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="234">
-          <caret line="15" column="0" selection-start-line="15" selection-start-column="0" selection-end-line="34" selection-end-column="14" />
+        <state relative-caret-position="272">
+          <caret line="16" column="25" selection-start-line="16" selection-start-column="25" selection-end-line="16" selection-end-column="25" />
           <folding>
             <element signature="e#256#267#0" expanded="true" />
-            <element signature="e#498#625#0" expanded="false" />
-            <element signature="e#759#985#0" expanded="false" />
-            <element signature="e#1325#2114#0" expanded="false" />
-            <element signature="e#2406#3472#0" expanded="false" />
-            <element signature="e#3834#6274#0" expanded="false" />
-            <element signature="e#6474#7396#0" expanded="false" />
-            <element signature="e#7537#8177#0" expanded="false" />
-            <element signature="e#8199#9087#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/TSP PEA/TSP_BB.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="776">
+          <caret line="290" column="62" selection-start-line="290" selection-start-column="62" selection-end-line="290" selection-end-column="62" />
+          <folding>
+            <element signature="e#36#47#0" expanded="true" />
+            <element signature="e#1353#1502#0" expanded="false" />
           </folding>
         </state>
       </provider>
