@@ -81,7 +81,11 @@ def nalepsza_krawedz(rozmiar, macierz, wiersz, kolumna):
                     yi = j
     return maks, xi, yi
 
-
+# Tu tak naprawde dzieje sie cala magia
+# Idea jest taka zeby dla zadanego przejscia
+# Obliczyc koszt, poprzez redukcje i pamietanie kosztu rodzica
+# Po wybraniu najmniejszego kosztu w danym poziomie schodzimy nizej
+# i powtarzamy az do samego dna
 def przeszukaj(n, macierz, krawedzie, koszt, wiersz, kolumna, najlepsza, wskaznik_w_przod, wskaznik_w_tyl):
     global nalepsza_cena
     kolumna_usuwana = [0 for c in range(n)]
@@ -134,6 +138,10 @@ def przeszukaj(n, macierz, krawedzie, koszt, wiersz, kolumna, najlepsza, wskazni
             for j in range(rozmiar):
                 macierz[wiersz[i]][kolumna[j]] = macierz[wiersz[i]][kolumna[j]] + wiersz_usuwany[i] + kolumna_usuwana[j]
 
+# Tak naprawde to funkcja wywoluje
+# faktyczny branch&bound zawarty w f. przeszukaj
+# A sama jedynie korzystajac z zwroconych danych
+# Ubiera je w elementy gotowe do wyswietlenia
 def bb(macierz):
     global nalepsza_cena
     rozmiar = len(macierz)
