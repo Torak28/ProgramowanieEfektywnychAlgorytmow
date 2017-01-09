@@ -4,7 +4,6 @@
     <list default="true" id="e3072320-8269-4da3-b042-05fef085bc7f" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/TSP PEA/TSP_BB2.py" afterPath="$PROJECT_DIR$/TSP PEA/TSP_BB2.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/TSP PEA/TSP_DP.py" afterPath="$PROJECT_DIR$/TSP PEA/TSP_DP.py" />
     </list>
     <ignored path="ProgramowanieEfektywnychAlgorytmow.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -517,13 +516,6 @@
       <option name="presentableId" value="Default" />
       <updated>1480263317144</updated>
     </task>
-    <task id="LOCAL-00026" summary="Dodanie kombinajce drog zależna od wielkości&#10;">
-      <created>1481455707934</created>
-      <option name="number" value="00026" />
-      <option name="presentableId" value="LOCAL-00026" />
-      <option name="project" value="LOCAL" />
-      <updated>1481455707934</updated>
-    </task>
     <task id="LOCAL-00027" summary="Dodanie kombinajce drog zależna od wielkości&#10;">
       <created>1481455758319</created>
       <option name="number" value="00027" />
@@ -860,7 +852,14 @@
       <option name="project" value="LOCAL" />
       <updated>1483953068739</updated>
     </task>
-    <option name="localTasksCounter" value="75" />
+    <task id="LOCAL-00075" summary="Dodanie komentarzy">
+      <created>1483953711483</created>
+      <option name="number" value="00075" />
+      <option name="presentableId" value="LOCAL-00075" />
+      <option name="project" value="LOCAL" />
+      <updated>1483953711483</updated>
+    </task>
+    <option name="localTasksCounter" value="76" />
     <servers />
   </component>
   <component name="TodoView" selected-index="4">
@@ -944,7 +943,6 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Skonczony projekt, dorbne poprawki stylow" />
     <MESSAGE value="quick Fix" />
     <MESSAGE value="dodalem komentarze" />
     <MESSAGE value="liczenie ze wzgledu na dlugosc sciezki&#10;" />
@@ -969,7 +967,8 @@
     <MESSAGE value="drobne zmiany w komentowanoiu całości" />
     <MESSAGE value="quick fix" />
     <MESSAGE value="Dodaje komentarze&#10;" />
-    <option name="LAST_COMMIT_MESSAGE" value="Dodaje komentarze&#10;" />
+    <MESSAGE value="Dodanie komentarzy" />
+    <option name="LAST_COMMIT_MESSAGE" value="Dodanie komentarzy" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

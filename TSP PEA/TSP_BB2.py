@@ -7,7 +7,6 @@
  https://www.youtube.com/watch?v=RR7GXoWiUw4&t=691s
 """
 
-
 import time
 
 INF = 1000000
