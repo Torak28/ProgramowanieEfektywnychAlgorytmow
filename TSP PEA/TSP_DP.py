@@ -1,4 +1,9 @@
-# Autor : Jarek Ciolek-Zelechowski
+"""
+ Autor : Jarek Ciolek-Zelechowski
+ Problem Komiwojazera rozwiazany algorytmem dynamicznym Helda-Karpa
+ przy pomocy wykladu Tushar'a Roy'a
+ https://www.youtube.com/watch?v=-JjA4BLQyqE
+"""
 
 import copy
 import time
@@ -9,7 +14,7 @@ ile = 0
 # Funkcja dla zadanej tablicy drogi generuje pary
 # Np. dla drogi = [1,2,3]
 # Wygeneruje wynik = [[1,2],[2,3]]
-# Potrzebne przy obliczaniu Długosci Drogi
+# Potrzebne przy obliczaniu Dlugosci Drogi
 def generujPary(tablica):
     wynik = []
     for i in range(tablica.__len__()-1):
@@ -27,6 +32,14 @@ def dlugoscDrogi(tablica, macierz):
         sum = sum + macierz[miastoAIndex][miastoBIndex]
     return sum
 
+# Dla zadanej pary danych: cel i przejscie
+# generuje minimalny koszt przejscia
+# i np dla [3, {1,2}] jest to idea
+# przejscia z 0 przez droge {1,2} do
+# celu jakim jest 3
+# Funkcja zwraca indeks w tablicy z policzonym kosztem
+# Lub sama dopisuje sie do tablicy i podaje swoj
+# dopisany indeks
 def minimum(cel, przejscie):
     if (cel, przejscie) in krotkiPrzejscia:
         return krotkiPrzejscia[cel, przejscie]
@@ -42,6 +55,10 @@ def minimum(cel, przejscie):
     permutacje.append(((cel, przejscie), wszystkieMinima[wartosci.index(krotkiPrzejscia[cel, przejscie])]))
     return krotkiPrzejscia[cel, przejscie]
 
+# Rozwiazanie problemu poprzez stworzenie tablicy
+# kosztow w linijce minimum(1, dane)
+# A nastepnie przegladanie jej w celu
+# znalezienia najepszego rozwiazania
 def dp(macierz):
     dane = []
     for i in range(Ilosc_Miast):
@@ -121,9 +138,10 @@ for i in range(rozmiar):
     print(macierz[ i ])
 
 # Wypisanie wyniku
-print("\n")
+# Wraz z liczeniem czasu
+print "\n"
 start = time.clock()
-droga,dyst = dp(macierz)
+droga, dyst = dp(macierz)
 end = time.clock()
 total = end - start
 print "Najkrotsza droga: ", droga
