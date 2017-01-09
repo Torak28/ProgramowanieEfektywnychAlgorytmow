@@ -69,24 +69,30 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="TSP_BB2.py" pinned="false" current-in-tab="false">
+      <file leaf-file-name="TSP_BB2.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/TSP PEA/TSP_BB2.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="0">
-              <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="7" selection-end-column="3" />
+            <state relative-caret-position="357">
+              <caret line="83" column="0" selection-start-line="83" selection-start-column="0" selection-end-line="83" selection-end-column="0" />
               <folding>
-                <element signature="e#5964#6449#0" expanded="false" />
-                <element signature="e#6471#7204#0" expanded="false" />
+                <element signature="e#256#267#0" expanded="true" />
+                <element signature="e#314#359#0" expanded="false" />
+                <element signature="e#652#1441#0" expanded="false" />
+                <element signature="e#1443#1474#0" expanded="false" />
+                <element signature="e#1733#2799#0" expanded="false" />
+                <element signature="e#6438#7078#0" expanded="false" />
+                <element signature="e#7100#7988#0" expanded="false" />
+                <element signature="e#8111#8129#0" expanded="false" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="TSP_DP.py" pinned="false" current-in-tab="true">
+      <file leaf-file-name="TSP_DP.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/TSP PEA/TSP_DP.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="374">
-              <caret line="141" column="6" selection-start-line="141" selection-start-column="6" selection-end-line="141" selection-end-column="6" />
+            <state relative-caret-position="119">
+              <caret line="7" column="0" selection-start-line="7" selection-start-column="0" selection-end-line="7" selection-end-column="11" />
               <folding>
                 <element signature="e#192#203#0" expanded="true" />
                 <element signature="e#235#284#0" expanded="false" />
@@ -167,8 +173,8 @@
         <option value="$PROJECT_DIR$/TSP PEA/test.py" />
         <option value="$PROJECT_DIR$/TSP PEA/TSP_BB.py" />
         <option value="$PROJECT_DIR$/README.md" />
-        <option value="$PROJECT_DIR$/TSP PEA/TSP_BB2.py" />
         <option value="$PROJECT_DIR$/TSP PEA/TSP_DP.py" />
+        <option value="$PROJECT_DIR$/TSP PEA/TSP_BB2.py" />
       </list>
     </option>
   </component>
@@ -265,7 +271,7 @@
       <recent name="D:\Dropbox\Studiowanie\git\ProgramowanieEfektywnychAlgorytmow\TSP PEA" />
     </key>
   </component>
-  <component name="RunManager" selected="Python.TSP_DP">
+  <component name="RunManager" selected="Python.TSP_BB2">
     <configuration default="false" name="28" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -494,8 +500,8 @@
     </list>
     <recent_temporary>
       <list size="5">
-        <item index="0" class="java.lang.String" itemvalue="Python.TSP_DP" />
-        <item index="1" class="java.lang.String" itemvalue="Python.TSP_BB2" />
+        <item index="0" class="java.lang.String" itemvalue="Python.TSP_BB2" />
+        <item index="1" class="java.lang.String" itemvalue="Python.TSP_DP" />
         <item index="2" class="java.lang.String" itemvalue="Python.TSP_BB" />
         <item index="3" class="java.lang.String" itemvalue="Python.test" />
         <item index="4" class="java.lang.String" itemvalue="Python.28" />
@@ -515,13 +521,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1480263317144</updated>
-    </task>
-    <task id="LOCAL-00027" summary="Dodanie kombinajce drog zależna od wielkości&#10;">
-      <created>1481455758319</created>
-      <option name="number" value="00027" />
-      <option name="presentableId" value="LOCAL-00027" />
-      <option name="project" value="LOCAL" />
-      <updated>1481455758319</updated>
     </task>
     <task id="LOCAL-00028" summary="BB dla konkretnego poziomu&#10;">
       <created>1481458574301</created>
@@ -859,7 +858,14 @@
       <option name="project" value="LOCAL" />
       <updated>1483953711483</updated>
     </task>
-    <option name="localTasksCounter" value="76" />
+    <task id="LOCAL-00076" summary="fix">
+      <created>1483953735003</created>
+      <option name="number" value="00076" />
+      <option name="presentableId" value="LOCAL-00076" />
+      <option name="project" value="LOCAL" />
+      <updated>1483953735003</updated>
+    </task>
+    <option name="localTasksCounter" value="77" />
     <servers />
   </component>
   <component name="TodoView" selected-index="4">
@@ -873,14 +879,14 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
-    <editor active="false" />
+    <editor active="true" />
     <layout>
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.06954689" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32827735" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33044422" sideWeight="0.5021075" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32719395" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Python Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32827735" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32502708" sideWeight="0.49789253" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32502708" sideWeight="0.49789253" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.24973656" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3261105" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
@@ -962,13 +968,13 @@
     <MESSAGE value="lepiej!" />
     <MESSAGE value="fix&#10;" />
     <MESSAGE value="Podejscie 2" />
-    <MESSAGE value="fix" />
     <MESSAGE value="Nie pokazuje już par" />
     <MESSAGE value="drobne zmiany w komentowanoiu całości" />
     <MESSAGE value="quick fix" />
     <MESSAGE value="Dodaje komentarze&#10;" />
     <MESSAGE value="Dodanie komentarzy" />
-    <option name="LAST_COMMIT_MESSAGE" value="Dodanie komentarzy" />
+    <MESSAGE value="fix" />
+    <option name="LAST_COMMIT_MESSAGE" value="fix" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -979,7 +985,7 @@
           </properties>
         </breakpoint>
       </default-breakpoints>
-      <option name="time" value="80" />
+      <option name="time" value="81" />
     </breakpoint-manager>
     <watches-manager>
       <configuration name="PythonConfigurationType">
@@ -1564,21 +1570,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/TSP PEA/TSP_BB2.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="7" selection-end-column="3" />
-          <folding>
-            <element signature="e#5964#6449#0" expanded="false" />
-            <element signature="e#6471#7204#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/TSP PEA/TSP_DP.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="374">
-          <caret line="141" column="6" selection-start-line="141" selection-start-column="6" selection-end-line="141" selection-end-column="6" />
+        <state relative-caret-position="119">
+          <caret line="7" column="0" selection-start-line="7" selection-start-column="0" selection-end-line="7" selection-end-column="11" />
           <folding>
             <element signature="e#192#203#0" expanded="true" />
             <element signature="e#235#284#0" expanded="false" />
@@ -1592,6 +1587,23 @@
             <element signature="e#2824#3382#0" expanded="false" />
             <element signature="e#3404#4208#0" expanded="false" />
             <element signature="e#4320#4338#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/TSP PEA/TSP_BB2.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="357">
+          <caret line="83" column="0" selection-start-line="83" selection-start-column="0" selection-end-line="83" selection-end-column="0" />
+          <folding>
+            <element signature="e#256#267#0" expanded="true" />
+            <element signature="e#314#359#0" expanded="false" />
+            <element signature="e#652#1441#0" expanded="false" />
+            <element signature="e#1443#1474#0" expanded="false" />
+            <element signature="e#1733#2799#0" expanded="false" />
+            <element signature="e#6438#7078#0" expanded="false" />
+            <element signature="e#7100#7988#0" expanded="false" />
+            <element signature="e#8111#8129#0" expanded="false" />
           </folding>
         </state>
       </provider>

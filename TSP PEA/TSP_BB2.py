@@ -8,11 +8,18 @@
 """
 
 import time
+import copy
 
 INF = 1000000
 nalepsza_cena = 0
 
-
+# Redukcja macierzy o zadany wiersz i kolumne
+# Funkcja zwraca elementy redukcji, czyli
+# Jesli w redukcji wierszy redukujemy o 18
+# A w redukcji kolumn redukujemy o 2
+# to funkcja zwroci 18+2, czyli 20
+# Potrzebne do liczenia kosztu dla danej
+# galezi
 def redukuj(rozmiar, macierz, wiersz, kolumna, wiersz_usuwany, kolumna_usuwana):
     redukcja = 0
     for i in range(rozmiar):
@@ -37,36 +44,43 @@ def redukuj(rozmiar, macierz, wiersz, kolumna, wiersz_usuwany, kolumna_usuwana):
         kolumna_usuwana[j] = temp
     return redukcja
 
+# Wielka petla ktora dla danego
+# poziomu generuje najlepsze przejscie
+# zwraca koszt najmniejszego przejscia
+# i polozenie tego przejscia w tablicy,
+# ktore dla nastepnego przejscia bedzie
+# potrzebnym do Liczenia LB, elementem
 def nalepsza_krawedz(rozmiar, macierz, wiersz, kolumna):
-    mosti = -INF
+    maks = -INF
     xi = 0
     yi = 0
     for i in range(rozmiar):
         for j in range(rozmiar):
             if not macierz[wiersz[i]][kolumna[j]]:
                 wiersz_min = INF
-                zeroes = 0
+                zero = 0
                 for k in range(rozmiar):
                     if not macierz[wiersz[i]][kolumna[k]]:
-                        zeroes += 1
+                        zero += 1
                     else:
                         wiersz_min = min(wiersz_min, macierz[wiersz[i]][kolumna[k]])
-                if zeroes > 1:
+                if zero > 1:
                     wiersz_min = 0
                 kolumna_min = INF
-                zeroes = 0
+                zero = 0
                 for k in range(rozmiar):
                     if not macierz[wiersz[k]][kolumna[j]]:
-                        zeroes += 1
+                        zero += 1
                     else:
                         kolumna_min = min(kolumna_min, macierz[wiersz[k]][kolumna[j]])
-                if zeroes > 1:
+                if zero > 1:
                     kolumna_min = 0
-                if wiersz_min + kolumna_min > mosti:
-                    mosti = wiersz_min + kolumna_min
+                if wiersz_min + kolumna_min > maks:
+                    maks = wiersz_min + kolumna_min
                     xi = i
                     yi = j
-    return mosti, xi, yi
+    return maks, xi, yi
+
 
 def przeszukaj(n, macierz, krawedzie, koszt, wiersz, kolumna, najlepsza, wskaznik_w_przod, wskaznik_w_tyl):
     global nalepsza_cena
@@ -116,7 +130,6 @@ def przeszukaj(n, macierz, krawedzie, koszt, wiersz, kolumna, najlepsza, wskazni
                 macierz[wiersz[xv]][kolumna[yv]] = INF
                 przeszukaj(n, macierz, krawedzie, koszt, wiersz, kolumna, najlepsza, wskaznik_w_przod, wskaznik_w_tyl)
                 macierz[wiersz[xv]][kolumna[yv]] = 0
-
         for i in range(rozmiar):
             for j in range(rozmiar):
                 macierz[wiersz[i]][kolumna[j]] = macierz[wiersz[i]][kolumna[j]] + wiersz_usuwany[i] + kolumna_usuwana[j]
@@ -133,9 +146,7 @@ def bb(macierz):
     wskaznik_w_przod = [INF for c in xrange(rozmiar)]
     wskaznik_w_tyl = [INF for c in xrange(rozmiar)]
     nalepsza_cena = INF
-
     przeszukaj(rozmiar, macierz, 0, 0, wiersz, kolumna, najlepsza, wskaznik_w_przod, wskaznik_w_tyl)
-
     index = 0
     for i in xrange(rozmiar):
         droga[i] = index
@@ -143,7 +154,6 @@ def bb(macierz):
     index = []
     koszt = 0
     index.append(1)
-
     for i in xrange(rozmiar):
         if i != rozmiar - 1:
             src = droga[i]
@@ -158,6 +168,7 @@ def bb(macierz):
 # Obsluga menu
 wybor = int(input('Wybieramy!\n\t1.Wpisuje z palca(do dopisania obsluga)\n\t2.Wczytam z pliku\nHmm?\n'))
 if wybor == 1:
+    INFdoWypisania = -1
     tabWpisywanie = []
     Ilosc_Miast = int(input('Ilosc Miast = '))
     macierz = [[0 for i in range(Ilosc_Miast)] for j in range(Ilosc_Miast)]
@@ -167,12 +178,16 @@ if wybor == 1:
             macierz[i][j] = int(input())
 
     rozmiar = len(macierz)
+    macierzDoWypisania = copy.deepcopy(macierz)
+    for i in range(rozmiar):
+        macierzDoWypisania[ i ][ i ] = INFdoWypisania
     for i in range(rozmiar):
         macierz[i][i] = INF
 
     for i in range(Ilosc_Miast):
         tabWpisywanie.append(i)
 elif wybor == 2:
+    INFdoWypisania = -1
     tabPlik = []
     nazwa = raw_input('Jak sie nazywa pliczek? ')
     plik = open(nazwa)
@@ -195,17 +210,21 @@ elif wybor == 2:
     macierz = [ map(int, x) for x in macierz ]
 
     rozmiar = len(macierz)
+    macierzDoWypisania = copy.deepcopy(macierz)
     for i in range(rozmiar):
         macierz[i][i] = INF
+    for i in range(rozmiar):
+        macierzDoWypisania[ i ][ i ] = INFdoWypisania
     for i in range(Ilosc_Miast):
         tabPlik.append(i)
 
 # Drukiwanie zadanej na poczatku macierzy
 print('Wypisanie:')
 for i in range(rozmiar):
-    print(macierz[ i ])
+    print(macierzDoWypisania[ i ])
 
 # Wypisanie wyniku
+# Pomiar czasu
 print "\n"
 start = time.clock()
 droga, dyst = bb(macierz)
