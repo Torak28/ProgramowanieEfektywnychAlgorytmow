@@ -13,6 +13,27 @@ import copy
 INF = 1000000
 nalepsza_cena = 0
 
+# Funkcja dla zadanej tablicy drogi generuje pary
+# Np. dla drogi = [1,2,3]
+# Wygeneruje wynik = [[1,2],[2,3]]
+# Potrzebne przy obliczaniu Dlugosci Drogi
+def generujPary(tablica):
+    wynik = []
+    for i in range(tablica.__len__()-1):
+        wynik.extend([ [ tablica[ i ], tablica[ i+1 ] ] ])
+    return wynik
+
+# Dla przyjetej tablicy drogi i zadanej macierzy przejscia
+# wylicza i zwraca dlugosc drogi
+def dlugoscDrogi(tablica, macierz):
+    sum = 0
+    pary = generujPary(tablica)
+    for i in range(pary.__len__()):
+        miastoAIndex = pary[i][0] - 1
+        miastoBIndex = pary[ i ][ 1 ] - 1
+        sum = sum + macierz[miastoAIndex][miastoBIndex]
+    return sum
+
 # Redukcja macierzy o zadany wiersz i kolumne
 # Funkcja zwraca elementy redukcji, czyli
 # Jesli w redukcji wierszy redukujemy o 18
