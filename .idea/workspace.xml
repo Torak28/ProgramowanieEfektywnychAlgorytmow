@@ -2,8 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="e3072320-8269-4da3-b042-05fef085bc7f" name="Default" comment="">
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/markdown-exported-files.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/TSP PEA/TSP_BB2.py" afterPath="$PROJECT_DIR$/TSP PEA/TSP_BB2.py" />
     </list>
     <ignored path="ProgramowanieEfektywnychAlgorytmow.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -72,17 +72,16 @@
       <file leaf-file-name="TSP_BB2.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/TSP PEA/TSP_BB2.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="357">
-              <caret line="83" column="0" selection-start-line="83" selection-start-column="0" selection-end-line="83" selection-end-column="0" />
+            <state relative-caret-position="493">
+              <caret line="173" column="23" selection-start-line="15" selection-start-column="0" selection-end-line="173" selection-end-column="23" />
               <folding>
                 <element signature="e#256#267#0" expanded="true" />
-                <element signature="e#314#359#0" expanded="false" />
                 <element signature="e#652#1441#0" expanded="false" />
-                <element signature="e#1443#1474#0" expanded="false" />
                 <element signature="e#1733#2799#0" expanded="false" />
-                <element signature="e#6438#7078#0" expanded="false" />
-                <element signature="e#7100#7988#0" expanded="false" />
-                <element signature="e#8111#8129#0" expanded="false" />
+                <element signature="e#3161#5601#0" expanded="false" />
+                <element signature="e#5801#6723#0" expanded="false" />
+                <element signature="e#6864#7504#0" expanded="false" />
+                <element signature="e#7526#8414#0" expanded="false" />
               </folding>
             </state>
           </provider>
@@ -265,6 +264,10 @@
       <pane id="Scratches" />
       <pane id="Scope" />
     </panes>
+  </component>
+  <component name="PropertiesComponent">
+    <property name="settings.editor.selected.configurable" value="preferences.lookFeel" />
+    <property name="settings.editor.splitter.proportion" value="0.2" />
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
@@ -521,20 +524,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1480263317144</updated>
-    </task>
-    <task id="LOCAL-00028" summary="BB dla konkretnego poziomu&#10;">
-      <created>1481458574301</created>
-      <option name="number" value="00028" />
-      <option name="presentableId" value="LOCAL-00028" />
-      <option name="project" value="LOCAL" />
-      <updated>1481458574301</updated>
-    </task>
-    <task id="LOCAL-00029" summary="Fix liczenia drogi&#10;">
-      <created>1481460236256</created>
-      <option name="number" value="00029" />
-      <option name="presentableId" value="LOCAL-00029" />
-      <option name="project" value="LOCAL" />
-      <updated>1481460236257</updated>
     </task>
     <task id="LOCAL-00030" summary="Naiwana wersja bb, dużo do poprawy">
       <created>1481462043432</created>
@@ -865,7 +854,21 @@
       <option name="project" value="LOCAL" />
       <updated>1483953735003</updated>
     </task>
-    <option name="localTasksCounter" value="77" />
+    <task id="LOCAL-00077" summary="Komentarze pt.1">
+      <created>1483956698529</created>
+      <option name="number" value="00077" />
+      <option name="presentableId" value="LOCAL-00077" />
+      <option name="project" value="LOCAL" />
+      <updated>1483956698529</updated>
+    </task>
+    <task id="LOCAL-00078" summary="Wszystie komentarze na miejscu!">
+      <created>1483956944963</created>
+      <option name="number" value="00078" />
+      <option name="presentableId" value="LOCAL-00078" />
+      <option name="project" value="LOCAL" />
+      <updated>1483956944963</updated>
+    </task>
+    <option name="localTasksCounter" value="79" />
     <servers />
   </component>
   <component name="TodoView" selected-index="4">
@@ -949,8 +952,6 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="quick Fix" />
-    <MESSAGE value="dodalem komentarze" />
     <MESSAGE value="liczenie ze wzgledu na dlugosc sciezki&#10;" />
     <MESSAGE value="fxi. Nadal nie czaje czemu se tak dzieje. Jak skupiam się na drodze to spada mi statystyka na 5 miastach i rosnie dla 15 :c" />
     <MESSAGE value="A moze to jest to? &lt;3" />
@@ -974,7 +975,9 @@
     <MESSAGE value="Dodaje komentarze&#10;" />
     <MESSAGE value="Dodanie komentarzy" />
     <MESSAGE value="fix" />
-    <option name="LAST_COMMIT_MESSAGE" value="fix" />
+    <MESSAGE value="Komentarze pt.1" />
+    <MESSAGE value="Wszystie komentarze na miejscu!" />
+    <option name="LAST_COMMIT_MESSAGE" value="Wszystie komentarze na miejscu!" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -1593,17 +1596,16 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/TSP PEA/TSP_BB2.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="357">
-          <caret line="83" column="0" selection-start-line="83" selection-start-column="0" selection-end-line="83" selection-end-column="0" />
+        <state relative-caret-position="493">
+          <caret line="173" column="23" selection-start-line="15" selection-start-column="0" selection-end-line="173" selection-end-column="23" />
           <folding>
             <element signature="e#256#267#0" expanded="true" />
-            <element signature="e#314#359#0" expanded="false" />
             <element signature="e#652#1441#0" expanded="false" />
-            <element signature="e#1443#1474#0" expanded="false" />
             <element signature="e#1733#2799#0" expanded="false" />
-            <element signature="e#6438#7078#0" expanded="false" />
-            <element signature="e#7100#7988#0" expanded="false" />
-            <element signature="e#8111#8129#0" expanded="false" />
+            <element signature="e#3161#5601#0" expanded="false" />
+            <element signature="e#5801#6723#0" expanded="false" />
+            <element signature="e#6864#7504#0" expanded="false" />
+            <element signature="e#7526#8414#0" expanded="false" />
           </folding>
         </state>
       </provider>
