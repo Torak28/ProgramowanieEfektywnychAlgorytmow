@@ -204,32 +204,18 @@ def bbPoziom(pom, wielkosc, najkrotszaDroga, macierzPierwotna, LBpop, macierzPop
             noweLB,niepotrzebnazmienna,m = liczLB(m,r,droga)
         else:
             noweLB,niepotrzebnazmienna,m = liczLB(m,LBpop,droga)
-        deltaLB = noweLB# - LBpop
+        deltaLB = noweLB
         tekst += "deltaLB", deltaLB
-        # Spoko pomysl ale nope
-        # tekst += "funk", mean([ deltaLB, dlugoscDrogi(droga, macierzDoDrogi) ])
         x = dlugoscDrogi(droga,macierzDoDrogi)
         if (x < mind):
             mind = x
-            mindrDD =droga
-        # najkrotszaDroga = mindr
-
         if (deltaLB < minLB):
             minLB = deltaLB
             mindrLB = droga
             minM = copy.deepcopy(m)
         najkrotszaDroga = mindrLB
-        tekst += "mindrDD", mindrDD
-        tekst += "dl", dlugoscDrogi(mindrDD,macierzDoDrogi)
-        tekst += "mindrLB", mindrLB
-        tekst += "dl", dlugoscDrogi(mindrLB, macierzDoDrogi)
-        tekst += "LBpop", LBpop
-        #print tekst
     if najkrotszaDroga.__len__() == Ilosc_Miast:
         najkrotszaDroga.append(1)
-    tekst2 = "LB", mindrLB, "drogaLB", dlugoscDrogi(mindrLB, macierzDoDrogi), "Naj", mindrDD, "drogaNaj", dlugoscDrogi(mindrDD, macierzDoDrogi)
-    #print tekst2
-    #print "---"
     return najkrotszaDroga, dlugoscDrogi(najkrotszaDroga,macierzDoDrogi), minLB, minM
 
 
@@ -247,17 +233,9 @@ def bb(macierzPierwotna):
         macirzPoprzednia = mp
     return aktaulnieNajkrotszaDroga, odleglosc
 
-def xd(tab, nazwa):
-    if nazwa == 'tsp10.txt':
-        pom = tab[1]
-        tab[1] = tab[-2]
-        tab[-2]=pom
-
 # Obsluga menu
-pliczki = ["tsp4.txt", "tsp6_1.txt", "tsp6_2.txt", "tsp10.txt", "tsp12.txt", "tsp13.txt", "tsp14.txt", "tsp15.txt"]
-for i in range(len(pliczki)):
-    wybor = 2 #int(input('Wybieramy!\n\t1.Wpisuje z palca(do dopisania obsluga)\n\t2.Wczytam z pliku\nHmm?\n'))
-    if wybor == 1:
+wybor = int(input('Wybieramy!\n\t1.Wpisuje z palca(do dopisania obsluga)\n\t2.Wczytam z pliku\nHmm?\n'))
+if wybor == 1:
         tabWpisywanie = []
         Ilosc_Miast = int(input('Ilosc Miast = '))
         macierz = [[0 for i in range(Ilosc_Miast)] for j in range(Ilosc_Miast)]
@@ -272,10 +250,9 @@ for i in range(len(pliczki)):
 
         for i in range(Ilosc_Miast):
             tabWpisywanie.append(i)
-    elif wybor == 2:
+elif wybor == 2:
         tabPlik = []
-        nazwa = pliczki[i] #raw_input('Jak sie nazywa pliczek? ')
-        print pliczki[i]
+        nazwa = raw_input('Jak sie nazywa pliczek? ')
         plik = open(nazwa)
         # Podzial pliku na liczby
         tab = [word for line in plik for word in line.split()]
@@ -302,26 +279,18 @@ for i in range(len(pliczki)):
             tabPlik.append(i)
 
     # Drukiwanie zadanej na poczatku macierzy
-    # print('Wypisanie:')
-    # for i in range(rozmiar):
-    #     print(macierz[ i ])
+print('Wypisanie:')
+for i in range(rozmiar):
+    print(macierz[ i ])
 
-    macierzDoDrogi = copy.deepcopy(macierz)
-    # Wypisanie wyniku
-    # print "\n"
-    start = time.clock()
-    droga,dyst = bb(macierz)
-    end = time.clock()
-    total = end - start
-
-
-    """
-    xd(droga, nazwa)
-    """
-
-
-
-    print "Najkrotsza droga: ", droga
-    print "Jej dlugosc2: ", dyst
-    # print("Czas pomiaru: {0:02f}s".format(total))
-    print "------------"
+macierzDoDrogi = copy.deepcopy(macierz)
+# Wypisanie wyniku
+start = time.clock()
+droga,dyst = bb(macierz)
+end = time.clock()
+total = end - start
+print "------------"
+print "Najkrotsza droga: ", droga
+print "Jej dlugosc: ", dyst
+print("Czas pomiaru: {0:02f}s".format(total))
+print "------------"
