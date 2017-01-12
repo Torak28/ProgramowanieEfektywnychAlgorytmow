@@ -179,6 +179,7 @@ def liczLB(macierzPierwotna,LBprev, droga):
     wynik = LBprev + r
     for i in range(A.__len__()):
         wynik = wynik + A[i]
+    wynik += macierzDoDrogi[pary[-1][0] - 1][pary[-1][1] - 1]
     return wynik, r , macierzPierwotna
 
 # Funkcja wykomuje przejscie algorytmu BB dla
@@ -197,34 +198,56 @@ def bbPoziom(pom, wielkosc, najkrotszaDroga, macierzPierwotna, LBpop, macierzPop
     for i in range(tabPrzejscia.__len__()):
         m = copy.deepcopy(a)
         droga = tabPrzejscia[i]
+        tekst = "Droga", droga
+        tekst += "Wartosci", dlugoscDrogi(droga, macierzDoDrogi)
         if pom == 0:
             noweLB,niepotrzebnazmienna,m = liczLB(m,r,droga)
         else:
             noweLB,niepotrzebnazmienna,m = liczLB(m,LBpop,droga)
-        deltaLB = noweLB - LBpop
-
+        deltaLB = noweLB# - LBpop
+        tekst += "deltaLB", deltaLB
+        # Spoko pomysl ale nope
+        # tekst += "funk", mean([ deltaLB, dlugoscDrogi(droga, macierzDoDrogi) ])
         x = dlugoscDrogi(droga,macierzDoDrogi)
-        #if (x < mind):
-        #    mind = x
-        #    mindr =droga
+        if (x < mind):
+            mind = x
+            mindrDD =droga
         # najkrotszaDroga = mindr
 
-        if (deltaLB < minLB and x < mind):
+        if (deltaLB < minLB):
             minLB = deltaLB
-            najkrotszaDroga = droga
-        if najkrotszaDroga.__len__() == Ilosc_Miast:
-            najkrotszaDroga.append(1)
-    return najkrotszaDroga, m, dlugoscDrogi(najkrotszaDroga,macierzDoDrogi), minLB, m
+            mindrLB = droga
+            minM = copy.deepcopy(m)
+        najkrotszaDroga = mindrLB
+        tekst += "mindrDD", mindrDD
+        tekst += "dl", dlugoscDrogi(mindrDD,macierzDoDrogi)
+        tekst += "mindrLB", mindrLB
+        tekst += "dl", dlugoscDrogi(mindrLB, macierzDoDrogi)
+        tekst += "LBpop", LBpop
+        #print tekst
+    """"
+    if (dlugoscDrogi(mindrDD,macierzDoDrogi) < dlugoscDrogi(mindrLB,macierzDoDrogi)):
+        najkrotszaDroga = mindrDD
+    else:
+         najkrotszaDroga = mindrLB
+    """
+    if najkrotszaDroga.__len__() == Ilosc_Miast:
+        najkrotszaDroga.append(1)
+    tekst2 = "LB", mindrLB, "drogaLB", dlugoscDrogi(mindrLB, macierzDoDrogi), "Naj", mindrDD, "drogaNaj", dlugoscDrogi(mindrDD, macierzDoDrogi)
+    #print tekst2
+    #print "---"
+    return najkrotszaDroga, dlugoscDrogi(najkrotszaDroga,macierzDoDrogi), minLB, minM
+
 
 # Funkcja zapetlajaca powyzsa na cale drzewo
 def bb(macierzPierwotna):
     macierzDoDrogi = copy.deepcopy(macierzPierwotna)
-    droga, m, odleglosc, lb, mp = bbPoziom(0, 2, [  ], macierzPierwotna, 0, 0, macierzDoDrogi)
+    droga, odleglosc, lb, mp = bbPoziom(0, 2, [  ], macierzPierwotna, 0, 0, macierzDoDrogi)
     aktaulnieNajkrotszaDroga = droga
     LBpop = lb
     macirzPoprzednia = mp
-    for i in range(iloscPoziomow(Ilosc_Miast)-1):
-        droga, m, odleglosc, lb, mp = bbPoziom(1,3+i,aktaulnieNajkrotszaDroga,macierzPierwotna, LBpop, macirzPoprzednia,macierzDoDrogi)
+    for i in range(iloscPoziomow(Ilosc_Miast)-1): #iloscPoziomow(Ilosc_Miast)-1
+        droga, odleglosc, lb, mp = bbPoziom(1,3+i,aktaulnieNajkrotszaDroga,macierzPierwotna, LBpop, macirzPoprzednia,macierzDoDrogi)
         aktaulnieNajkrotszaDroga = droga
         LBpop = lb
         macirzPoprzednia = mp
@@ -290,7 +313,7 @@ for i in range(len(pliczki)):
     droga,dyst = bb(macierz)
     end = time.clock()
     total = end - start
-    print "Najkrotsza droga: ", droga[::-1]
+    print "Najkrotsza droga: ", droga
     print "Jej dlugosc2: ", dyst
     # print("Czas pomiaru: {0:02f}s".format(total))
     print "------------"
