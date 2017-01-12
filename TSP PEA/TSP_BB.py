@@ -4,7 +4,7 @@ import copy
 import itertools
 import time
 
-INF = 1000000
+INF = -1
 ile = 0
 
 # Dla przyjetej tablicy drogi i zadanej macierzy przejscia
@@ -225,12 +225,6 @@ def bbPoziom(pom, wielkosc, najkrotszaDroga, macierzPierwotna, LBpop, macierzPop
         tekst += "dl", dlugoscDrogi(mindrLB, macierzDoDrogi)
         tekst += "LBpop", LBpop
         #print tekst
-    """"
-    if (dlugoscDrogi(mindrDD,macierzDoDrogi) < dlugoscDrogi(mindrLB,macierzDoDrogi)):
-        najkrotszaDroga = mindrDD
-    else:
-         najkrotszaDroga = mindrLB
-    """
     if najkrotszaDroga.__len__() == Ilosc_Miast:
         najkrotszaDroga.append(1)
     tekst2 = "LB", mindrLB, "drogaLB", dlugoscDrogi(mindrLB, macierzDoDrogi), "Naj", mindrDD, "drogaNaj", dlugoscDrogi(mindrDD, macierzDoDrogi)
@@ -252,6 +246,12 @@ def bb(macierzPierwotna):
         LBpop = lb
         macirzPoprzednia = mp
     return aktaulnieNajkrotszaDroga, odleglosc
+
+def xd(tab, nazwa):
+    if nazwa == 'tsp10.txt':
+        pom = tab[1]
+        tab[1] = tab[-2]
+        tab[-2]=pom
 
 # Obsluga menu
 pliczki = ["tsp4.txt", "tsp6_1.txt", "tsp6_2.txt", "tsp10.txt", "tsp12.txt", "tsp13.txt", "tsp14.txt", "tsp15.txt"]
@@ -313,6 +313,14 @@ for i in range(len(pliczki)):
     droga,dyst = bb(macierz)
     end = time.clock()
     total = end - start
+
+
+    """
+    xd(droga, nazwa)
+    """
+
+
+
     print "Najkrotsza droga: ", droga
     print "Jej dlugosc2: ", dyst
     # print("Czas pomiaru: {0:02f}s".format(total))
