@@ -196,7 +196,6 @@ def bbPoziom(pom, wielkosc, najkrotszaDroga, macierzPierwotna, LBpop, macierzPop
         tabPrzejscia.extend(kombinacjeKonkretnychDrog(Ilosc_Miast,wielkosc,najkrotszaDroga))
     for i in range(tabPrzejscia.__len__()):
         m = copy.deepcopy(a)
-        xd = copy.deepcopy(m)
         droga = tabPrzejscia[i]
         if pom == 0:
             noweLB,niepotrzebnazmienna,m = liczLB(m,r,droga)
@@ -205,13 +204,14 @@ def bbPoziom(pom, wielkosc, najkrotszaDroga, macierzPierwotna, LBpop, macierzPop
         deltaLB = noweLB - LBpop
 
         x = dlugoscDrogi(droga,macierzDoDrogi)
-        if (x < mind):
-            mind = x
-            mindr =droga
-        najkrotszaDroga = mindr
+        #if (x < mind):
+        #    mind = x
+        #    mindr =droga
+        # najkrotszaDroga = mindr
 
-        if(deltaLB < minLB):
+        if (deltaLB < minLB and x < mind):
             minLB = deltaLB
+            najkrotszaDroga = droga
         if najkrotszaDroga.__len__() == Ilosc_Miast:
             najkrotszaDroga.append(1)
     return najkrotszaDroga, m, dlugoscDrogi(najkrotszaDroga,macierzDoDrogi), minLB, m
@@ -231,62 +231,66 @@ def bb(macierzPierwotna):
     return aktaulnieNajkrotszaDroga, odleglosc
 
 # Obsluga menu
-wybor = int(input('Wybieramy!\n\t1.Wpisuje z palca(do dopisania obsluga)\n\t2.Wczytam z pliku\nHmm?\n'))
-if wybor == 1:
-    tabWpisywanie = []
-    Ilosc_Miast = int(input('Ilosc Miast = '))
-    macierz = [[0 for i in range(Ilosc_Miast)] for j in range(Ilosc_Miast)]
-    print('Koszty przejazdu? (Liczba i enter. Sam program rozkmini jak to leci)')
-    for i in range(Ilosc_Miast):
-        for j in range(Ilosc_Miast):
-            macierz[i][j] = int(input())
+pliczki = ["tsp4.txt", "tsp6_1.txt", "tsp6_2.txt", "tsp10.txt", "tsp12.txt", "tsp13.txt", "tsp14.txt", "tsp15.txt"]
+for i in range(len(pliczki)):
+    wybor = 2 #int(input('Wybieramy!\n\t1.Wpisuje z palca(do dopisania obsluga)\n\t2.Wczytam z pliku\nHmm?\n'))
+    if wybor == 1:
+        tabWpisywanie = []
+        Ilosc_Miast = int(input('Ilosc Miast = '))
+        macierz = [[0 for i in range(Ilosc_Miast)] for j in range(Ilosc_Miast)]
+        print('Koszty przejazdu? (Liczba i enter. Sam program rozkmini jak to leci)')
+        for i in range(Ilosc_Miast):
+            for j in range(Ilosc_Miast):
+                macierz[i][j] = int(input())
 
-    rozmiar = len(macierz)
-    for i in range(rozmiar):
-        macierz[i][i] = INF
+        rozmiar = len(macierz)
+        for i in range(rozmiar):
+            macierz[i][i] = INF
 
-    for i in range(Ilosc_Miast):
-        tabWpisywanie.append(i)
-elif wybor == 2:
-    tabPlik = []
-    nazwa = raw_input('Jak sie nazywa pliczek? ')
-    plik = open(nazwa)
-    # Podzial pliku na liczby
-    tab = [word for line in plik for word in line.split()]
+        for i in range(Ilosc_Miast):
+            tabWpisywanie.append(i)
+    elif wybor == 2:
+        tabPlik = []
+        nazwa = pliczki[i] #raw_input('Jak sie nazywa pliczek? ')
+        print pliczki[i]
+        plik = open(nazwa)
+        # Podzial pliku na liczby
+        tab = [word for line in plik for word in line.split()]
 
-    Ilosc_Miast = int(tab[0])
-    macierz = [[0 for i in range(Ilosc_Miast)] for j in range(Ilosc_Miast)]
+        Ilosc_Miast = int(tab[0])
+        macierz = [[0 for i in range(Ilosc_Miast)] for j in range(Ilosc_Miast)]
 
-    # Usuniecie poczatku mowiacego o Ilosci miast
-    tab.remove(tab[0])
+        # Usuniecie poczatku mowiacego o Ilosci miast
+        tab.remove(tab[0])
 
-    # Przepisanie tablicy liczb do macierzy
-    pom = 0
-    for i in range(Ilosc_Miast):
-       for j in range(Ilosc_Miast):
-            macierz[i][j] = tab[pom]
-            pom += 1
+        # Przepisanie tablicy liczb do macierzy
+        pom = 0
+        for i in range(Ilosc_Miast):
+           for j in range(Ilosc_Miast):
+                macierz[i][j] = tab[pom]
+                pom += 1
 
-    macierz = [ map(int, x) for x in macierz ]
+        macierz = [ map(int, x) for x in macierz ]
 
-    rozmiar = len(macierz)
-    for i in range(rozmiar):
-        macierz[i][i] = INF
-    for i in range(Ilosc_Miast):
-        tabPlik.append(i)
+        rozmiar = len(macierz)
+        for i in range(rozmiar):
+            macierz[i][i] = INF
+        for i in range(Ilosc_Miast):
+            tabPlik.append(i)
 
-# Drukiwanie zadanej na poczatku macierzy
-print('Wypisanie:')
-for i in range(rozmiar):
-    print(macierz[ i ])
+    # Drukiwanie zadanej na poczatku macierzy
+    # print('Wypisanie:')
+    # for i in range(rozmiar):
+    #     print(macierz[ i ])
 
-macierzDoDrogi = copy.deepcopy(macierz)
-# Wypisanie wyniku
-print "\n"
-start = time.clock()
-droga,dyst = bb(macierz)
-end = time.clock()
-total = end - start
-print "Najkrotsza droga: ", droga[::-1]
-print "Jej dlugosc: ", dlugoscDrogi(droga[::-1],macierzDoDrogi)
-print("Czas pomiaru: {0:02f}s".format(total))
+    macierzDoDrogi = copy.deepcopy(macierz)
+    # Wypisanie wyniku
+    # print "\n"
+    start = time.clock()
+    droga,dyst = bb(macierz)
+    end = time.clock()
+    total = end - start
+    print "Najkrotsza droga: ", droga[::-1]
+    print "Jej dlugosc2: ", dyst
+    # print("Czas pomiaru: {0:02f}s".format(total))
+    print "------------"

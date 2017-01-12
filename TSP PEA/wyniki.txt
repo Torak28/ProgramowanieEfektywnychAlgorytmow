@@ -1,14 +1,8 @@
-Wyniki:
-  sack1: zadana pojemnoœæ: 10;  wyniki V = 10, wartoœæ = 285
-  sack2: zadana pojemnoœæ: 30;  wyniki V = 26, wartoœæ = 501
-  sack3: zadana pojemnoœæ: 90;  wyniki V = 90, wartoœæ = 1233
-  sack3: zadana pojemnoœæ: 120; wyniki V = 120,wartoœæ = 1509
-
-TSP4:  koszt drogi: 200 (wynik dok³adny)
-TSP6_1:koszt drogi: 132 (wynik dok³adny)
-TSP6_2:koszt drogi:  80 (wynik dok³adny)
-TSP10: koszt drogi: 212 (wynik dok³adny)
-TSP12: koszt drogi: 264 (wynik dok³adny)
-TSP13: koszt drogi: 269 (wynik dok³adny)
-TSP14: koszt drogi: 282 (wynik dok³adny)
-TSP15: koszt drogi: 291 (wynik dok³adny)
+TSP4:  koszt drogi: 200 (wynik dokÅ‚adny)    tsp4.txt
+TSP6_1:koszt drogi: 132 (wynik dokÅ‚adny)    tsp6_1.txt
+TSP6_2:koszt drogi:  80 (wynik dokÅ‚adny)    tsp6_2.txt
+TSP10: koszt drogi: 212 (wynik dokÅ‚adny)    tsp10.txt
+TSP12: koszt drogi: 264 (wynik dokÅ‚adny)    tsp12.txt
+TSP13: koszt drogi: 269 (wynik dokÅ‚adny)    tsp13.txt
+TSP14: koszt drogi: 282 (wynik dokÅ‚adny)    tsp14.txt
+TSP15: koszt drogi: 291 (wynik dokÅ‚adny)    tsp15.txt

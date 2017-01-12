@@ -195,70 +195,75 @@ def bb(macierz):
     return koszt, index
 
 # Obsluga menu
-wybor = int(input('Wybieramy!\n\t1.Wpisuje z palca(do dopisania obsluga)\n\t2.Wczytam z pliku\nHmm?\n'))
-if wybor == 1:
-    INFdoWypisania = -1
-    tabWpisywanie = []
-    Ilosc_Miast = int(input('Ilosc Miast = '))
-    macierz = [[0 for i in range(Ilosc_Miast)] for j in range(Ilosc_Miast)]
-    print('Koszty przejazdu? (Liczba i enter. Sam program rozkmini jak to leci)')
-    for i in range(Ilosc_Miast):
-        for j in range(Ilosc_Miast):
-            macierz[i][j] = int(input())
+pliczki = ["tsp4.txt", "tsp6_1.txt", "tsp6_2.txt", "tsp10.txt", "tsp12.txt", "tsp13.txt", "tsp14.txt", "tsp15.txt"]
+for i in range(1):
+    wybor = 2 #int(input('Wybieramy!\n\t1.Wpisuje z palca(do dopisania obsluga)\n\t2.Wczytam z pliku\nHmm?\n'))
+    if wybor == 1:
+        INFdoWypisania = -1
+        tabWpisywanie = []
+        Ilosc_Miast = int(input('Ilosc Miast = '))
+        macierz = [[0 for i in range(Ilosc_Miast)] for j in range(Ilosc_Miast)]
+        print('Koszty przejazdu? (Liczba i enter. Sam program rozkmini jak to leci)')
+        for i in range(Ilosc_Miast):
+            for j in range(Ilosc_Miast):
+                macierz[i][j] = int(input())
 
-    rozmiar = len(macierz)
-    macierzDoWypisania = copy.deepcopy(macierz)
+        rozmiar = len(macierz)
+        macierzDoWypisania = copy.deepcopy(macierz)
+        for i in range(rozmiar):
+            macierzDoWypisania[ i ][ i ] = INFdoWypisania
+        for i in range(rozmiar):
+            macierz[i][i] = INF
+
+        for i in range(Ilosc_Miast):
+            tabWpisywanie.append(i)
+    elif wybor == 2:
+        INFdoWypisania = -1
+        tabPlik = []
+        nazwa = pliczki[3] #raw_input('Jak sie nazywa pliczek? ')
+        print pliczki[3]
+        plik = open(nazwa)
+        # Podzial pliku na liczby
+        tab = [word for line in plik for word in line.split()]
+
+        Ilosc_Miast = int(tab[0])
+        macierz = [[0 for i in range(Ilosc_Miast)] for j in range(Ilosc_Miast)]
+
+        # Usuniecie poczatku mowiacego o Ilosci miast
+        tab.remove(tab[0])
+
+        # Przepisanie tablicy liczb do macierzy
+        pom = 0
+        for i in range(Ilosc_Miast):
+           for j in range(Ilosc_Miast):
+                macierz[i][j] = tab[pom]
+                pom += 1
+
+        macierz = [ map(int, x) for x in macierz ]
+
+        rozmiar = len(macierz)
+        macierzDoWypisania = copy.deepcopy(macierz)
+        for i in range(rozmiar):
+            macierz[i][i] = INF
+        for i in range(rozmiar):
+            macierzDoWypisania[ i ][ i ] = INFdoWypisania
+        for i in range(Ilosc_Miast):
+            tabPlik.append(i)
+
+    # Drukiwanie zadanej na poczatku macierzy
+    print('Wypisanie:')
     for i in range(rozmiar):
-        macierzDoWypisania[ i ][ i ] = INFdoWypisania
-    for i in range(rozmiar):
-        macierz[i][i] = INF
+        print(macierzDoWypisania[ i ])
 
-    for i in range(Ilosc_Miast):
-        tabWpisywanie.append(i)
-elif wybor == 2:
-    INFdoWypisania = -1
-    tabPlik = []
-    nazwa = raw_input('Jak sie nazywa pliczek? ')
-    plik = open(nazwa)
-    # Podzial pliku na liczby
-    tab = [word for line in plik for word in line.split()]
-
-    Ilosc_Miast = int(tab[0])
-    macierz = [[0 for i in range(Ilosc_Miast)] for j in range(Ilosc_Miast)]
-
-    # Usuniecie poczatku mowiacego o Ilosci miast
-    tab.remove(tab[0])
-
-    # Przepisanie tablicy liczb do macierzy
-    pom = 0
-    for i in range(Ilosc_Miast):
-       for j in range(Ilosc_Miast):
-            macierz[i][j] = tab[pom]
-            pom += 1
-
-    macierz = [ map(int, x) for x in macierz ]
-
-    rozmiar = len(macierz)
-    macierzDoWypisania = copy.deepcopy(macierz)
-    for i in range(rozmiar):
-        macierz[i][i] = INF
-    for i in range(rozmiar):
-        macierzDoWypisania[ i ][ i ] = INFdoWypisania
-    for i in range(Ilosc_Miast):
-        tabPlik.append(i)
-
-# Drukiwanie zadanej na poczatku macierzy
-print('Wypisanie:')
-for i in range(rozmiar):
-    print(macierzDoWypisania[ i ])
-
-# Wypisanie wyniku
-# Pomiar czasu
-print "\n"
-start = time.clock()
-droga, dyst = bb(macierz)
-end = time.clock()
-total = end - start
-print "Najkrotsza droga: ", dyst
-print "Jej dlugosc: ", droga
-print("Czas pomiaru: {0:02f}s".format(total))
+    macierzDoDrogi = copy.deepcopy(macierz)
+    # Wypisanie wyniku
+    # Pomiar czasu
+    # print "\n"
+    start = time.clock()
+    dyst, droga = bb(macierz)
+    end = time.clock()
+    total = end - start
+    print "Najkrotsza droga: ", droga
+    print "Jej dlugosc2: ", dlugoscDrogi(droga, macierzDoDrogi)
+    print("Czas pomiaru: {0:02f}s".format(total))
+    print "------------"
