@@ -147,3 +147,4 @@ total = end - start
 print "Najkrotsza droga: ", droga
 print "Jej dlugosc: ", dyst
 print("Czas pomiaru: {0:02f}s".format(total))
+input()
