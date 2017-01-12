@@ -1,0 +1,8 @@
+# Package Files #
+*.war
+*.ear
+
+# IDEA config files
+.idea/
+TSP PEA/BBexe
+TSP PEA/DPexe
