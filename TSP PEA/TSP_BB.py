@@ -1,7 +1,6 @@
 # Autor : Jarek Ciolek-Zelechowski
 
 import copy
-import itertools
 import time
 
 INF = -1
@@ -294,3 +293,4 @@ print "Najkrotsza droga: ", droga
 print "Jej dlugosc: ", dyst
 print("Czas pomiaru: {0:02f}s".format(total))
 print "------------"
+input()

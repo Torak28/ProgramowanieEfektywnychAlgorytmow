@@ -195,8 +195,8 @@ def bb(macierz):
     return koszt, index
 
 # Obsluga menu
-pliczki = ["tsp4.txt", "tsp6_1.txt", "tsp6_2.txt", "tsp10.txt", "tsp12.txt", "tsp13.txt", "tsp14.txt", "tsp15.txt"]
-for i in range(1):
+pliczki = ["tsp4.txt", "tsp6_1.txt", "tsp6_2.txt", "tsp12.txt", "tsp13.txt", "tsp14.txt", "tsp15.txt"]
+for i in range(len(pliczki)):
     wybor = 2 #int(input('Wybieramy!\n\t1.Wpisuje z palca(do dopisania obsluga)\n\t2.Wczytam z pliku\nHmm?\n'))
     if wybor == 1:
         INFdoWypisania = -1
@@ -220,8 +220,8 @@ for i in range(1):
     elif wybor == 2:
         INFdoWypisania = -1
         tabPlik = []
-        nazwa = pliczki[3] #raw_input('Jak sie nazywa pliczek? ')
-        print pliczki[3]
+        nazwa = pliczki[i] #raw_input('Jak sie nazywa pliczek? ')
+        print pliczki[i]
         plik = open(nazwa)
         # Podzial pliku na liczby
         tab = [word for line in plik for word in line.split()]
@@ -250,20 +250,14 @@ for i in range(1):
         for i in range(Ilosc_Miast):
             tabPlik.append(i)
 
-    # Drukiwanie zadanej na poczatku macierzy
-    print('Wypisanie:')
-    for i in range(rozmiar):
-        print(macierzDoWypisania[ i ])
-
     macierzDoDrogi = copy.deepcopy(macierz)
     # Wypisanie wyniku
     # Pomiar czasu
-    # print "\n"
     start = time.clock()
     dyst, droga = bb(macierz)
     end = time.clock()
     total = end - start
     print "Najkrotsza droga: ", droga
-    print "Jej dlugosc2: ", dlugoscDrogi(droga, macierzDoDrogi)
+    print "Jej dlugosc2: ", dlugoscDrogi(droga,macierzDoDrogi)
     print("Czas pomiaru: {0:02f}s".format(total))
     print "------------"
