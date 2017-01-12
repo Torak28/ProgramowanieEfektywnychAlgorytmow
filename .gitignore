@@ -3,6 +3,6 @@
 *.ear
 
 # IDEA config files
-.idea/
+.idea
 TSP PEA/BBexe
 TSP PEA/DPexe
