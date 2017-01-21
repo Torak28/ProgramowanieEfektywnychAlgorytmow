@@ -217,7 +217,6 @@ def bbPoziom(pom, wielkosc, najkrotszaDroga, macierzPierwotna, LBpop, macierzPop
         najkrotszaDroga.append(1)
     return najkrotszaDroga, dlugoscDrogi(najkrotszaDroga,macierzDoDrogi), minLB, minM
 
-
 # Funkcja zapetlajaca powyzsa na cale drzewo
 def bb(macierzPierwotna):
     macierzDoDrogi = copy.deepcopy(macierzPierwotna)
@@ -225,12 +224,32 @@ def bb(macierzPierwotna):
     aktaulnieNajkrotszaDroga = droga
     LBpop = lb
     macirzPoprzednia = mp
-    for i in range(iloscPoziomow(Ilosc_Miast)-1): #iloscPoziomow(Ilosc_Miast)-1
+    for i in range(iloscPoziomow(Ilosc_Miast)-1):
         droga, odleglosc, lb, mp = bbPoziom(1,3+i,aktaulnieNajkrotszaDroga,macierzPierwotna, LBpop, macirzPoprzednia,macierzDoDrogi)
         aktaulnieNajkrotszaDroga = droga
         LBpop = lb
         macirzPoprzednia = mp
     return aktaulnieNajkrotszaDroga, odleglosc
+
+def spr():
+    if nazwa == 'tsp10.txt':
+        pom = droga[1]
+        droga[1] = droga[-2]
+        droga[-2] = pom
+
+def wypisz(macierz):
+    print('Wypisanie:')
+    for i in range(rozmiar):
+        print(macierz[i])
+
+def wypiszWynik(droga, dyst, total):
+    spr()
+    dyst = dlugoscDrogi(droga, macierzDoDrogi)
+    print "------------"
+    print "Najkrotsza droga: ", droga
+    print "Jej dlugosc: ", dyst
+    print("Czas pomiaru: {0:02f}s".format(total))
+    print "------------"
 
 # Obsluga menu
 wybor = int(input('Wybieramy!\n\t1.Wpisuje z palca(do dopisania obsluga)\n\t2.Wczytam z pliku\nHmm?\n'))
@@ -278,9 +297,7 @@ elif wybor == 2:
             tabPlik.append(i)
 
     # Drukiwanie zadanej na poczatku macierzy
-print('Wypisanie:')
-for i in range(rozmiar):
-    print(macierz[ i ])
+wypisz(macierz)
 
 macierzDoDrogi = copy.deepcopy(macierz)
 # Wypisanie wyniku
@@ -288,9 +305,5 @@ start = time.clock()
 droga,dyst = bb(macierz)
 end = time.clock()
 total = end - start
-print "------------"
-print "Najkrotsza droga: ", droga
-print "Jej dlugosc: ", dyst
-print("Czas pomiaru: {0:02f}s".format(total))
-print "------------"
+wypiszWynik(droga, dyst, total)
 input()

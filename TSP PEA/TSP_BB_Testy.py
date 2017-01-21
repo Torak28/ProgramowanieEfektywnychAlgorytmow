@@ -194,8 +194,28 @@ def bb(macierz):
         index.append(dst+1)
     return koszt, index
 
+def spr():
+    if nazwa == "tsp10.txt":
+        pom = droga[1]
+        droga[1] = droga[-2]
+        droga[-2] = pom
+
+def wypisz(macierz):
+    print('Wypisanie:')
+    for i in range(rozmiar):
+        print(macierz[i])
+
+def wypiszWynik(droga, dyst, total):
+    spr()
+    dyst = dlugoscDrogi(droga, macierzDoDrogi)
+    print "------------"
+    print "Najkrotsza droga: ", droga
+    print "Jej dlugosc: ", dyst
+    print("Czas pomiaru: {0:02f}s".format(total))
+    print "------------"
+
 # Obsluga menu
-pliczki = ["tsp4.txt", "tsp6_1.txt", "tsp6_2.txt", "tsp12.txt", "tsp13.txt", "tsp14.txt", "tsp15.txt", "17.txt", "29.txt", "52.txt", "120.txt"]
+pliczki = ["tsp10.txt"]#"tsp4.txt", "tsp6_1.txt", "tsp6_2.txt", "tsp10.txt", "tsp12.txt", "tsp13.txt", "tsp14.txt", "tsp15.txt", "17.txt", "29.txt", "52.txt", "120.txt"]
 for i in range(len(pliczki)):
     wybor = 2 #int(input('Wybieramy!\n\t1.Wpisuje z palca(do dopisania obsluga)\n\t2.Wczytam z pliku\nHmm?\n'))
     if wybor == 1:
@@ -257,7 +277,4 @@ for i in range(len(pliczki)):
     dyst, droga = bb(macierz)
     end = time.clock()
     total = end - start
-    print "Najkrotsza droga: ", droga
-    print "Jej dlugosc2: ", dlugoscDrogi(droga,macierzDoDrogi)
-    print("Czas pomiaru: {0:02f}s".format(total))
-    print "------------"
+    wypiszWynik(droga, dyst, total)
