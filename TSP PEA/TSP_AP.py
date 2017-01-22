@@ -31,8 +31,37 @@ def dlugoscDrogi(tablica, macierz):
         sum = sum + macierz[miastoAIndex][miastoBIndex]
     return sum
 
+def generujMozliwosci(tablica, elem):
+    wynikCalosci = []
+    for i in range(1, len(tablica)):
+        wynikCzesc = copy.deepcopy(tablica)
+        wynikCzesc.insert(i,elem)
+        wynikCalosci.append(wynikCzesc)
+    return wynikCalosci
+
 def wybierzWiercholek(dist):
     return dist.index(max(dist)) + 1
+
+def wybierzNajlepsze(macierzWyniku):
+    minDr = 2147483647
+    wynik = []
+    for i in range(len(macierzWyniku)):
+        if(dlugoscDrogi(macierzWyniku[i],macierz) < minDr):
+            minDr = dlugoscDrogi(macierzWyniku[i],macierz)
+            wynik.append(macierzWyniku[i])
+    return wynik[-1]
+
+def aktualizujDist(wierzcholek, dist):
+    dist[wierzcholek-1] = 0
+    for i in range(len(dist)):
+        if dist[i] == 0:
+            dist[i] = 0
+        else:
+            if macierz[0][i] < macierz[wierzcholek-1][i]:
+                dist[i] = macierz[0][i]
+            else:
+                dist[i] = macierz[wierzcholek-1][i]
+    return dist
 
 def ap(macierz):
     dist = []
@@ -40,18 +69,21 @@ def ap(macierz):
     droga = [1,1]
     for i in range(Ilosc_Miast):
         dist.append(macierz[0][i])
-
     """
     Teoretyczna petla for
+    TODO:
+    aktalizacja dist
+    liczenie kosztu
+    Tablica do odwiedzenia(teoretycznie dist to zalatwi, we will see)
+    Teortycnie liczenie odlegolosci jest bez sensu
     """
-    print wybierzWiercholek(dist)
-
-
-    print dist
-    return 1,2
+    for i in range(Ilosc_Miast-1):
+        droga = wybierzNajlepsze(generujMozliwosci(droga, wybierzWiercholek(dist)))
+        aktualizujDist(wybierzWiercholek(dist),dist)
+    return droga, dlugoscDrogi(droga,macierz)
 
 # Obsluga menu
-wybor = 2#int(input('Wybieramy!\n\t1.Wpisuje z palca(do dopisania obsluga)\n\t2.Wczytam z pliku\nHmm?\n'))
+wybor = int(input('Wybieramy!\n\t1.Wpisuje z palca(do dopisania obsluga)\n\t2.Wczytam z pliku\nHmm?\n'))
 if wybor == 1:
     tabWpisywanie = []
     wszystkieSubsety = [ ]
@@ -75,7 +107,7 @@ elif wybor == 2:
     wszystkieSubsety = []
     krotkiPrzejscia = {}
     permutacje = []
-    nazwa = "test"#raw_input('Jak sie nazywa pliczek? ')
+    nazwa = raw_input('Jak sie nazywa pliczek? ')
     plik = open(nazwa)
     # Podzial pliku na liczby
     tab = [word for line in plik for word in line.split()]
