@@ -215,7 +215,7 @@ def wypiszWynik(droga, dyst, total):
     print "------------"
 
 # Obsluga menu
-pliczki = ["tsp10.txt"]#"tsp4.txt", "tsp6_1.txt", "tsp6_2.txt", "tsp10.txt", "tsp12.txt", "tsp13.txt", "tsp14.txt", "tsp15.txt", "17.txt", "29.txt", "52.txt", "120.txt"]
+pliczki = ["tsp4.txt", "tsp6_1.txt", "tsp6_2.txt", "tsp10.txt", "tsp12.txt", "tsp13.txt", "tsp14.txt", "tsp15.txt", "17.txt", "29.txt", "52.txt", "120.txt"]
 for i in range(len(pliczki)):
     wybor = 2 #int(input('Wybieramy!\n\t1.Wpisuje z palca(do dopisania obsluga)\n\t2.Wczytam z pliku\nHmm?\n'))
     if wybor == 1:
