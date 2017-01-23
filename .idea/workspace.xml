@@ -2,8 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="e3072320-8269-4da3-b042-05fef085bc7f" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gitignore" afterPath="$PROJECT_DIR$/.gitignore" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/TSP PEA/TSP_AP.py" afterPath="$PROJECT_DIR$/TSP PEA/TSP_AP.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/TSP PEA/wykresAP.py" afterPath="$PROJECT_DIR$/TSP PEA/wykresAP.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/TSP PEA/wykresDP.py" afterPath="$PROJECT_DIR$/TSP PEA/wykresDP.py" />
     </list>
     <ignored path="ProgramowanieEfektywnychAlgorytmow.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -29,7 +31,7 @@
       <file leaf-file-name="TSP_DP.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/TSP PEA/TSP_DP.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="0">
+            <state relative-caret-position="408">
               <caret line="35" column="36" selection-start-line="35" selection-start-column="36" selection-end-line="35" selection-end-column="36" />
               <folding>
                 <element signature="e#192#203#0" expanded="true" />
@@ -75,33 +77,23 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="TSP_AP.py" pinned="false" current-in-tab="false">
+      <file leaf-file-name="TSP_AP.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/TSP PEA/TSP_AP.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="385">
-              <caret line="53" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="150" selection-end-column="7" />
+            <state relative-caret-position="731">
+              <caret line="78" column="32" selection-start-line="78" selection-start-column="32" selection-end-line="78" selection-end-column="32" />
               <folding>
                 <element signature="e#152#163#0" expanded="true" />
                 <element signature="e#378#505#0" expanded="false" />
                 <element signature="e#639#865#0" expanded="false" />
-                <element signature="e#909#1105#0" expanded="false" />
-                <element signature="e#1140#1172#0" expanded="false" />
-                <element signature="e#1215#1471#0" expanded="false" />
-                <element signature="e#1516#1817#0" expanded="false" />
-                <element signature="e#1840#2381#0" expanded="false" />
-                <element signature="e#2522#3080#0" expanded="false" />
-                <element signature="e#3102#3906#0" expanded="false" />
+                <element signature="e#1089#1285#0" expanded="false" />
+                <element signature="e#1393#1425#0" expanded="false" />
+                <element signature="e#1590#1846#0" expanded="false" />
+                <element signature="e#1986#2287#0" expanded="false" />
+                <element signature="e#2343#2656#0" expanded="false" />
+                <element signature="e#2797#3355#0" expanded="false" />
+                <element signature="e#3377#4181#0" expanded="false" />
               </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="wykresBB.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/TSP PEA/wykresBB.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="170">
-              <caret line="10" column="10" selection-start-line="10" selection-start-column="10" selection-end-line="10" selection-end-column="10" />
-              <folding />
             </state>
           </provider>
         </entry>
@@ -109,53 +101,19 @@
       <file leaf-file-name="wykresAP.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/TSP PEA/wykresAP.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="136">
-              <caret line="8" column="24" selection-start-line="8" selection-start-column="24" selection-end-line="8" selection-end-column="24" />
+            <state relative-caret-position="187">
+              <caret line="11" column="10" selection-start-line="11" selection-start-column="10" selection-end-line="11" selection-end-column="10" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name=".gitignore" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/.gitignore">
+      <file leaf-file-name="wykresDP.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/TSP PEA/wykresDP.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="85">
-              <caret line="5" column="5" selection-start-line="5" selection-start-column="5" selection-end-line="5" selection-end-column="5" />
+            <state relative-caret-position="187">
+              <caret line="11" column="10" selection-start-line="11" selection-start-column="10" selection-end-line="11" selection-end-column="10" />
               <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="TSP_AP_Testy.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/TSP PEA/TSP_AP_Testy.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="342">
-              <caret line="145" column="4" selection-start-line="145" selection-start-column="4" selection-end-line="145" selection-end-column="4" />
-              <folding>
-                <element signature="e#152#163#0" expanded="true" />
-                <element signature="e#378#505#0" expanded="false" />
-                <element signature="e#639#865#0" expanded="false" />
-                <element signature="e#909#1105#0" expanded="false" />
-                <element signature="e#1140#1172#0" expanded="false" />
-                <element signature="e#1215#1471#0" expanded="false" />
-                <element signature="e#1516#1817#0" expanded="false" />
-                <element signature="e#2723#3337#0" expanded="false" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="TSP_BB_Testy.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/TSP PEA/TSP_BB_Testy.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="138">
-              <caret line="210" column="4" selection-start-line="210" selection-start-column="4" selection-end-line="210" selection-end-column="24" />
-              <folding>
-                <element signature="e#256#267#0" expanded="true" />
-                <element signature="e#6474#7396#0" expanded="false" />
-                <element signature="e#7540#7614#0" expanded="false" />
-                <element signature="e#8222#8922#0" expanded="false" />
-              </folding>
             </state>
           </provider>
         </entry>
@@ -204,19 +162,19 @@
         <option value="$PROJECT_DIR$/TSP PEA/setup.txt" />
         <option value="$PROJECT_DIR$/TSP PEA/TSP_DP_Testy.py" />
         <option value="$PROJECT_DIR$/TSP PEA/wykresy.py" />
-        <option value="$PROJECT_DIR$/TSP PEA/wykresDP.py" />
         <option value="$PROJECT_DIR$/TSP PEA/bogna.py" />
         <option value="$PROJECT_DIR$/TSP PEA/test.py" />
         <option value="$PROJECT_DIR$/TSP PEA/tsp10.txt" />
         <option value="$PROJECT_DIR$/TSP PEA/TSP_DP.py" />
         <option value="$PROJECT_DIR$/TSP PEA/TSP_BB.py" />
         <option value="$PROJECT_DIR$/TSP PEA/test" />
-        <option value="$PROJECT_DIR$/TSP PEA/TSP_AP.py" />
         <option value="$PROJECT_DIR$/TSP PEA/TSP_BB_Testy.py" />
         <option value="$PROJECT_DIR$/TSP PEA/TSP_AP_Testy.py" />
-        <option value="$PROJECT_DIR$/TSP PEA/wykresAP.py" />
         <option value="$PROJECT_DIR$/TSP PEA/as.py" />
         <option value="$PROJECT_DIR$/.gitignore" />
+        <option value="$PROJECT_DIR$/TSP PEA/wykresDP.py" />
+        <option value="$PROJECT_DIR$/TSP PEA/wykresAP.py" />
+        <option value="$PROJECT_DIR$/TSP PEA/TSP_AP.py" />
       </list>
     </option>
   </component>
@@ -251,6 +209,8 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scratches" />
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -285,8 +245,6 @@
           </PATH>
         </subPane>
       </pane>
-      <pane id="Scope" />
-      <pane id="Scratches" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -313,23 +271,6 @@
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <module name="ProgramowanieEfektywnychAlgorytmow" />
       <option name="SCRIPT_NAME" value="$PROJECT_DIR$/TSP PEA/TSP_BB_Testy.py" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
-      <method />
-    </configuration>
-    <configuration default="false" name="TSP_AP" type="PythonConfigurationType" factoryName="Python" temporary="true">
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/TSP PEA" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <module name="ProgramowanieEfektywnychAlgorytmow" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/TSP PEA/TSP_AP.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <method />
@@ -381,6 +322,23 @@
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <module name="ProgramowanieEfektywnychAlgorytmow" />
       <option name="SCRIPT_NAME" value="$PROJECT_DIR$/TSP PEA/wykresAP.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <method />
+    </configuration>
+    <configuration default="false" name="wykresDP" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/TSP PEA" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <module name="ProgramowanieEfektywnychAlgorytmow" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/TSP PEA/wykresDP.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <method />
@@ -521,18 +479,18 @@
     </configuration>
     <list size="5">
       <item index="0" class="java.lang.String" itemvalue="Python.TSP_BB_Testy" />
-      <item index="1" class="java.lang.String" itemvalue="Python.TSP_AP" />
-      <item index="2" class="java.lang.String" itemvalue="Python.TSP_AP_Testy" />
-      <item index="3" class="java.lang.String" itemvalue="Python.wykresBB" />
-      <item index="4" class="java.lang.String" itemvalue="Python.wykresAP" />
+      <item index="1" class="java.lang.String" itemvalue="Python.TSP_AP_Testy" />
+      <item index="2" class="java.lang.String" itemvalue="Python.wykresBB" />
+      <item index="3" class="java.lang.String" itemvalue="Python.wykresAP" />
+      <item index="4" class="java.lang.String" itemvalue="Python.wykresDP" />
     </list>
     <recent_temporary>
       <list size="5">
         <item index="0" class="java.lang.String" itemvalue="Python.wykresAP" />
-        <item index="1" class="java.lang.String" itemvalue="Python.TSP_AP_Testy" />
-        <item index="2" class="java.lang.String" itemvalue="Python.wykresBB" />
-        <item index="3" class="java.lang.String" itemvalue="Python.TSP_BB_Testy" />
-        <item index="4" class="java.lang.String" itemvalue="Python.TSP_AP" />
+        <item index="1" class="java.lang.String" itemvalue="Python.wykresDP" />
+        <item index="2" class="java.lang.String" itemvalue="Python.TSP_AP_Testy" />
+        <item index="3" class="java.lang.String" itemvalue="Python.wykresBB" />
+        <item index="4" class="java.lang.String" itemvalue="Python.TSP_BB_Testy" />
       </list>
     </recent_temporary>
   </component>
@@ -549,13 +507,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1480263317144</updated>
-    </task>
-    <task id="LOCAL-00051" summary="liczenie ze wzgledu na dlugosc sciezki&#10;">
-      <created>1481546061602</created>
-      <option name="number" value="00051" />
-      <option name="presentableId" value="LOCAL-00051" />
-      <option name="project" value="LOCAL" />
-      <updated>1481546061602</updated>
     </task>
     <task id="LOCAL-00052" summary="fxi. Nadal nie czaje czemu se tak dzieje. Jak skupiam się na drodze to spada mi statystyka na 5 miastach i rosnie dla 15 :c">
       <created>1481546530549</created>
@@ -893,7 +844,14 @@
       <option name="project" value="LOCAL" />
       <updated>1485157431461</updated>
     </task>
-    <option name="localTasksCounter" value="100" />
+    <task id="LOCAL-00100" summary="Testy + wykresy&#10;">
+      <created>1485157673365</created>
+      <option name="number" value="00100" />
+      <option name="presentableId" value="LOCAL-00100" />
+      <option name="project" value="LOCAL" />
+      <updated>1485157673365</updated>
+    </task>
+    <option name="localTasksCounter" value="101" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -905,9 +863,9 @@
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33044422" sideWeight="0.5021075" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32719395" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Python Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32827735" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.35969663" sideWeight="0.49789253" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.35536295" sideWeight="0.49789253" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.24973656" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32719395" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32719395" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.39761648" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
@@ -1008,7 +966,7 @@
           </properties>
         </breakpoint>
       </default-breakpoints>
-      <option name="time" value="100" />
+      <option name="time" value="102" />
     </breakpoint-manager>
     <watches-manager>
       <configuration name="PythonConfigurationType">
@@ -1100,17 +1058,17 @@
     <entry file="file://$PROJECT_DIR$/tsp12.txt" />
     <entry file="file://$PROJECT_DIR$/tsp4.txt" />
     <entry file="file://$PROJECT_DIR$/README.md">
-      <provider editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
       <provider selected="true" editor-type-id="split-provider[text-editor;MarkdownPreviewEditor]">
         <state split_layout="SPLIT">
           <first_editor relative-caret-position="0">
             <caret line="0" column="2" selection-start-line="0" selection-start-column="2" selection-end-line="0" selection-end-column="2" />
           </first_editor>
           <second_editor />
+        </state>
+      </provider>
+      <provider editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
         </state>
       </provider>
     </entry>
@@ -1172,13 +1130,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/TSP PEA/wykresDP.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="136">
-          <caret line="8" column="20" selection-start-line="8" selection-start-column="20" selection-end-line="8" selection-end-column="20" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/TSP PEA/wyniki.txt">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="119">
@@ -1210,7 +1161,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/TSP PEA/TSP_DP.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
+        <state relative-caret-position="408">
           <caret line="35" column="36" selection-start-line="35" selection-start-column="36" selection-end-line="35" selection-end-column="36" />
           <folding>
             <element signature="e#192#203#0" expanded="true" />
@@ -1253,43 +1204,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/TSP PEA/TSP_AP.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="385">
-          <caret line="53" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="150" selection-end-column="7" />
-          <folding>
-            <element signature="e#152#163#0" expanded="true" />
-            <element signature="e#378#505#0" expanded="false" />
-            <element signature="e#639#865#0" expanded="false" />
-            <element signature="e#909#1105#0" expanded="false" />
-            <element signature="e#1140#1172#0" expanded="false" />
-            <element signature="e#1215#1471#0" expanded="false" />
-            <element signature="e#1516#1817#0" expanded="false" />
-            <element signature="e#1840#2381#0" expanded="false" />
-            <element signature="e#2522#3080#0" expanded="false" />
-            <element signature="e#3102#3906#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/TSP PEA/TSP_BB_Testy.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="138">
           <caret line="210" column="4" selection-start-line="210" selection-start-column="4" selection-end-line="210" selection-end-column="24" />
-          <folding>
-            <element signature="e#256#267#0" expanded="true" />
-            <element signature="e#6474#7396#0" expanded="false" />
-            <element signature="e#7540#7614#0" expanded="false" />
-            <element signature="e#8222#8922#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/TSP PEA/wykresBB.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="170">
-          <caret line="10" column="10" selection-start-line="10" selection-start-column="10" selection-end-line="10" selection-end-column="10" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1297,40 +1215,57 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="342">
           <caret line="145" column="4" selection-start-line="145" selection-start-column="4" selection-end-line="145" selection-end-column="4" />
-          <folding>
-            <element signature="e#152#163#0" expanded="true" />
-            <element signature="e#378#505#0" expanded="false" />
-            <element signature="e#639#865#0" expanded="false" />
-            <element signature="e#909#1105#0" expanded="false" />
-            <element signature="e#1140#1172#0" expanded="false" />
-            <element signature="e#1215#1471#0" expanded="false" />
-            <element signature="e#1516#1817#0" expanded="false" />
-            <element signature="e#2723#3337#0" expanded="false" />
-          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/TSP PEA/as.py" />
+    <entry file="file://$PROJECT_DIR$/.gitignore">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="153">
+          <caret line="9" column="0" selection-start-line="9" selection-start-column="0" selection-end-line="9" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/TSP PEA/wykresBB.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="170">
+          <caret line="10" column="10" selection-start-line="10" selection-start-column="10" selection-end-line="10" selection-end-column="10" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/TSP PEA/wykresDP.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="187">
+          <caret line="11" column="10" selection-start-line="11" selection-start-column="10" selection-end-line="11" selection-end-column="10" />
+          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/TSP PEA/wykresAP.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="136">
-          <caret line="8" column="24" selection-start-line="8" selection-start-column="24" selection-end-line="8" selection-end-column="24" />
+        <state relative-caret-position="187">
+          <caret line="11" column="10" selection-start-line="11" selection-start-column="10" selection-end-line="11" selection-end-column="10" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/TSP PEA/as.py">
+    <entry file="file://$PROJECT_DIR$/TSP PEA/TSP_AP.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="51">
-          <caret line="3" column="22" selection-start-line="3" selection-start-column="22" selection-end-line="3" selection-end-column="22" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/.gitignore">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="85">
-          <caret line="5" column="5" selection-start-line="5" selection-start-column="5" selection-end-line="5" selection-end-column="5" />
-          <folding />
+        <state relative-caret-position="731">
+          <caret line="78" column="32" selection-start-line="78" selection-start-column="32" selection-end-line="78" selection-end-column="32" />
+          <folding>
+            <element signature="e#152#163#0" expanded="true" />
+            <element signature="e#378#505#0" expanded="false" />
+            <element signature="e#639#865#0" expanded="false" />
+            <element signature="e#1089#1285#0" expanded="false" />
+            <element signature="e#1393#1425#0" expanded="false" />
+            <element signature="e#1590#1846#0" expanded="false" />
+            <element signature="e#1986#2287#0" expanded="false" />
+            <element signature="e#2343#2656#0" expanded="false" />
+            <element signature="e#2797#3355#0" expanded="false" />
+            <element signature="e#3377#4181#0" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>
