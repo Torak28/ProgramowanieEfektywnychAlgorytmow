@@ -4,8 +4,6 @@
     <list default="true" id="e3072320-8269-4da3-b042-05fef085bc7f" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/TSP PEA/TSP_AP.py" afterPath="$PROJECT_DIR$/TSP PEA/TSP_AP.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/TSP PEA/wykresAP.py" afterPath="$PROJECT_DIR$/TSP PEA/wykresAP.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/TSP PEA/wykresDP.py" afterPath="$PROJECT_DIR$/TSP PEA/wykresDP.py" />
     </list>
     <ignored path="ProgramowanieEfektywnychAlgorytmow.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -508,13 +506,6 @@
       <option name="presentableId" value="Default" />
       <updated>1480263317144</updated>
     </task>
-    <task id="LOCAL-00052" summary="fxi. Nadal nie czaje czemu se tak dzieje. Jak skupiam się na drodze to spada mi statystyka na 5 miastach i rosnie dla 15 :c">
-      <created>1481546530549</created>
-      <option name="number" value="00052" />
-      <option name="presentableId" value="LOCAL-00052" />
-      <option name="project" value="LOCAL" />
-      <updated>1481546530549</updated>
-    </task>
     <task id="LOCAL-00053" summary="A moze to jest to? &lt;3">
       <created>1481546859620</created>
       <option name="number" value="00053" />
@@ -851,7 +842,14 @@
       <option name="project" value="LOCAL" />
       <updated>1485157673365</updated>
     </task>
-    <option name="localTasksCounter" value="101" />
+    <task id="LOCAL-00101" summary="Wykresy 2&#10;">
+      <created>1485160659524</created>
+      <option name="number" value="00101" />
+      <option name="presentableId" value="LOCAL-00101" />
+      <option name="project" value="LOCAL" />
+      <updated>1485160659526</updated>
+    </task>
+    <option name="localTasksCounter" value="102" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -930,7 +928,6 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Nie pokazuje już par" />
     <MESSAGE value="drobne zmiany w komentowanoiu całości" />
     <MESSAGE value="quick fix" />
     <MESSAGE value="Dodaje komentarze&#10;" />
@@ -955,7 +952,8 @@
     <MESSAGE value="getting there. Dodanie wybierania wierzcholka&#10;" />
     <MESSAGE value="Przypadkowo sie udalo" />
     <MESSAGE value="Testy + wykresy&#10;" />
-    <option name="LAST_COMMIT_MESSAGE" value="Testy + wykresy&#10;" />
+    <MESSAGE value="Wykresy 2&#10;" />
+    <option name="LAST_COMMIT_MESSAGE" value="Wykresy 2&#10;" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

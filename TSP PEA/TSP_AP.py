@@ -31,6 +31,11 @@ def dlugoscDrogi(tablica, macierz):
         sum = sum + macierz[miastoAIndex][miastoBIndex]
     return sum
 
+# Genurej wszystie mozliwe umieszczenie
+# elementu w zadanej tablicy. Potrzebne
+# do wybierania najlepszej drogi
+# np dla tablicy [1,3,1] i elem: 2 zwroci:
+# [1,2,3,1] i [1,3,2,1]
 def generujMozliwosci(tablica, elem):
     wynikCalosci = []
     for i in range(1, len(tablica)):
@@ -39,9 +44,14 @@ def generujMozliwosci(tablica, elem):
         wynikCalosci.append(wynikCzesc)
     return wynikCalosci
 
+# Z podanej listy dist wybiera maksymalny
+# element i zwraca jego indeks
 def wybierzWiercholek(dist):
     return dist.index(max(dist)) + 1
 
+# Dla zadanej na wejsciu macierzy wyniku
+# Bedacej reprezentacja mozliwych sciezek
+# wybiera najorzystniejsza i ja zwraca
 def wybierzNajlepsze(macierzWyniku):
     minDr = 2147483647
     wynik = []
@@ -51,6 +61,9 @@ def wybierzNajlepsze(macierzWyniku):
             wynik.append(macierzWyniku[i])
     return wynik[-1]
 
+# Po wykonaniu pojedynczego kroku sprawdza
+# czy mozna i jak tak to aktualizuje
+# tablice dist
 def aktualizujDist(wierzcholek, dist):
     dist[wierzcholek-1] = 0
     for i in range(len(dist)):
@@ -63,20 +76,12 @@ def aktualizujDist(wierzcholek, dist):
                 dist[i] = macierz[wierzcholek-1][i]
     return dist
 
+# Przejscie algorytmu po calosci
 def ap(macierz):
     dist = []
-    koszt = 0
     droga = [1,1]
     for i in range(Ilosc_Miast):
         dist.append(macierz[0][i])
-    """
-    Teoretyczna petla for
-    TODO:
-    aktalizacja dist
-    liczenie kosztu
-    Tablica do odwiedzenia(teoretycznie dist to zalatwi, we will see)
-    Teortycnie liczenie odlegolosci jest bez sensu
-    """
     for i in range(Ilosc_Miast-1):
         droga = wybierzNajlepsze(generujMozliwosci(droga, wybierzWiercholek(dist)))
         aktualizujDist(wybierzWiercholek(dist),dist)
