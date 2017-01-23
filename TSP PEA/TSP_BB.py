@@ -231,13 +231,6 @@ def bb(macierzPierwotna):
         macirzPoprzednia = mp
     return aktaulnieNajkrotszaDroga, odleglosc
 
-# Sprawdza poprawnosc danych
-def spr():
-    if nazwa == 'tsp10.txt':
-        pom = droga[1]
-        droga[1] = droga[-2]
-        droga[-2] = pom
-
 # Wypisuje macierz na poczatku
 def wypisz(macierz):
     print('Wypisanie:')
@@ -246,7 +239,6 @@ def wypisz(macierz):
 
 # Wypisuje wyniki
 def wypiszWynik(droga, dyst, total):
-    spr()
     dyst = dlugoscDrogi(droga, macierzDoDrogi)
     print "------------"
     print "Najkrotsza droga: ", droga
