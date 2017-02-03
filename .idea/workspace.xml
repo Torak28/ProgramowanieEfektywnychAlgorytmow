@@ -62,8 +62,8 @@
         <entry file="file://$PROJECT_DIR$/README.md">
           <provider selected="true" editor-type-id="split-provider[text-editor;MarkdownPreviewEditor]">
             <state split_layout="SPLIT">
-              <first_editor relative-caret-position="85">
-                <caret line="5" column="39" selection-start-line="5" selection-start-column="39" selection-end-line="5" selection-end-column="39" />
+              <first_editor relative-caret-position="102">
+                <caret line="6" column="31" selection-start-line="6" selection-start-column="31" selection-end-line="6" selection-end-column="31" />
                 <folding />
               </first_editor>
               <second_editor />
@@ -499,13 +499,6 @@
       <option name="presentableId" value="Default" />
       <updated>1480263317144</updated>
     </task>
-    <task id="LOCAL-00056" summary="Początki wielkiego algorytmu">
-      <created>1483810327066</created>
-      <option name="number" value="00056" />
-      <option name="presentableId" value="LOCAL-00056" />
-      <option name="project" value="LOCAL" />
-      <updated>1483810327066</updated>
-    </task>
     <task id="LOCAL-00057" summary="Dodanie minimum">
       <created>1483814190839</created>
       <option name="number" value="00057" />
@@ -842,7 +835,14 @@
       <option name="project" value="LOCAL" />
       <updated>1485174774596</updated>
     </task>
-    <option name="localTasksCounter" value="105" />
+    <task id="LOCAL-00105" summary="akttualizacja README">
+      <created>1486153699516</created>
+      <option name="number" value="00105" />
+      <option name="presentableId" value="LOCAL-00105" />
+      <option name="project" value="LOCAL" />
+      <updated>1486153699516</updated>
+    </task>
+    <option name="localTasksCounter" value="106" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -921,7 +921,6 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Dodanie komentarzy" />
     <MESSAGE value="fix" />
     <MESSAGE value="Komentarze pt.1" />
     <MESSAGE value="Wszystie komentarze na miejscu!" />
@@ -946,7 +945,8 @@
     <MESSAGE value="Komentarze" />
     <MESSAGE value="ostatnie poprawki&#10;" />
     <MESSAGE value="oddawanie" />
-    <option name="LAST_COMMIT_MESSAGE" value="oddawanie" />
+    <MESSAGE value="akttualizacja README" />
+    <option name="LAST_COMMIT_MESSAGE" value="akttualizacja README" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -1253,8 +1253,8 @@
       </provider>
       <provider selected="true" editor-type-id="split-provider[text-editor;MarkdownPreviewEditor]">
         <state split_layout="SPLIT">
-          <first_editor relative-caret-position="85">
-            <caret line="5" column="39" selection-start-line="5" selection-start-column="39" selection-end-line="5" selection-end-column="39" />
+          <first_editor relative-caret-position="102">
+            <caret line="6" column="31" selection-start-line="6" selection-start-column="31" selection-end-line="6" selection-end-column="31" />
             <folding />
           </first_editor>
           <second_editor />
